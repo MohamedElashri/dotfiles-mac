@@ -30,21 +30,15 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
     brew cask install "$line"
 done < "./lists/cask.txt"
 
-
-# SSH config
-stow ssh -t $HOME/
-
-
-stow bash -t $HOME
 rm $HOME/.zshrc
-stow zsh -t $HOME
+stow configs/zsh -t $HOME
 
-stow vscode -t $HOME
+stow /configs/vscode -t $HOME
 ln -s "$HOME/work/git/dotfiles/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 # If using  VSCodium instead replace by
 #ln -s "$HOME/work/git/dotfiles/vscode/settings.json" "$HOME/Library/Application Support/VSCodium/User/settings.json"
 
 # git
-stow git -t $HOME/
+stow /configs/git -t $HOME/
 git config --global core.excludesfile $HOME/.gitignore
 
