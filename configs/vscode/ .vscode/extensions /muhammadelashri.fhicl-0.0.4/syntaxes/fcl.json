@@ -1,0 +1,88 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "fichl",
+    "patterns": [
+        {
+            "include": "#boolean"
+        },
+        {
+            "include": "#comment"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#entities"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#others"
+        }
+    ],
+    "repository": {
+        "boolean": {
+            "patterns": [
+                {
+                    "match": "\\b(true|false)\\b",
+                    "name": "constant.numeric.fhicl"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "match": "\".*?\"",
+                    "name": "string.quoted.fhicl"
+                },
+                {
+                    "match": "'.*?'",
+                    "name": "string.quoted.fhicl"
+                }
+            ]
+        },
+        "others": {
+            "patterns": [
+                {
+                    "match": "-?\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b",
+                    "name": "constant.numeric.fhicl"
+                },
+                {
+                    "match": "\\s+\\[.+\\]",
+                    "name": "variable.definition.fhicl"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "match": "\\b(process_name:|services:|source:|outputs:|physics:|producers:|analyzers:|filters:|trigger_paths:|end_paths:)",
+                    "name": "keyword.core.fhicl"
+                },
+                {
+                    "match": "\\b(BEGIN_PROLOG|END_PROLOG)",
+                    "name": "keyword.core.fhicl"
+                },
+                {
+                    "match": "(@local::|@table::).+",
+                    "name": "keyword.core.fhicl"
+                }
+            ]
+        },
+        "comment": {
+            "patterns": [
+                {
+                    "match": "#include",
+                    "name": "keyword.include.fhicl"
+                },
+                {
+                    "begin": "#",
+                    "end": "\n",
+                    "name": "comment.block.fhicl"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.fcl"
+}

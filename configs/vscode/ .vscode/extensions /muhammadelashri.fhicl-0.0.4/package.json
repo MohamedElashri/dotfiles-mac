@@ -1,0 +1,71 @@
+{
+	"name": "FHiCL",
+	"displayName": "Fermilab FHiCL Language",
+	"publisher": "muhammadelashri",
+	"description": "Fermilab Hierarchical Configuration Language Syntax",
+	"repository": "https://github.com/MohamedElashri/VSCode-Language-Fhicl",
+	"license": "SEE LICENSE IN LICENSE.md",
+	"version": "0.0.4",
+	"keywords": [
+		"fcl",
+		"FHiCL",
+		"fermilab"
+	],
+	"icon": "img/logo.png",
+	"engines": {
+		"vscode": "^1.34.0"
+	},
+	"categories": [
+		"Programming Languages",
+		"Snippets"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "fcl",
+				"aliases": [
+					"fichl",
+					"FHiCL"
+				],
+				"extensions": [
+					".fcl"
+				],
+				"configuration": "./fcl_language-configuration.json"
+			},
+			{
+				"id": "cfg",
+				"aliases": [
+					"JobSub"
+				],
+				"extensions": [
+					".cfg"
+				],
+				"configuration": "./cfg_language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "fcl",
+				"scopeName": "source.fcl",
+				"path": "./syntaxes/fcl.json"
+			},
+			{
+				"language": "cfg",
+				"scopeName": "source.cfg",
+				"path": "./syntaxes/cfg.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "fcl",
+				"path": "./syntaxes/snippets.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "21a5765b-a260-4254-bf84-3ded52470d1e",
+		"publisherId": "f2ab1d76-9d3c-4586-bfdd-f9ed0e013165",
+		"publisherDisplayName": "Mohamed Elashri",
+		"installedTimestamp": 1625168411138
+	}
+}

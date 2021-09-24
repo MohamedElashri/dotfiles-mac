@@ -1,0 +1,10 @@
+{
+  "job": {
+    "body": "#include \"services.fcl\"\n#include \"${1:Module}.fcl\"\nprocess_name: ${2:Module type}\nservices:\n{\n  # Uncomment the services you'd like to include\n  # MemoryTracker:         {}\n  # message:               @local::standard_out\n  # RandomNumberGenerator: {}\n  scheduler:             { wantTracer: false wantSummary: true }\n  # TFileService:          { fileName: \"myjob_hist.root\" }\n  # TimeTracker:           {}\n  @table::standard_services\n}\nsource:\n{\n  module_type: RootInput\n  maxEvents:  -1\n}\noutputs:\n{\n  out1:\n  {\n   module_type: RootOutput\n   fileName:    \"myjob_out.root\" # default file name, can override from commandline with -o or --output\n   fastCloning: false\n  }\n}\n# Define and configure some modules to do work on each event.\n# First modules are defined; they are scheduled later.\n# Modules are grouped by type.\nphysics:\n{\n  filters:\n  {\n    filter1: @local::standard_afilter\n  }\n  \n  producers:\n  {\n    producer1: @local::standard_aproducer\n  }\n  \n  analyzers:\n  {\n    analyzer1: @local::standard_analyzer\n  }\n  # Define the path for producer and filter modules, order matters.\n  reco: [ filter1, producer1 ]\n  \n  # Define the path for the analyzer modules, order does not matter.\n  ana: [ analyzer1 ]\n  # Define the output stream, there could be more than one if using filters \n  stream1:  [ out1 ]\n  # trigger_paths is a keyword and contains the paths that modify the art::Event, \n  # ie. filters and producers\n  trigger_paths: [ reco ] \n  # end_paths is a keyword and contains the paths that do not modify the art::Event, \n  # ie. analyzers and output streams.  these all run simultaneously\n  end_paths:     [ ana, stream1 ]\n}",
+    "prefix": "FCL job"
+  },
+  "prolog": {
+    "body": "BEGIN_PROLOG\n\nstandard_${1:job name}:\n{\n\tmodule_type:\t\"${2:module base name}\"\n\n}\n\nEND_PROLOG",
+    "prefix": "BEGIN-END PROLOG"
+  }
+}
