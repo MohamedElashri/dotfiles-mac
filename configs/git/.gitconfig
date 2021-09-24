@@ -1,0 +1,18 @@
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[user]
+	name = Mohamed Elashri
+	email = s-mohamed.elashri@zewailcity.edu.eg
+	signingKey = ""
+[gpg]
+	program = gpg
+[commit]
+	gpgSign = false
+[tag]
+	forceSignAnnotated = false
+
+# [url "git@github.com:"]
+  #      insteadOf = https://github.com/

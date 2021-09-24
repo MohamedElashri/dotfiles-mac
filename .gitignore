@@ -1,0 +1,12 @@
+# Mac
+.DS_Store
+
+
+#VS Code
+.vscode
+
+# general
+/tmp
+
+# secrets
+.env
