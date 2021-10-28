@@ -160,3 +160,17 @@ export PATH="/opt/homebrew/opt/python@3.8/bin:$PATH"
 # goto github folder directly
 alias github='cd /Users/mohamedelashri/Desktop/Github'
 
+# Docker
+alias dm='docker-machine'
+alias dmls='docker-machine ls'
+alias dockerpsall='docker ps -a --format=$FORMAT'
+alias dockerpsrecent='docker ps -l --format=$FORMAT'
+alias dockerrunml4t='docker run -it -v "$(pwd)":/app cs7646'
+alias dockerdeletecontainers='docker rm -vf $(docker ps -a -q)'
+alias dockerdeleteimages='docker rmi -f $(docker images -a -q)'
+alias dockerrestart='dockerdeletecontainers && dockerdeleteimages && make && make up'
+
+# Jupyter
+alias jnotebook='jupyter notebook'
+
+
