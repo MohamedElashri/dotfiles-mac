@@ -208,3 +208,15 @@ man() {
 # Note: Syntax highlighting for zsh must be the final part. It's ornary.
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+
+# macOS has no `md5sum`, so use `md5` as a fallback if it hasn't been
+# been installed with brew/macports/fink
+ command -v md5sum > /dev/null || \
+   command -v md5 > /dev/null && \
+   alias md5sum=$(which md5)
+
+# macOS has no `sha1sum`, so use `shasum` as a fallback if it hasn't been
+# been installed with brew/macports/fink
+ command -v sha1sum > /dev/null || \
+   command -v shasum > /dev/null && \
+   alias sha1sum=$(which shasum)
