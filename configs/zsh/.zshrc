@@ -164,6 +164,7 @@ export NVM_DIR="$HOME/.nvm"
 source ~/.aliases
 source ~/.aliases-ssh             # SSH shortcuts (private for security)
 source ~/.aliases-sensitive       # General private (for security) shortcuts
+source ~/.docker                  # Docker aliasses
 
 
 
