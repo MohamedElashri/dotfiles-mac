@@ -1,0 +1,16 @@
+alt-tab
+android-platform-tools
+cakebrew
+dotnet-sdk
+font-fira-code
+font-hack-nerd-font
+font-victor-mono-nerd-font
+jupyter-notebook-viewer
+lagrange
+maccy
+mactex
+miniforge
+openinterminal
+raycast
+vimr
+xquartz

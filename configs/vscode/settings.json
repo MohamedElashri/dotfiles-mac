@@ -1,113 +1,37 @@
 {
-    "workbench.colorTheme": "Material Theme",
-    "tabnine.experimentalAutoImports": true,
+    "workbench.colorTheme": "Default Dark+",
+    "editor.inlineSuggest.enabled": true,
     "workbench.iconTheme": "vscode-icons",
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "terminal.integrated.commandsToSkipShell": [
-        "language-julia.interrupt"
+    "C_Cpp.default.includePath": [
+      "$ROOTSYS"
     ],
-    "julia.symbolCacheDownload": true,
-    "julia.enableTelemetry": false,
-    "kite.showWelcomeNotificationOnStartup": false,
-    "vsicons.dontShowNewVersionMessage": true,
-    "git.autofetch": true,
-    "github.gitAuthentication": false,
-    "git.autoStash": true,
-    "latex-workshop.latex.tools": [    
-
-
-        {
-            "name": "latexmk",
-            "command": "latexmk",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-pdf",
-                "-outdir=%OUTDIR%",
-                "%DOC%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "lualatexmk",
-            "command": "latexmk",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-lualatex",
-                "-outdir=%OUTDIR%",
-                "%DOC%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "latexmk_rconly",
-            "command": "latexmk",
-            "args": [
-                "%DOC%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "pdflatex",
-            "command": "pdflatex",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOC%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "bibtex",
-            "command": "bibtex",
-            "args": [
-                "%DOCFILE%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "rnw2tex",
-            "command": "Rscript",
-            "args": [
-                "-e",
-                "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
-            ],
-            "env": {}
-        },
-        {
-            "name": "jnw2tex",
-            "command": "julia",
-            "args": [
-                "-e",
-                "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
-            ],
-            "env": {}
-        },
-        {
-            "name": "jnw2texmintex",
-            "command": "julia",
-            "args": [
-                "-e",
-                "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
-            ],
-            "env": {}
-        },
-        {
-            "name": "tectonic",
-            "command": "tectonic",
-            "args": [
-                "--synctex",
-                "--keep-logs",
-                "%DOC%.tex"
-            ],
-            "env": {}
-        }
+    "C_Cpp.default.systemIncludePath": [
+      "$ROOTSYS"
     ],
-    "files.autoSave": "afterDelay"
-
+    "aws.telemetry": false,
+    "terminal.integrated.env.osx": {
+      "FIG_NEW_SESSION": "1"
+    },
+    "github.copilot.enable": {
+      "*": true,
+      "yaml": true,
+      "plaintext": true,
+      "markdown": true
+    },
+    "editor.hover.enabled": true,
+    "[markdown]": {
+      "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "files.associations": {
+      "*.md": "markdown"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "editor.accessibilitySupport": "off",
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "telemetry.telemetryLevel": "crash",
+    "gitlens.telemetry.enabled": false,
+    "code-runner.enableAppInsights": false
 }

@@ -33,10 +33,13 @@ done < "./lists/cask.txt"
 rm $HOME/.zshrc
 stow configs/zsh -t $HOME
 
+# Install vsocde extensions and import settings.json
 stow /configs/vscode -t $HOME
 ln -s "$HOME/work/git/dotfiles/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 # If using  VSCodium instead replace by
 #ln -s "$HOME/work/git/dotfiles/vscode/settings.json" "$HOME/Library/Application Support/VSCodium/User/settings.json"
+cat $HOME/work/git/dotfiles/vscode/vs_code_extensions_list.txt | xargs -L1 code --install-extension
+
 
 # git
 stow /configs/git -t $HOME/

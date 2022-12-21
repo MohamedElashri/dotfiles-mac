@@ -1,14 +1,22 @@
-# Backup homebrew packages
-brew list >> "lists/brew.txt"
+brew list > "lists/brew.txt"
 
 # Backup cask packages
-brew cask list >> "lists/cask.txt"
+brew list --cask > "lists/cask.txt"
 
-# Backup .zshrc
-cat ~/.zshrc >> "configs/zsh/.zshrc"
+# Backup .zshrc and *.zsh files and overwrite the existing files
+
+cp -f ~/.zshrc         configs/zsh/.zshrc
+cp -f ~/aliases.zsh    configs/zsh/aliases.zsh
+cp -f ~/plugins.zsh    configs/zsh/plugins.zsh
+cp -f ~/environment.zsh configs/zsh/environment.zsh
+cp -f ~/config.zsh     configs/zsh/config.zsh
+cp -f ~/functions.zsh  configs/zsh/functions.zsh
+
 
 # Backup git config file
-cat  ~/.gitconfig >> "configs/git/.gitconfig"
+cp -f ~/.gitconfig configs/git/.gitconfig
 
 # Backup vscode settings file
-cat $HOME/Library/Application Support/Code/User/settings.json >> "configs/vscode/settings.json"
+cp -f $HOME/Library/ApplicationSupport/Code/User/settings.json configs/vscode/settings.json
+# backup vsocde extensions list
+code --list-extensions > "configs/vscode/vs_code_extensions_list.txt"

@@ -4,15 +4,37 @@
 	required = true
 	clean = git-lfs clean -- %f
 [user]
-	name = Mohamed Elashri
-	email = s-mohamed.elashri@zewailcity.edu.eg
-	signingKey = ""
-[gpg]
-	program = gpg
+	name = Mohamed
+	email = muhammadelashri@gmail.com
+	signingkey = 29496E7A07758443
 [commit]
-	gpgSign = false
+	gpgsign = true
+	template = /Users/mohamedelashri/.stCommitMsg
 [tag]
-	forceSignAnnotated = false
+	forceSignAnnotated = true
 
 # [url "git@github.com:"]
   #      insteadOf = https://github.com/
+[core]
+	excludesfile = /Users/mohamedelashri/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[diff]
+	tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[merge]
+	tool = Kaleidoscope
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[mergetool]
+	prompt = false
+[gpg]
+	program = /usr/local/bin/gpg
