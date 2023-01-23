@@ -1,6 +1,11 @@
 #export DOTFILES=$HOME/.dotfiles
 export ZSH="/Users/mohamedelashri/.oh-my-zsh"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
+if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
+    ZSH_THEME="powerlevel10k/powerlevel10k"
+
+fi
+
 source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -27,7 +32,7 @@ eval "$(pyenv virtualenv-init -)"
 
 # Nix-shell
 #$HOME/.nix-profile/etc/profile.d/nix.sh
-. /Users/mohamedelashri/.nix-profile/etc/profile.d/nix.sh
+#. /Users/mohamedelashri/.nix-profile/etc/profile.d/nix.sh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -45,3 +50,13 @@ export HOMEBREW_NO_ENV_HINTS=1
 
 ## PGP
 export GPG_TTY=$(tty)
+
+
+# history
+export HISTFILE=~/.zsh_history
+export HISTFILESIZE=1000000000
+export HISTSIZE=1000000000
+setopt INC_APPEND_HISTORY
+export HISTTIMEFORMAT="[%F %T] "
+setopt EXTENDED_HISTORY
+setopt HIST_FIND_NO_DUPS

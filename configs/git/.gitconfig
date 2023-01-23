@@ -24,13 +24,17 @@
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [diff]
-	tool = Kaleidoscope
+tool=ultracompare
+oldtool=Kaleidoscope
+
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [difftool]
 	prompt = false
 [merge]
-	tool = Kaleidoscope
+tool=ultracompare
+oldtool=Kaleidoscope
+
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
@@ -38,3 +42,19 @@
 	prompt = false
 [gpg]
 	program = /usr/local/bin/gpg
+
+[mergetool "ultracompare"]
+keepBackup=false
+trustExitCode=false
+prompt=false
+cmd=\"/Applications/UltraCompare.app/Contents/MacOS/UltraCompare\" -gitm "$LOCAL" "$REMOTE" "$BASE" "$MERGED" -title1 "LOCAL" -title2 "REMOTE" -ff
+
+[UC]
+defdiffmerge=yes
+defdiff=yes
+
+[difftool "ultracompare"]
+keepBackup=false
+trustExitCode=false
+prompt=false
+cmd=\"/Applications/UltraCompare.app/Contents/MacOS/UltraCompare\" -gitdt "$LOCAL" "$REMOTE" "$BASE" "$MERGED" -title1 "LOCAL" -title2 "REMOTE" -ff

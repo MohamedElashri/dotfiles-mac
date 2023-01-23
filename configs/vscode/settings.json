@@ -33,5 +33,10 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "telemetry.telemetryLevel": "crash",
     "gitlens.telemetry.enabled": false,
-    "code-runner.enableAppInsights": false
+    "code-runner.enableAppInsights": false,
+    "codeium.enableConfig": {
+      "*": false,
+      "code-runner-output": true
+    },
+    "codium.enabled": true
 }

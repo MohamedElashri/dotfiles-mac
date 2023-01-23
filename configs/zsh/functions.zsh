@@ -1,13 +1,6 @@
 ###  Terminal ###
 
 
-__shhist_prompt() {
-    local __exit_code="${?:-1}"
-    history -D -t "%s" -1 | sudo --preserve-env --user ${SUDO_USER:-${LOGNAME}} shhist insert --session ${TERM_SESSION_ID:-${__shhist_session}} --username ${LOGNAME} --hostname $(hostname) --exit-code ${__exit_code}
-    return ${__exit_code}
-}
-
-
 
 
 ########################

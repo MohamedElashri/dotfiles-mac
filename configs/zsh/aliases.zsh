@@ -1,7 +1,7 @@
 
 ### Files ###
 
-alias l="pwd && ls"  
+alias l='pwd && ls'  
 alias ls='ls --color=auto' # Colorize the ls output
 alias ll='ls -la' # Use a long listing format
 alias l.='ls -d .* --color=auto' # Show hidden files
@@ -66,11 +66,11 @@ alias path='echo -e ${PATH//:/\\n}' # Print each PATH entry on a separate line
 alias restart_shell="exec ${SHELL} -l" # Restart shell (i.e. invoke as a login shell)
 alias pycat='pygmentize -g' # syntax highlight files
 alias cat='ccat' # for colorized cat(faster than pycat)
-alias zshconfig="nano ~/.zshrc" # edit zshrc
+alias zshconfig='nano ~/.zshrc' # edit zshrc
 alias bat='cat' # Use bat instead of cat
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
-alias export=" export" # Re-alias "export" to " export" to remove from history
+alias hidedesktop='defaults write com.apple.finder CreateDesktop -bool false && killall Finder'
+alias showdesktop='defaults write com.apple.finder CreateDesktop -bool true && killall Finder'
+alias export='export' # Re-alias "export" to "export" to remove from history
 
 
 

@@ -119,8 +119,3 @@ fi
 # else
 #   export EDITOR='mvim'
 # fi
-
-__shhist_session="${RANDOM}" # random session id
-
-
-precmd_functions=(__shhist_prompt $precmd_functions) # add shhist to precmd
