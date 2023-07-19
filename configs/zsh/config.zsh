@@ -103,7 +103,8 @@ ZSH_HIGHLIGHT_STYLES[cursor]='standout'
 
 
 
-
+export PATH="/usr/local/Cellar/python@3.10/3.10/bin:$PATH"
+export PATH=$(brew --prefix python)/bin:$PATH
 
 # sets the Homebrew-installed Ruby to a higher priority than the system Ruby
 

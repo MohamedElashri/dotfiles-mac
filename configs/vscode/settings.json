@@ -1,42 +1,65 @@
 {
-    "workbench.colorTheme": "Default Dark+",
-    "editor.inlineSuggest.enabled": true,
-    "workbench.iconTheme": "vscode-icons",
-    "C_Cpp.default.includePath": [
-      "$ROOTSYS"
-    ],
-    "C_Cpp.default.systemIncludePath": [
-      "$ROOTSYS"
-    ],
-    "aws.telemetry": false,
-    "terminal.integrated.env.osx": {
-      "FIG_NEW_SESSION": "1"
-    },
-    "github.copilot.enable": {
-      "*": true,
-      "yaml": true,
-      "plaintext": true,
-      "markdown": true
-    },
-    "editor.hover.enabled": true,
-    "[markdown]": {
-      "editor.defaultFormatter": "yzhang.markdown-all-in-one"
-    },
-    "files.associations": {
-      "*.md": "markdown"
-    },
-    "explorer.confirmDragAndDrop": false,
-    "editor.accessibilitySupport": "off",
-    "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "diffEditor.ignoreTrimWhitespace": false,
-    "telemetry.telemetryLevel": "crash",
-    "gitlens.telemetry.enabled": false,
-    "code-runner.enableAppInsights": false,
-    "codeium.enableConfig": {
-      "*": false,
-      "code-runner-output": true
-    },
-    "codium.enabled": true
+  "aws.telemetry": false,
+  "editor.accessibilitySupport": "off",
+  "editor.inlineSuggest.enabled": true,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "workbench.colorCustomizations": {
+    "terminal.background":"#191919",
+    "terminal.foreground":"#A7A7A7",
+    "terminalCursor.background":"#A7A7A7",
+    "terminalCursor.foreground":"#A7A7A7",
+    "terminal.ansiBlack":"#191919",
+    "terminal.ansiBlue":"#639EE4",
+    "terminal.ansiBrightBlack":"#5F5A60",
+    "terminal.ansiBrightBlue":"#639EE4",
+    "terminal.ansiBrightCyan":"#4BB1A7",
+    "terminal.ansiBrightGreen":"#84B97C",
+    "terminal.ansiBrightMagenta":"#B888E2",
+    "terminal.ansiBrightRed":"#DC657D",
+    "terminal.ansiBrightWhite":"#FFFFFF",
+    "terminal.ansiBrightYellow":"#C3BA63",
+    "terminal.ansiCyan":"#4BB1A7",
+    "terminal.ansiGreen":"#84B97C",
+    "terminal.ansiMagenta":"#B888E2",
+    "terminal.ansiRed":"#DC657D",
+    "terminal.ansiWhite":"#A7A7A7",
+    "terminal.ansiYellow":"#C3BA63"},
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false,
+    "quarto": false,
+    "python": true
+  },
+  "git.ignoreLegacyWarning": true,
+  "remote.SSH.connectTimeout": 100,
+  "codeium.enableConfig": {
+    "*": true,
+    "python": false
+  },
+  "workbench.colorTheme": "Dracula Soft",
+  "gitlens.advanced.messages": {
+    "suppressGitVersionWarning": true
+  },
+  "gitlens.gitCommands.skipConfirmations": [
+    "fetch:command",
+    "stash-push:command",
+    "switch:command",
+    "remote-add:command"
+  ],
+  "gitlens.views.remotes.branches.layout": "list",
+  "editor.inlineSuggest.showToolbar": "always",
+  "editor.minimap.enabled": false,
+  "editor.minimap.autohide": true, 
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "workbench.editorLargeFileConfirmation": 50,
+  "editor.formatOnPaste": true,
+  "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
+  "cody.plugins.debug.enabled": false,
+  "rootFileViewer.darkMode": true
 }

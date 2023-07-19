@@ -34,11 +34,10 @@ alias -- -="cd -"
 
 alias cleanupDS="find . -type f -name '*.DS_Store' -ls -delete" # Cleanup .DS_Store files
 
-
 ## Directories
 alias sites="cd $HOME/Sites"
-alias github='cd /Users/mohamedelashri/Desktop/projects/Github'
-alias lhcb= 'cd /Users/mohamedelashri/Desktop/projects/LHCb'
+alias github='cd /Users/melashri/Desktop/projects/Github'
+alias lhcb= 'cd /Users/melashri/Desktop/projects/LHCb'
 alias doc='cd ~/Documents/'
 alias ds='cd ~/.ssh'
 alias dz='cd ~/.dotfiles'

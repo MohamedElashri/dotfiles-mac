@@ -17,6 +17,6 @@ cp -f ~/shellhistory.zsh configs/zsh/shellhistory.zsh
 cp -f ~/.gitconfig configs/git/.gitconfig
 
 # Backup vscode settings file
-cp -f $HOME/Library/ApplicationSupport/Code/User/settings.json configs/vscode/settings.json
+cp -f "$HOME/Library/Application Support/Code/User/settings.json" "configs/vscode/settings.json"
 # backup vsocde extensions list
 code --list-extensions > "configs/vscode/vs_code_extensions_list.txt"

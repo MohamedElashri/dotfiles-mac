@@ -1,5 +1,5 @@
 #export DOTFILES=$HOME/.dotfiles
-export ZSH="/Users/mohamedelashri/.oh-my-zsh"
+export ZSH="/Users/melashri/.oh-my-zsh"
 #ZSH_THEME="powerlevel10k/powerlevel10k"
 if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
     ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -51,6 +51,11 @@ export HOMEBREW_NO_ENV_HINTS=1
 ## PGP
 export GPG_TTY=$(tty)
 
+## selfhost infistcal
+export INFISICAL_API_URL="https://secrets.elashri.xyz/api"
+
+## ipassword cli
+eval "$(op completion zsh)"; compdef _op op
 
 # history
 export HISTFILE=~/.zsh_history

@@ -6,7 +6,7 @@
 [user]
 	name = Mohamed
 	email = muhammadelashri@gmail.com
-	signingkey = 29496E7A07758443
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILVhMqBTTTp0eNRsbraLX1f65LPNezRcG0ZJyxQt1k9A
 [commit]
 	gpgsign = true
 	template = /Users/mohamedelashri/.stCommitMsg
@@ -42,6 +42,7 @@ oldtool=Kaleidoscope
 	prompt = false
 [gpg]
 	program = /usr/local/bin/gpg
+	format = ssh
 
 [mergetool "ultracompare"]
 keepBackup=false
@@ -58,3 +59,5 @@ keepBackup=false
 trustExitCode=false
 prompt=false
 cmd=\"/Applications/UltraCompare.app/Contents/MacOS/UltraCompare\" -gitdt "$LOCAL" "$REMOTE" "$BASE" "$MERGED" -title1 "LOCAL" -title2 "REMOTE" -ff
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
