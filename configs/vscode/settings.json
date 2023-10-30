@@ -38,7 +38,8 @@
   "remote.SSH.connectTimeout": 100,
   "codeium.enableConfig": {
     "*": true,
-    "python": false
+    "python": false,
+    "c": false
   },
   "workbench.colorTheme": "Dracula Soft",
   "gitlens.advanced.messages": {
@@ -61,5 +62,15 @@
   "editor.formatOnPaste": true,
   "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
   "cody.plugins.debug.enabled": false,
-  "rootFileViewer.darkMode": true
+  "rootFileViewer.darkMode": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "python.formatting.provider": "none",
+  "github.copilot-labs.showBrushesLenses": true,
+  "github.copilot-labs.showTestGenerationLenses": true,
+  "remote.SSH.remotePlatform": {
+    "sleepy-earth": "linux"
+  }
 }

@@ -49,13 +49,14 @@ alias dbin='cd /usr/local/bin/'
 ### Terminal utilites ###
 
 alias c='clear' # clear terminal shortcut
-alias cd..='cd ..' # get rid of command not found
+#alias cd..='cd' # get rid of command not found
 alias mount='mount |column -t' # human readable mount output
 alias h='history' # show history
 alias j='jobs -l' # show job ids
 alias e='exit' #exit terminal
 alias reload='source ~/.zshrc' #reload terminal
 alias stats='zsh_stats' #terminal stats
+alias profile='nano ~/.zshrc' # access zshrc
 alias speedup="sudo rm -rf /private/var/log/asl/*" # Speed-up Terminal load time by clearing system logs
 alias root='sudo -i' # Gain root
 alias su='sudo -i' # Gain root 
@@ -111,7 +112,8 @@ alias record='asciinema rec' # Record terminal session
 alias nano='micro' ## use micro editor
 alias vim='Nvim' ## use neovim
 alias generate_password='LC_ALL=C tr -dc "[:alnum:]" < /dev/urandom | head -c 20 | pbcopy' # Generate a random password and copy it to the clipboard
-
+alias gcc13='gcc-13' # use gcc 13 from homebrew
+alias gcc12='gcc-12' # use gcc 12 from homebrew
 ## Git
 alias gst="git status"
 alias gb="git branch"
