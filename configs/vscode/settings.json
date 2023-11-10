@@ -37,27 +37,26 @@
   "git.ignoreLegacyWarning": true,
   "remote.SSH.connectTimeout": 100,
   "codeium.enableConfig": {
-    "*": true,
+    "*": false,
     "python": false,
     "c": false
   },
-  "workbench.colorTheme": "Dracula Soft",
   "gitlens.advanced.messages": {
     "suppressGitVersionWarning": true
   },
   "gitlens.gitCommands.skipConfirmations": [
     "fetch:command",
     "stash-push:command",
-    "switch:command",
-    "remote-add:command"
-  ],
+    "switch:command"
+    ],
   "gitlens.views.remotes.branches.layout": "list",
   "editor.inlineSuggest.showToolbar": "always",
   "editor.minimap.enabled": false,
   "editor.minimap.autohide": true, 
-  "editor.fontFamily": "JetBrains Mono",
-  "editor.fontSize": 14,
-  "editor.fontLigatures": true,
+  "editor.fontFamily": "Monaspace Argon Var",
+  "editor.fontWeight": "bold",
+  "editor.fontLigatures": "'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03'",
+  "editor.fontSize": 13,
   "workbench.editorLargeFileConfirmation": 50,
   "editor.formatOnPaste": true,
   "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
@@ -71,6 +70,10 @@
   "github.copilot-labs.showBrushesLenses": true,
   "github.copilot-labs.showTestGenerationLenses": true,
   "remote.SSH.remotePlatform": {
-    "sleepy-earth": "linux"
-  }
+    "sleepy-earth": "linux",
+    "sneezy-earth": "linux",
+    "lxplus": "linux"
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Dracula Soft"
 }

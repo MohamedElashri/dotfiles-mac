@@ -10,8 +10,6 @@ font-victor-mono-nerd-font
 fuse-t
 fuse-t-sshfs
 jupyter-notebook-viewer
-kitty
-lagrange
 mactex
 miniforge
 notion
@@ -22,5 +20,4 @@ rio
 slack
 vlc
 warp
-wezterm
 xquartz

@@ -27,8 +27,6 @@ coreutils
 ctags
 dav1d
 davix
-docbook
-docbook-xsl
 duf
 duktape
 dust
@@ -60,7 +58,6 @@ gl2ps
 glew
 glib
 gmp
-gnu-getopt
 gnupg
 gnutls
 go
@@ -187,6 +184,8 @@ nghttp2
 nlohmann-json
 nmap
 npth
+nspr
+nss
 numpy
 ocrmypdf
 oniguruma
@@ -212,6 +211,7 @@ pinentry-mac
 pixman
 pkg-config
 pngquant
+poppler
 popt
 proselint
 pybind11
@@ -278,7 +278,6 @@ wimlib
 write-good
 x264
 x265
-xmlto
 xorgproto
 xrootd
 xvid
@@ -308,8 +307,6 @@ font-victor-mono-nerd-font
 fuse-t
 fuse-t-sshfs
 jupyter-notebook-viewer
-kitty
-lagrange
 mactex
 miniforge
 notion
@@ -320,5 +317,4 @@ rio
 slack
 vlc
 warp
-wezterm
 xquartz
