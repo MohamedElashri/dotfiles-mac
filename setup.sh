@@ -45,3 +45,6 @@ cat $HOME/work/git/dotfiles/vscode/vs_code_extensions_list.txt | xargs -L1 code 
 stow /configs/git -t $HOME/
 git config --global core.excludesfile $HOME/.gitignore
 
+# fonts
+cp -f configs/fonts/Fonts/* ~/Library/Fonts/
+cp -f configs/fonts/FontCollections/* ~/Library/FontCollections/

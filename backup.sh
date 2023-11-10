@@ -22,3 +22,9 @@ cp -f ~/.gitignore_global 	configs/git/.gitignore_global
 cp -f "$HOME/Library/Application Support/Code/User/settings.json" "configs/vscode/settings.json"
 # backup vsocde extensions list
 code --list-extensions > "configs/vscode/vs_code_extensions_list.txt"
+
+
+# Backup Mac Installed fonts 
+cp -f ~/Library/Fonts/* "configs/fonts/Fonts"
+# Backup Fonts Collections
+cp -f ~/Library/FontCollections/* "configs/fonts/FontCollections"
