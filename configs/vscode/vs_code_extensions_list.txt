@@ -7,6 +7,8 @@ bierner.github-markdown-preview
 Codeium.codeium
 Codium.codium
 deerawan.vscode-dash
+dendron.dendron
+dendron.dendron-paste-image
 dracula-theme.theme-dracula
 eamodio.gitlens
 esbenp.prettier-vscode
@@ -14,15 +16,18 @@ formulahendry.code-runner
 GitHub.codespaces
 GitHub.copilot
 GitHub.copilot-chat
-GitHub.copilot-labs
 GitHub.github-vscode-theme
 GitHub.heygithub
 GitHub.remotehub
 github.vscode-github-actions
+GitHub.vscode-pull-request-github
+h5web.vscode-h5web
 IronGeek.vscode-env
 jeff-hykin.better-cpp-syntax
+kaleidoscope-app.vscode-ksdiff
 KevinRose.vsc-python-indent
 mathematic.vscode-pdf
+mechatroner.rainbow-csv
 ms-azuretools.vscode-docker
 ms-python.autopep8
 ms-python.isort
@@ -50,6 +55,7 @@ nvidia.nsight-vscode-edition
 pal-theme.pal-theme
 phind.phind
 quarto.quarto
+redhat.vscode-yaml
 samuelcolvin.jinjahtml
 shd101wyy.markdown-preview-enhanced
 sourcegraph.cody-ai
@@ -57,6 +63,7 @@ sourcegraph.sourcegraph
 spadin.remote-x11
 spadin.remote-x11-ssh
 tamasfe.even-better-toml
+timonwong.shellcheck
 twxs.cmake
 VisualStudioExptTeam.intellicode-api-usage-examples
 VisualStudioExptTeam.vscodeintellicode

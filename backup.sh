@@ -15,7 +15,7 @@ cp -f ~/shellhistory.zsh 	configs/zsh/shellhistory.zsh
 cp -f ~/.p10k.zsh		 	configs/zsh/.p10k.zsh
 
 # Backup git config file
-cp -f ~/.gitconfig 			configs/git/.gitconfig
+cp -f ~/.gitconfig 			 configs/git/.gitconfig
 cp -f ~/.gitignore_global 	configs/git/.gitignore_global
 
 # Backup vscode settings file

@@ -1,10 +1,13 @@
 1password-cli
 adguard
+aerospace
 alt-tab
 applite
 bluesnooze
+calibre
 discord
 dotnet-sdk
+extraterm
 font-fira-code
 font-victor-mono-nerd-font
 fuse-t
@@ -16,6 +19,7 @@ notion
 openinterminal
 qbittorrent
 raycast
+rectangle
 rio
 slack
 vlc

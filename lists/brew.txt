@@ -4,6 +4,7 @@ aribb24
 armadillo
 arpack
 asciinema
+at-spi2-core
 atk
 autoconf
 bat
@@ -27,6 +28,7 @@ coreutils
 ctags
 dav1d
 davix
+dbus
 duf
 duktape
 dust
@@ -97,6 +99,7 @@ jsonlint
 jsonschema
 krb5
 lame
+lazygit
 leptonica
 less
 libaec
@@ -123,6 +126,7 @@ libimagequant
 libksba
 liblinear
 liblqr
+libmicrohttpd
 libmpc
 libnghttp2
 libogg
@@ -157,7 +161,10 @@ libxau
 libxcb
 libxdmcp
 libxext
+libxfixes
+libxi
 libxrender
+libxtst
 libyaml
 little-cms2
 llvm
@@ -210,6 +217,7 @@ pinentry
 pinentry-mac
 pixman
 pkg-config
+pmix
 pngquant
 poppler
 popt
@@ -219,9 +227,14 @@ pycparser
 pyenv
 pyenv-virtualenv
 pygments
+python-attrs
+python-click
 python-cryptography
+python-idna
 python-lxml
 python-packaging
+python-pathspec
+python-platformdirs
 python-setuptools
 python@3.10
 python@3.11
@@ -297,11 +310,14 @@ zoxide
 zstd
 1password-cli
 adguard
+aerospace
 alt-tab
 applite
 bluesnooze
+calibre
 discord
 dotnet-sdk
+extraterm
 font-fira-code
 font-victor-mono-nerd-font
 fuse-t
@@ -313,6 +329,7 @@ notion
 openinterminal
 qbittorrent
 raycast
+rectangle
 rio
 slack
 vlc
