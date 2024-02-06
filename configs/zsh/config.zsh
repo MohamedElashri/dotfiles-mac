@@ -105,6 +105,7 @@ ZSH_HIGHLIGHT_STYLES[cursor]='standout'
 
 export PATH="/usr/local/Cellar/python@3.10/3.10/bin:$PATH"
 export PATH=$(brew --prefix python)/bin:$PATH
+export PYTHONPATH="/$HOME/pythia8310/lib:$PYTHONPATH"
 
 # sets the Homebrew-installed Ruby to a higher priority than the system Ruby
 
@@ -114,7 +115,8 @@ if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
 fi
 
 
-
+# Atuin client config location
+export ATUIN_CONFIG_DIR=$HOME/.atuin
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else

@@ -1,88 +1,92 @@
 {
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "application.shellEnvironmentResolutionTimeout": 20,
+  "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
   "aws.telemetry": false,
-  "editor.accessibilitySupport": "off",
-  "editor.inlineSuggest.enabled": true,
-  "terminal.integrated.env.osx": {
-    "FIG_NEW_SESSION": "1"
-  },
-  "workbench.colorCustomizations": {
-    "terminal.background":"#191919",
-    "terminal.foreground":"#A7A7A7",
-    "terminalCursor.background":"#A7A7A7",
-    "terminalCursor.foreground":"#A7A7A7",
-    "terminal.ansiBlack":"#191919",
-    "terminal.ansiBlue":"#639EE4",
-    "terminal.ansiBrightBlack":"#5F5A60",
-    "terminal.ansiBrightBlue":"#639EE4",
-    "terminal.ansiBrightCyan":"#4BB1A7",
-    "terminal.ansiBrightGreen":"#84B97C",
-    "terminal.ansiBrightMagenta":"#B888E2",
-    "terminal.ansiBrightRed":"#DC657D",
-    "terminal.ansiBrightWhite":"#FFFFFF",
-    "terminal.ansiBrightYellow":"#C3BA63",
-    "terminal.ansiCyan":"#4BB1A7",
-    "terminal.ansiGreen":"#84B97C",
-    "terminal.ansiMagenta":"#B888E2",
-    "terminal.ansiRed":"#DC657D",
-    "terminal.ansiWhite":"#A7A7A7",
-    "terminal.ansiYellow":"#C3BA63"},
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": true,
-    "scminput": false,
-    "quarto": false,
-    "python": true
-  },
-  "git.ignoreLegacyWarning": true,
-  "remote.SSH.connectTimeout": 100,
   "codeium.enableConfig": {
     "*": false,
-    "python": false,
-    "c": false
+    "c": false,
+    "python": false
+  },
+  "cody.plugins.debug.enabled": false,
+  "editor.accessibilitySupport": "off",
+  "editor.fontFamily": "Monaspace Argon",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 13,
+  "editor.fontWeight": "bold",
+  "editor.formatOnPaste": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.inlineSuggest.showToolbar": "always",
+  "editor.minimap.autohide": true,
+  "editor.minimap.enabled": false,
+  "git.ignoreLegacyWarning": true,
+  "github.copilot-labs.showBrushesLenses": true,
+  "github.copilot-labs.showTestGenerationLenses": true,
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": true,
+    "plaintext": false,
+    "python": true,
+    "quarto": false,
+    "scminput": false
   },
   "gitlens.advanced.messages": {
     "suppressGitVersionWarning": true
   },
+  "gitlens.ai.experimental.anthropic.model": "claude-instant-1",
+  "gitlens.ai.experimental.provider": "anthropic",
   "gitlens.gitCommands.skipConfirmations": [
     "fetch:command",
     "stash-push:command",
     "switch:command"
-    ],
-  "gitlens.views.remotes.branches.layout": "list",
-  "editor.inlineSuggest.showToolbar": "always",
-  "editor.minimap.enabled": false,
-  "editor.minimap.autohide": true, 
-  "editor.fontFamily": "Monaspace Argon",
-  "editor.fontWeight": "bold",
-  "editor.fontLigatures": true,
-  "editor.fontSize": 13,
-  "terminal.integrated.fontFamily": "JetBrains Mono",
-  "workbench.editorLargeFileConfirmation": 50,
-  "editor.formatOnPaste": true,
-  "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
-  "cody.plugins.debug.enabled": false,
-  "rootFileViewer.darkMode": true,
-  "vsicons.dontShowNewVersionMessage": true,
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.autopep8"
-  },
-  "python.formatting.provider": "none",
-  "github.copilot-labs.showBrushesLenses": true,
-  "github.copilot-labs.showTestGenerationLenses": true,
-  "remote.SSH.remotePlatform": {
-    "sleepy-earth": "linux",
-    "sneezy-earth": "linux",
-    "lxplus": "linux"
-  },
-  "workbench.iconTheme": "vscode-icons",
-  "workbench.colorTheme": "Dracula",
-  "terminal.external.osxExec": "Warp.app",
-  "application.shellEnvironmentResolutionTimeout": 20,
-  "redhat.telemetry.enabled": false,
+  ],
   "gitlens.graph.layout": "editor",
+  "gitlens.views.remotes.branches.layout": "list",
+  "jupyter.askForKernelRestart": false,
+  "python.formatting.provider": "none",
+  "redhat.telemetry.enabled": false,
+  "remote.SSH.connectTimeout": 100,
+  "remote.SSH.remotePlatform": {
+    "lxplus": "linux",
+    "sleepy-earth": "linux",
+    "sneezy-earth": "linux"
+  },
+  "rootFileViewer.darkMode": true,
+  "terminal.external.osxExec": "Warp.app",
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.colorCustomizations": {
+    "terminal.ansiBlack": "#191919",
+    "terminal.ansiBlue": "#639EE4",
+    "terminal.ansiBrightBlack": "#5F5A60",
+    "terminal.ansiBrightBlue": "#639EE4",
+    "terminal.ansiBrightCyan": "#4BB1A7",
+    "terminal.ansiBrightGreen": "#84B97C",
+    "terminal.ansiBrightMagenta": "#B888E2",
+    "terminal.ansiBrightRed": "#DC657D",
+    "terminal.ansiBrightWhite": "#FFFFFF",
+    "terminal.ansiBrightYellow": "#C3BA63",
+    "terminal.ansiCyan": "#4BB1A7",
+    "terminal.ansiGreen": "#84B97C",
+    "terminal.ansiMagenta": "#B888E2",
+    "terminal.ansiRed": "#DC657D",
+    "terminal.ansiWhite": "#A7A7A7",
+    "terminal.ansiYellow": "#C3BA63",
+    "terminal.background": "#191919",
+    "terminal.foreground": "#A7A7A7",
+    "terminalCursor.background": "#A7A7A7",
+    "terminalCursor.foreground": "#A7A7A7"
+  },
+  "workbench.colorTheme": "Dracula",
   "workbench.editorAssociations": {
     "*.xls": "default"
   },
-  "jupyter.askForKernelRestart": false
+  "workbench.editorLargeFileConfirmation": 50,
+  "workbench.iconTheme": "vscode-icons",
+  "accessibility.voice.keywordActivation": "inlineChat"
 }
