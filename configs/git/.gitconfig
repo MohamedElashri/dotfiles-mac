@@ -4,8 +4,8 @@
 	required = true
 	clean = git-lfs clean -- %f
 [user]
-	name = Mohamed Elashri
-	email = me@elashri.com
+	name = MohamedElashri
+	email = mail@elashri.com
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILVhMqBTTTp0eNRsbraLX1f65LPNezRcG0ZJyxQt1k9A
 [commit]
 	gpgsign = true

@@ -16,7 +16,7 @@ cp -f ~/.p10k.zsh		 	configs/zsh/.p10k.zsh
 
 # Backup git config file
 cp -f ~/.gitconfig 			 configs/git/.gitconfig
-cp -f ~/.gitignore_global 	configs/git/.gitignore_global
+cp -f ~/.gitignore_global 	 configs/git/.gitignore_global
 
 # Backup vscode settings file
 cp -f "$HOME/Library/Application Support/Code/User/settings.json" "configs/vscode/settings.json"
