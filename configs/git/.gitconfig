@@ -3,58 +3,199 @@
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+
 [user]
 	name = MohamedElashri
 	email = mail@elashri.com
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILVhMqBTTTp0eNRsbraLX1f65LPNezRcG0ZJyxQt1k9A
+
+[credential]
+  username = "MohamedElashri"
+
+[credential "https://gitlab.cern.ch"]
+  username = "melashri"  
+
+[credential "https://github.com"]
+  helper =
+  helper = !/usr/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+  helper =
+  helper = !/usr/bin/gh auth git-credential
+
+  
 [commit]
 	gpgsign = true
+	verbose = true
 	template = $Home/.stCommitMsg
+
+[fetch]
+	recurseSubmodules = on-demand
+	prune = true
+
+[rebase]
+	autosquash = true
+
+[pull]
+	rebase = true
+
 [tag]
 	forceSignAnnotated = true
 
-# [url "git@github.com:"]
-  #      insteadOf = https://github.com/
+[delta]
+  line-numbers = true
+  navigate = true
+  light = false
+  side-by-side = true
+
+[blame]
+  date = short
+  showEmail = true
+
+[branch]
+  #autosetupmerge = always
+  #autosetuprebase = always
+
+
 [core]
-	excludesfile = $HOME/.gitignore_global
+	excludesfile = ~/.gitignore_global
+	whitespace = space-before-tab, trailing-space, cr-at-eol
+
+[color]
+  branch      = auto
+  diff        = auto
+  grep        = auto
+  interactive = auto
+  status      = auto
+  ui          = auto
+  pager       = true
+
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
+
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+
 [diff]
 oldtool=Kaleidoscope
 
 	tool = Kaleidoscope
+
 [merge]
 oldtool=Kaleidoscope
 
 	tool = Kaleidoscope
+
 [gpg]
 	program = /usr/local/bin/gpg
 	format = ssh
 
-[UC]
-defdiffmerge=yes
-defdiff=yes
 
-[difftool "ultracompare"]
-keepBackup=false
-trustExitCode=false
-prompt=false
-cmd=\"/Applications/UltraCompare.app/Contents/MacOS/UltraCompare\" -gitdt "$LOCAL" "$REMOTE" "$BASE" "$MERGED" -title1 "LOCAL" -title2 "REMOTE" -ff
 [gpg "ssh"]
 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+
+[filter "lfs"]
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+
+
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
 [difftool]
 	prompt = false
 	trustExitCode = true
+
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
-[mergetool]
-	prompt = false
+
+[pretty]
+
+    custom = "%C(magenta)%h%C(red)%d %C(yellow)%ar %C(green)%s %C(yellow)(%an)"
+    #                     │        │            │            │             └─ author name
+    #                     │        │            │            └─ message
+    #                     │        │            └─ date (relative)
+    #                     │        └─ decorations (branch, heads or tags)
+    #                     └─ hash (abbreviated)
+
+
 [help]
     autocorrect = 1
+
+[alias]
+    co = checkout # Checkout a branch
+    cp  = cherry-pick # Cherry-pick a commit
+    ci = commit # Commit changes
+    st = status # Show the working tree status
+    br = branch # List branches
+    up = pull --rebase # Update from remote
+    div = divergence # Show the divergence from the remote
+    ff = pull --ff-only # Fast-forward only
+    lg = log --decorate # Show log with branch names and tags
+    logs = log --stat --decorate # Show log with file changes
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short # Show log with pretty format
+    trim = !git remote prune origin && git gc # Prune remote branches and garbage collect
+    cleanup = !git clean -df && git stash clear # Clean untracked files and clear the stash
+    all = add -A # Add all files , remove deleted
+    amend = commit --amend -C HEAD # Amend the last commit
+    conflicts = !git ls-files -u | awk '{print $4}' | sort -u # List files with conflicts
+    adda = !git add -A && git status # Add untracked, remove deleted, and show status
+    unadd = rm --cached # Unstage a file
+    delete-local-merged = branch -d `git branch --merged | grep -v '^*' | tr -d '\n'` # Delete local branches that have been merged
+    undo = reset --soft HEAD^ # Undo last commit without removing changes
+    diffc = diff --cached # Show changes in the index / Diff what is staged for the next commit
+    diffst = diff --stat # Diff overview
+    graph =  log --pretty=oneline --date-order --graph # Show the commit graph
+    grapha = log --pretty=oneline --date-order --graph --all # Show the commit graph for all branches
+    logp = log --pretty=nice --date-order # Show the log with pretty format
+    who = shortlog --numbered --summary --email --no-merges --since="4 months" # Show who has committed in the last 4 months
+    merged = !sh -c 'git rev-list HEAD | grep $(git rev-parse $0)' # check if a branch has been merged into the current HEAD
+    rebranch = !sh -c 'git stash && git branch $0 && git reset --hard HEAD^ && git checkout $0' # move the last commit to a new branch
+    root = rev-parse --show-toplevel # Show the root directory of the repository
+    untracked = ls-files --others --exclude-standard * # List untracked files
+
+
+    ; Custom aliases
+    uncommit = !git reset HEAD~1 # Undo last commit without removing changes
+    absorb = "!f() { git ff $1 && git branch -d $f }; f" # Fast-forward and delete a branch
+    apply-stash = "!f() { git stash apply stash@{/$*}; }; f" # Apply a specific stash
+    gomain = !git checkout main && git fetch && git reset --hard origin/main && git r # Go to main, fetch, reset, and show the log
+
+    ; data analysis
+    authors = !git log --format="%aN"
+    email-domains = !git log --format="%aE" | awk -F'@' '{print $2}'
+    emails = !git log --format="%aE"
+    one-week = !git diff --stat `git log --since='1 week' --format=%H | tail -1`
+    ranked-authors = !git authors | sort | uniq -c | sort -n
+    ranked-email-domains = !git email-domains | sort | uniq -c | sort -n
+    unique-authors = !git authors | sort -u
+    unique-email-domains = !git email-domains | sort -u
+    praise = blame --date=short --show-email
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Find commits by commit message
+
+    cm = "!f() { \
+        git log --pretty=custom --decorate --date=short --grep=\"$1\"; \
+    }; f"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Find commits by source code
+
+    cc = "!f() { \
+        git log --pretty=custom --decorate --date=short -S\"$1\"; \
+    }; f"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+
+
+
