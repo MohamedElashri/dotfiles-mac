@@ -37,6 +37,7 @@ dust
 eigen
 emacs
 exa
+eza
 fd
 ffmpeg
 ffmpeg@4
@@ -198,6 +199,7 @@ nettle
 nghttp2
 nlohmann-json
 nmap
+node
 npth
 nspr
 nss
@@ -322,6 +324,7 @@ zstd
 1password-cli
 adguard
 aerospace
+alacritty
 alt-tab
 applite
 bluesnooze
@@ -330,6 +333,7 @@ font-fira-code
 font-victor-mono-nerd-font
 fuse-t
 fuse-t-sshfs
+hyper
 mactex
 miniforge
 openinterminal

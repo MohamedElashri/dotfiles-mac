@@ -3,7 +3,6 @@ albertopdrf.root-file-viewer
 amazonwebservices.aws-toolkit-vscode
 amazonwebservices.codewhisperer-for-command-line-companion
 be5invis.toml
-benjaminbenais.copilot-theme
 bierner.github-markdown-preview
 codeium.codeium
 codium.codium
@@ -21,7 +20,6 @@ github.github-vscode-theme
 github.heygithub
 github.remotehub
 github.vscode-github-actions
-github.vscode-pull-request-github
 h5web.vscode-h5web
 irongeek.vscode-env
 jeff-hykin.better-cpp-syntax
@@ -46,7 +44,6 @@ ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
 ms-vscode-remote.vscode-remote-extensionpack
 ms-vscode.cmake-tools
-ms-vscode.cpptools
 ms-vscode.cpptools-extension-pack
 ms-vscode.cpptools-themes
 ms-vscode.makefile-tools
@@ -55,8 +52,6 @@ ms-vscode.remote-repositories
 ms-vscode.remote-server
 ms-vscode.vscode-speech
 ms-vsliveshare.vsliveshare
-nvidia.nsight-vscode-edition
-pal-theme.pal-theme
 phind.phind
 quarto.quarto
 redhat.vscode-yaml

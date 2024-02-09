@@ -24,7 +24,7 @@ cp -f "$HOME/Library/Application Support/Code/User/settings.json" "configs/vscod
 code --list-extensions > "configs/vscode/vs_code_extensions_list.txt"
 
 
-# Backup Mac Installed fonts 
+# Backup Mac Installed fonts
 cp -f ~/Library/Fonts/* "configs/fonts/Fonts"
 # Backup Fonts Collections
 cp -f ~/Library/FontCollections/* "configs/fonts/FontCollections"
