@@ -36,8 +36,8 @@ alias cleanupDS="find . -type f -name '*.DS_Store' -ls -delete" # Cleanup .DS_St
 
 ## Directories
 alias sites="cd $HOME/Sites"
-alias github='cd /Users/melashri/Desktop/projects/Github'
-alias lhcb= 'cd /Users/melashri/Desktop/projects/LHCb'
+alias github='cd $HOME/Desktop/projects/Github'
+alias lhcb= 'cd $HOME/Desktop/projects/LHCb'
 alias doc='cd ~/Documents/'
 alias ds='cd ~/.ssh'
 alias dz='cd ~/.dotfiles'
@@ -114,30 +114,9 @@ alias vim='Nvim' ## use neovim
 alias generate_password='LC_ALL=C tr -dc "[:alnum:]" < /dev/urandom | head -c 20 | pbcopy' # Generate a random password and copy it to the clipboard
 alias gcc13='gcc-13' # use gcc 13 from homebrew
 alias gcc12='gcc-12' # use gcc 12 from homebrew
-## Git
-alias gst="git status"
-alias gb="git branch"
-alias gc="git checkout"
-alias gl="git log --oneline --decorate --color"
-alias amend="git add . && git commit --amend --no-edit"
-alias commit="git add . && git commit -m"
-alias diff="git diff"
-alias force="git push --force"
-alias nuke="git clean -df && git reset --hard"
-alias pop="git stash pop"
-alias pull="git pull"
-alias push="git push"
-alias resolve="git add . && git commit --no-edit"
-alias stash="git stash -u"
-alias unstage="git restore --staged ."
-alias wip="commit wip"
-# Git Diff
-alias gd='git diff'
-alias gds='git diff --staged'
-alias gdn='git diff --name-only'
+
 
 ### Networking ###
- 
 alias clear_dns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder' # clear DNS cache
 alias ping='ping -c 5' # ping 5 times only
 alias ports='netstat -tulanp' # show all open ports
