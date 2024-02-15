@@ -1,0 +1,89 @@
+ControlPath ~/.ssh/%C
+ControlMaster auto
+ControlPersist 1
+PermitLocalCommand yes
+LocalCommand fig hook ssh --prompt "$$" "$(tty)" '~/.ssh/%C' '%r@%n' 1>&2
+
+#SCE_GROUP:8C026B3F-BF01-4CC7-8E5A-BAFC9684982F:::UC
+
+Host Sneezy
+	User melashri
+	HostName sneezy.geop.uc.edu
+	Port 22
+
+Host Sleepy
+	User melashri
+	HostName sleepy.geop.uc.edu
+	Port 22
+
+Host Goofy
+	User melashri
+	HostName goofy.geop.uc.edu
+	Port 22
+	ForwardX11 yes
+	ForwardX11Trusted yes
+	ProxyJump melashri@earth.phy.uc.edu:22
+
+# I need to access that server then access Goofy from there.
+Host Earth
+	User melashri
+	HostName earth.phy.uc.edu
+	Port 22
+	ForwardX11 yes
+
+Host *
+	IdentityFile ~/.ssh/id_rsa
+	AddKeysToAgent yes
+	UseKeychain yes
+
+Host Lxplus
+	User melashri
+	HostName lxplus.cern.ch
+	Port 22
+	ForwardX11 yes
+	ForwardAgent yes
+	ServerAliveInterval 60
+	ServerAliveCountMax 240
+	IdentityFile /Users/melashri/.ssh/id_rsa
+
+Host sleepy-earth
+	User melashri
+	HostName sleepy.geop.uc.edu
+	Port 22
+	LocalForward 7899 localhost:7899
+	ForwardAgent yes
+	ForwardX11 yes
+	ForwardX11Trusted yes
+	ProxyJump melashri@earth.phy.uc.edu:22
+	ServerAliveInterval 600
+	ServerAliveCountMax 240
+
+Host sneezy-earth
+	User melashri
+	HostName sneezy.geop.uc.edu
+	Port 22
+	LocalForward 7899 localhost:7899
+	ForwardAgent yes
+	ForwardX11 yes
+	ForwardX11Trusted yes
+	ProxyJump melashri@earth.phy.uc.edu:22
+	ServerAliveInterval 600
+	ServerAliveCountMax 240
+
+Host NY-MELASHRI
+	User melashri
+	HostName 66.94.110.168
+	Port 239
+	ForwardX11 yes
+	ForwardX11Trusted yes
+	ServerAliveCountMax 240
+	ServerAliveInterval 120
+
+Host GE-MELASHRI
+	User melashri
+	HostName 185.182.187.198
+	Port 239
+	ForwardX11 yes
+	ForwardX11Trusted yes
+	ServerAliveCountMax 240
+	ServerAliveInterval 120

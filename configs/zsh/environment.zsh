@@ -5,7 +5,7 @@ if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
     ZSH_THEME="powerlevel10k/powerlevel10k"
 
 fi
-
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"

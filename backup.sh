@@ -15,7 +15,7 @@ cp -f ~/shellhistory.zsh 	          configs/zsh/shellhistory.zsh
 cp -f ~/.p10k.zsh                     configs/zsh/.p10k.zsh
 cp -f ~/.config/bat/config            configs/cli/bat/config
 cp -f ~/.config/zed/settings.json     configs/zed/settings.json
-cp -f ~/.autin/config.toml            configs/cli/autin/config.toml
+cp -f ~/.atuin/config.toml            configs/cli/atuin/config.toml
 cp -f ~/.ssh/config                   configs/ssh/config
 
 # Backup git config file
