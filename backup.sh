@@ -17,7 +17,7 @@ cp -f ~/.config/bat/config            configs/cli/bat/config
 cp -f ~/.config/zed/settings.json     configs/zed/settings.json
 cp -f ~/.atuin/config.toml            configs/cli/atuin/config.toml
 cp -f ~/.ssh/config                   configs/ssh/config
-
+cp -f ~/.config/helix/config.toml     configs/cli/helix/config.toml
 # Backup git config file
 cp -f ~/.gitconfig 			 configs/git/.gitconfig
 cp -f ~/.gitignore_global 	 configs/git/.gitignore_global
