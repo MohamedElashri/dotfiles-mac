@@ -1,16 +1,17 @@
 1password-cli
 adguard
-aerospace
 alacritty
 alt-tab
 applite
 bluesnooze
+contour
 discord
+extraterm
 font-fira-code
-font-victor-mono-nerd-font
 fuse-t
 fuse-t-sshfs
 hyper
+kitty
 mactex
 miniforge
 openinterminal
@@ -22,4 +23,5 @@ slack
 vimr
 vlc
 warp
+wezterm
 xquartz

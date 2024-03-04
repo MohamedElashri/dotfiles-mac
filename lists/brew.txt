@@ -11,7 +11,6 @@ atuin
 autoconf
 bat
 berkeley-db@5
-black
 boost
 brotli
 c-ares
@@ -25,8 +24,10 @@ chezmoi
 circumflex
 cjson
 cmake
+coder
 colordiff
 coreutils
+cppcheck
 ctags
 dav1d
 davix
@@ -36,7 +37,6 @@ duktape
 dust
 eigen
 emacs
-exa
 eza
 fd
 ffmpeg
@@ -45,6 +45,7 @@ fftw
 firefox-profile-switcher-connector
 flac
 fontconfig
+free-mac
 freetype
 frei0r
 fribidi
@@ -82,6 +83,7 @@ helix
 hepmc3
 hicolor-icon-theme
 highway
+htop
 hugo
 hwloc
 icu4c
@@ -204,7 +206,7 @@ npth
 nspr
 nss
 numpy
-ocrmypdf
+nvm
 oniguruma
 open-mpi
 openblas
@@ -241,19 +243,16 @@ pyenv
 pyenv-virtualenv
 pygments
 python-argcomplete
-python-attrs
 python-click
 python-cryptography
 python-idna
 python-lxml
 python-packaging
 python-pathspec
-python-platformdirs
 python-setuptools
 python@3.10
 python@3.11
 python@3.12
-python@3.8
 python@3.9
 pyvim
 pyyaml
@@ -264,7 +263,6 @@ rclone
 readline
 reattach-to-user-namespace
 redis
-rich
 ripgrep
 root
 rsync
@@ -289,6 +287,7 @@ tesseract-lang
 tflint
 theora
 tidy-html5
+tinyxml2
 tmux
 tree-sitter
 unbound
@@ -323,17 +322,18 @@ zoxide
 zstd
 1password-cli
 adguard
-aerospace
 alacritty
 alt-tab
 applite
 bluesnooze
+contour
 discord
+extraterm
 font-fira-code
-font-victor-mono-nerd-font
 fuse-t
 fuse-t-sshfs
 hyper
+kitty
 mactex
 miniforge
 openinterminal
@@ -345,4 +345,5 @@ slack
 vimr
 vlc
 warp
+wezterm
 xquartz

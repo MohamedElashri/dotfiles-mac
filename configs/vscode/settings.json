@@ -48,11 +48,7 @@
   "python.formatting.provider": "none",
   "redhat.telemetry.enabled": false,
   "remote.SSH.connectTimeout": 100,
-  "remote.SSH.remotePlatform": {
-    "lxplus": "linux",
-    "sleepy-earth": "linux",
-    "sneezy-earth": "linux"
-  },
+  "remote.SSH.remotePlatform": {"lxplus":"linux","sleepy-earth":"linux","sneezy-earth":"linux","coder-vscode--melashri--VisualStudio":"linux"},
   "rootFileViewer.darkMode": true,
   "terminal.external.osxExec": "Warp.app",
   "terminal.integrated.env.osx": {
@@ -91,5 +87,6 @@
   "workbench.iconTheme": "vscode-icons",
   "accessibility.voice.keywordActivation": "inlineChat",
   "extensions.autoCheckUpdates": false,
-  "extensions.autoUpdate": false
+  "extensions.autoUpdate": false,
+  "remoteHub.commitDirectlyWarning": "off"
 }

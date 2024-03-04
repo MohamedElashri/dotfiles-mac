@@ -5,6 +5,7 @@ amazonwebservices.codewhisperer-for-command-line-companion
 be5invis.toml
 bierner.github-markdown-preview
 codeium.codeium
+coder.coder-remote
 codium.codium
 deerawan.vscode-dash
 dendron.dendron

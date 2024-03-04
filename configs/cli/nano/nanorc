@@ -1,0 +1,9 @@
+set linenumbers
+include /opt/homebrew/Cellar/nano/5.7/share/nano/*.nanorc
+#set smooth
+set autoindent
+set backup
+set casesensitive
+set historylog
+#set mouse
+#set morespace

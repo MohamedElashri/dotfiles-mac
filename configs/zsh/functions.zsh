@@ -38,10 +38,6 @@ function git_search() {
 }
 ######
 
-## Github ##
-# Github Copilot CLI
-eval "$(github-copilot-cli alias -- "$0")"
-## Github ##
 ########## Development ##########
 
 
@@ -308,17 +304,32 @@ function drmi() {
 
 ########## Misc ##########
 # Cheatsheets https://github.com/chubin/cheat.sh
-function cht() {
+function cheat() {
   curl https://cheat.sh/$1
 }
 
 # Show frequently used commands
-function freq_cmd() {
-  if [[ -n "$1" ]]; then
-    history | awk '{print $4}' | sort | uniq -c | sort -nr | head -n $1
-  else
-    history | awk '{print $4}' | sort | uniq -c | sort -nr | head
-  fi
+function cmd() {
+
+  history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n10
 }
 
+
+# Show all aliases, functions, and scripts in user PATH
+list_commands() {
+  # List aliases
+  echo "User-defined Aliases:"
+  alias
+
+  echo
+  echo "User-defined Functions:"
+  # List functions, excluding any that might be predefined by the shell itself or plugins
+  # This filters out functions starting with an underscore, common in Zsh for internal or system functions
+  typeset -f | awk '/^[a-zA-Z0-9]/ {print $1}' | while read -r function_name; do
+    # Print the function name
+    echo $function_name
+    # Optionally, to print the function body as well, uncomment the next line
+    # typeset -f $function_name
+  done
+}
 ########## Misc ##########

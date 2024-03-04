@@ -6,17 +6,17 @@ LocalCommand fig hook ssh --prompt "$$" "$(tty)" '~/.ssh/%C' '%r@%n' 1>&2
 
 #SCE_GROUP:8C026B3F-BF01-4CC7-8E5A-BAFC9684982F:::UC
 
-Host Sneezy
+Host sneezy
 	User melashri
 	HostName sneezy.geop.uc.edu
 	Port 22
 
-Host Sleepy
+Host sleepy
 	User melashri
 	HostName sleepy.geop.uc.edu
 	Port 22
 
-Host Goofy
+Host goofy
 	User melashri
 	HostName goofy.geop.uc.edu
 	Port 22
@@ -24,8 +24,7 @@ Host Goofy
 	ForwardX11Trusted yes
 	ProxyJump melashri@earth.phy.uc.edu:22
 
-# I need to access that server then access Goofy from there.
-Host Earth
+Host earth
 	User melashri
 	HostName earth.phy.uc.edu
 	Port 22
@@ -36,7 +35,7 @@ Host *
 	AddKeysToAgent yes
 	UseKeychain yes
 
-Host Lxplus
+Host lxplus
 	User melashri
 	HostName lxplus.cern.ch
 	Port 22
@@ -87,3 +86,13 @@ Host GE-MELASHRI
 	ForwardX11Trusted yes
 	ServerAliveCountMax 240
 	ServerAliveInterval 120
+
+# --- START CODER VSCODE ---
+Host coder-vscode--*
+  ConnectTimeout 0
+  LogLevel ERROR
+  ProxyCommand "/Users/melashri/Library/Application Support/Code/User/globalStorage/coder.coder-remote/bin/coder-darwin-arm64" vscodessh --network-info-dir "/Users/melashri/Library/Application Support/Code/User/globalStorage/coder.coder-remote/net" --log-dir "/Users/melashri/Library/Application Support/Code/User/globalStorage/coder.coder-remote/log" --session-token-file "/Users/melashri/Library/Application Support/Code/User/globalStorage/coder.coder-remote/session_token" --url-file "/Users/melashri/Library/Application Support/Code/User/globalStorage/coder.coder-remote/url" %h
+  SetEnv  CODER_SSH_SESSION_TYPE=vscode
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+# --- END CODER VSCODE ---
