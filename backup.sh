@@ -3,8 +3,7 @@ brew list > "lists/brew.txt"
 # Backup cask packages
 brew list --cask > "lists/cask.txt"
 
-# Backup .zshrc and *.zsh files and overwrite the existing files
-
+# Backup config files 
 cp -f ~/.zshrc           	          configs/zsh/.zshrc
 cp -f ~/aliases.zsh      	          configs/zsh/aliases.zsh
 cp -f ~/plugins.zsh      	          configs/zsh/plugins.zsh
@@ -19,7 +18,10 @@ cp -f ~/.atuin/config.toml            configs/cli/atuin/config.toml
 cp -f ~/.ssh/config                   configs/ssh/config
 cp -f ~/.config/helix/config.toml     configs/cli/helix/config.toml
 cp -f ~/.nanorc 					  configs/cli/nano/nanorc
-# Backup git config file
+cp -f ~/.config/gh/config.yml         configs/cli/gh/config.yml
+
+
+# Backup git
 cp -f ~/.gitconfig 			 configs/git/.gitconfig
 cp -f ~/.gitignore_global 	 configs/git/.gitignore_global
 

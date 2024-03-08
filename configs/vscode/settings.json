@@ -25,12 +25,12 @@
   "github.copilot-labs.showBrushesLenses": true,
   "github.copilot-labs.showTestGenerationLenses": true,
   "github.copilot.enable": {
-    "*": true,
-    "markdown": true,
+    "*": false,
     "plaintext": false,
+    "markdown": true,
+    "scminput": false,
     "python": true,
-    "quarto": false,
-    "scminput": false
+    "quarto": false
   },
   "gitlens.advanced.messages": {
     "suppressGitVersionWarning": true
@@ -85,8 +85,8 @@
   },
   "workbench.editorLargeFileConfirmation": 50,
   "workbench.iconTheme": "vscode-icons",
-  "accessibility.voice.keywordActivation": "inlineChat",
   "extensions.autoCheckUpdates": false,
   "extensions.autoUpdate": false,
-  "remoteHub.commitDirectlyWarning": "off"
+  "remoteHub.commitDirectlyWarning": "off",
+  "github.copilot.editor.enableAutoCompletions": false
 }

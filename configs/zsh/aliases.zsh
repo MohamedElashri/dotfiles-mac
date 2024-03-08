@@ -93,6 +93,9 @@ alias vim='Nvim'
 alias gen_pass='LC_ALL=C tr -dc "[:alnum:]" < /dev/urandom | head -c 20 | pbcopy'
 alias gcc13='gcc-13'
 alias gcc12='gcc-12'
+alias copilot='gh copilot'
+alias explain='gh copilot explain'
+alias suggest='gh copilot suggest'
 
 ### Networking ###
 alias clear_dns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'

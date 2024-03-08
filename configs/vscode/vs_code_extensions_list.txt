@@ -8,8 +8,7 @@ codeium.codeium
 coder.coder-remote
 codium.codium
 deerawan.vscode-dash
-dendron.dendron
-dendron.dendron-paste-image
+doublebot.doublebot
 dracula-theme.theme-dracula
 eamodio.gitlens
 esbenp.prettier-vscode
@@ -53,7 +52,6 @@ ms-vscode.remote-repositories
 ms-vscode.remote-server
 ms-vscode.vscode-speech
 ms-vsliveshare.vsliveshare
-phind.phind
 quarto.quarto
 redhat.vscode-yaml
 samuelcolvin.jinjahtml
@@ -69,5 +67,4 @@ visualstudioexptteam.intellicode-api-usage-examples
 visualstudioexptteam.vscodeintellicode
 vscode-icons-team.vscode-icons
 vscodevim.vim
-withfig.fig
 yzhang.markdown-all-in-one
