@@ -79,6 +79,12 @@ fi
 # Atuin configuration
 export ATUIN_CONFIG_DIR=$HOME/.atuin
 
+# zoxide configuration
+eval "$(zoxide init zsh)"
+
+# procs configuration
+source <(procs --gen-completion-out zsh)
+
 # Conditional editor settings based on SSH connection
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'

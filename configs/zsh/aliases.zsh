@@ -3,7 +3,7 @@ alias l='pwd && ls'
 alias ll='ls -la' # Use a long listing format
 alias l.='ls -d .* --color=auto' # Show hidden files
 alias ld="ls -D" # List only directories
-alias ls='exa' # Use exa instead of ls, overriding previous ls aliases
+alias ls='eza' # Use exa instead of ls, overriding previous ls aliases
 alias grep='grep --color=auto' # Colorize the grep output
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -83,6 +83,8 @@ alias hn='clx'
 alias firefox='open -a /Applications/Firefox.app'
 alias web='firefox'
 alias safari="open /Applications/Safari.app"
+alias top='htop'
+alias ps='procs'
 
 ### Development ###
 alias diff='colordiff'

@@ -37,10 +37,23 @@
 	forceSignAnnotated = true
 
 [delta]
+  features = decorations navigate
+  width = variable
+  hyperlinks = true
+  relative-paths = true
   line-numbers = true
-  navigate = true
   light = false
   side-by-side = true
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit blue
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
+    grep-file-style = red
 
 [blame]
   date = short
@@ -54,6 +67,14 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	whitespace = space-before-tab, trailing-space, cr-at-eol
+  pager = delta
+  editor = nvim
+
+[pager]
+    log = rg -v '^    <!-- ' | delta  # or less
+
+[interactive]
+    diffFilter = delta --color-only
 
 [color]
   branch      = auto
@@ -65,13 +86,9 @@
   pager       = true
 
 [diff]
-oldtool=Kaleidoscope
-
 	tool = Kaleidoscope
 
 [merge]
-oldtool=Kaleidoscope
-
 	tool = Kaleidoscope
 
 [gpg]
@@ -80,7 +97,7 @@ oldtool=Kaleidoscope
 
 
 [gpg "ssh"]
-	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+	program = /Applications/security/1Password.app/Contents/MacOS/op-ssh-sign
 
 [filter "lfs"]
     required = true

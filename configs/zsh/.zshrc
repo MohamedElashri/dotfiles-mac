@@ -1,8 +1,6 @@
 # Pre-initialization blocks for external tools. These should stay at the top.
 # CodeWhisperer pre block
 [[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
-# Fig pre block
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
@@ -11,6 +9,11 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+# Powerlevel10k configuration
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
 
 # Zsh configuration files
 source $HOME/config.zsh
@@ -23,8 +26,6 @@ source $HOME/shellhistory.zsh
 # iTerm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# Powerlevel10k configuration (duplicated line removed)
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # PATH configuration
 export PATH="$PATH:$HOME/.local/bin"
@@ -37,7 +38,6 @@ source $HOME/m_nvim.zsh
 eval "$(atuin init zsh)"
 
 # Post-initialization blocks for external tools. These should stay at the bottom.
-# Fig post block
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
 # CodeWhisperer post block
 [[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"

@@ -1,6 +1,6 @@
 # Path configurations
 export PATH="/opt/homebrew/opt/python@3.8/bin:/usr/local/bin:$PATH"
-export PATH="${PATH}:/Applications/ShellHistory.app/Contents/Helpers"
+export PATH="${PATH}:/Applications/terminal/ShellHistory.app/Contents/Helpers"
 
 # Oh My Zsh configuration
 export ZSH="$HOME/.oh-my-zsh"

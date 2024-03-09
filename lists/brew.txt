@@ -12,7 +12,9 @@ autoconf
 bat
 berkeley-db@5
 boost
+bottom
 brotli
+btop
 c-ares
 ca-certificates
 cairo
@@ -59,6 +61,7 @@ gettext
 gh
 ghostscript
 giflib
+git-delta
 git-lfs
 gl2ps
 glew
@@ -235,6 +238,7 @@ pmix
 pngquant
 poppler
 popt
+procs
 proselint
 pugixml
 pybind11
@@ -288,6 +292,7 @@ tflint
 theora
 tidy-html5
 tinyxml2
+tlrc
 tmux
 tree-sitter
 unbound
