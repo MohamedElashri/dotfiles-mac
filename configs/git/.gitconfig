@@ -21,7 +21,7 @@
 [commit]
 	gpgsign = true
 	verbose = true
-	template = $Home/.stCommitMsg
+	template = ~/.stCommitMsg
 
 [fetch]
 	recurseSubmodules = on-demand

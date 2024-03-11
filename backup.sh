@@ -19,11 +19,12 @@ cp -f ~/.ssh/config                   configs/ssh/config
 cp -f ~/.config/helix/config.toml     configs/cli/helix/config.toml
 cp -f ~/.nanorc 					  configs/cli/nano/nanorc
 cp -f ~/.config/gh/config.yml         configs/cli/gh/config.yml
-
+                 
 
 # Backup git
 cp -f ~/.gitconfig 			 configs/git/.gitconfig
 cp -f ~/.gitignore_global 	 configs/git/.gitignore_global
+cp -f ~/.stCommitMsg         configs/git/.stCommitMsg
 
 # Backup vscode settings file
 cp -f "$HOME/Library/Application Support/Code/User/settings.json" "configs/vscode/settings.json"

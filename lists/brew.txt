@@ -30,6 +30,7 @@ coder
 colordiff
 coreutils
 cppcheck
+cryptography
 ctags
 dav1d
 davix
