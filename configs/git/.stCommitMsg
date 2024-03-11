@@ -1,0 +1,19 @@
+
+# Title: Summary, imperative, start upper case, don't end with a period
+# No more than 50 chars. #### 50 chars is here:  #
+
+# Remember blank line between title and body.
+
+# Body: Explain *what* and *why*
+
+
+Authored-by: Mohamed Elashri <mail@elashri.com>
+
+
+# 1. Separate title from body with a blank line
+# 2. Limit the title line to 50 characters
+# 3. Capitalize the title line
+# 4. Do not end the title line with a period
+# 5. Use the imperative mood in the title line
+# 7. Use the body to explain what and why vs. how
+
