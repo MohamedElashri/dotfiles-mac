@@ -49,7 +49,7 @@ Host sleepy-earth
 	User melashri
 	HostName sleepy.geop.uc.edu
 	Port 22
-	LocalForward 7899 localhost:7899
+	LocalForward 8765 localhost:8765
 	ForwardAgent yes
 	ForwardX11 yes
 	ForwardX11Trusted yes
@@ -61,7 +61,7 @@ Host sneezy-earth
 	User melashri
 	HostName sneezy.geop.uc.edu
 	Port 22
-	LocalForward 7899 localhost:7899
+	LocalForward 8765 localhost:8765
 	ForwardAgent yes
 	ForwardX11 yes
 	ForwardX11Trusted yes
@@ -96,3 +96,5 @@ Host coder-vscode--*
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 # --- END CODER VSCODE ---
+Host *
+	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"

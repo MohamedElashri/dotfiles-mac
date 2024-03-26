@@ -88,5 +88,10 @@
   "extensions.autoCheckUpdates": false,
   "extensions.autoUpdate": false,
   "remoteHub.commitDirectlyWarning": "off",
-  "github.copilot.editor.enableAutoCompletions": false
+  "editor.defaultFormatter": "ms-python.autopep8",
+  "github.copilot.advanced": {},
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.autoSave": "afterDelay"
 }

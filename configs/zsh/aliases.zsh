@@ -80,7 +80,9 @@ alias badge="tput bel"
 alias battery="pmset -g batt"
 alias battery-cycle="system_profiler SPPowerDataType | grep "Cycle Count" | awk '{print $3}'"
 alias hn='clx'
-alias firefox='open -a /Applications/Firefox.app'
+alias firefox='open -a /Applications/Firefox\ Developer\ Edition.app/'
+alias orion='open -a /Applications/browsers/Orion\ RC.app/'
+alias arc='open -a /Applications/browsers/Arc.app/'
 alias web='firefox'
 alias safari="open /Applications/Safari.app"
 alias top='htop'
@@ -100,6 +102,7 @@ alias gcc12='gcc-12'
 alias copilot='gh copilot'
 alias explain='gh copilot explain'
 alias suggest='gh copilot suggest'
+alias findgrep='GrePFind'
 
 ### Networking ###
 alias clear_dns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'

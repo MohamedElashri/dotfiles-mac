@@ -41,6 +41,15 @@ function git_search() {
 ########## Development ##########
 
 
+function GrePFind() {
+  # Search for pattern $2 in the folder $1 and its subfolders
+  # usage: grepfind ~/.logs pattern
+  # usage: grepfind ~/.logs "This is pattern"
+  grep -rnw "$1" -e "$2"
+}
+
+
+
 ########## System ##########
 
 trash() { command mv "$@" $HOME/.Trash ; } # move files to trash

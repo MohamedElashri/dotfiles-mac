@@ -2,10 +2,12 @@
 adguard
 alacritty
 alt-tab
+android-platform-tools
 applite
 bluesnooze
 contour
 discord
+doughnut
 extraterm
 font-fira-code
 fuse-t
@@ -19,6 +21,7 @@ qbittorrent
 raycast
 rectangle
 rio
+sioyek
 slack
 vimr
 vlc

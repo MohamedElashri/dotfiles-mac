@@ -63,27 +63,28 @@ ZSH_HIGHLIGHT_STYLES[arg0]='fg=#F8F8F2'
 ZSH_HIGHLIGHT_STYLES[default]='fg=#F8F8F2'
 ZSH_HIGHLIGHT_STYLES[cursor]='standout'
 
-# Path configurations
+####Path configurations ####
+export PATH="$PATH:$HOME/.local/bin"
 export PATH="/usr/local/Cellar/python@3.10/3.10/bin:$PATH"
 export PATH=$(brew --prefix python)/bin:$PATH
-export PATH=/opt/homebrew/opt/ruby/bin:$PATH
-export PATH=`gem environment gemdir`/bin:$PATH
 export PYTHONPATH="/$HOME/pythia8310/lib:$PYTHONPATH"
 
-# Ruby configuration
+## Ruby configuration
 if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
   export PATH=/opt/homebrew/opt/ruby/bin:$PATH
   export PATH=`gem environment gemdir`/bin:$PATH
 fi
 
-# Atuin configuration
-export ATUIN_CONFIG_DIR=$HOME/.atuin
+export ATUIN_CONFIG_DIR=$HOME/.atuin ## Atuin configuration
 
-# zoxide configuration
-eval "$(zoxide init zsh)"
 
-# procs configuration
-source <(procs --gen-completion-out zsh)
+
+#### Additional tools  ####
+eval "$(zoxide init zsh)" # zoxide config
+#eval "$(starship init zsh)" # starship config
+eval "$(atuin init zsh)" # atuin config
+source <(procs --gen-completion-out zsh) # procs configuration
+
 
 # Conditional editor settings based on SSH connection
 # if [[ -n $SSH_CONNECTION ]]; then
