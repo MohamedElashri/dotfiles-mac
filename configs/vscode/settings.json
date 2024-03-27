@@ -92,6 +92,5 @@
   "github.copilot.advanced": {},
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "files.autoSave": "afterDelay"
+  }
 }

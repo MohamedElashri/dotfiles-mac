@@ -19,6 +19,7 @@ cp -f ~/.ssh/config                   configs/ssh/config
 cp -f ~/.config/helix/config.toml     configs/cli/helix/config.toml
 cp -f ~/.nanorc 					  configs/cli/nano/nanorc
 cp -f ~/.config/gh/config.yml         configs/cli/gh/config.yml
+cp -f ~/.hyper.js 					  configs/cli/hyper/hyper.js
                  
 
 # Backup git

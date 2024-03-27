@@ -95,8 +95,6 @@ alias record='asciinema rec'
 alias nano='micro' 
 alias vim='Nvim'
 alias gen_pass='LC_ALL=C tr -dc "[:alnum:]" < /dev/urandom | head -c 20 | pbcopy'
-alias genpasswd='echo `env LC_CTYPE=C tr -dc "a-zA-Z0-9-_\$\?" < /dev/urandom | head -c 20`' # make me a password
-alias pubkey="more ~/.ssh/id_ed25519.pub | pbcopy | echo '=> Public key copied to pasteboard.'" # copy the public key
 alias gcc13='gcc-13'
 alias gcc12='gcc-12'
 alias copilot='gh copilot'
