@@ -79,7 +79,6 @@
     "terminalCursor.background": "#A7A7A7",
     "terminalCursor.foreground": "#A7A7A7"
   },
-  "workbench.colorTheme": "Dracula",
   "workbench.editorAssociations": {
     "*.xls": "default"
   },
@@ -92,5 +91,12 @@
   "github.copilot.advanced": {},
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "workbench.colorTheme": "Dracula Pro",
+  "continue.enableTabAutocomplete": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "CodeGPT.apiKey": "Google AI Studio",
+  "CodeGPT.Autocomplete.maxTokens": 5000
 }

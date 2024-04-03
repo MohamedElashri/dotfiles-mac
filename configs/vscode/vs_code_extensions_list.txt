@@ -7,12 +7,13 @@ bierner.github-markdown-preview
 codeium.codeium
 coder.coder-remote
 codium.codium
+continue.continue
+danielsanmedium.dscodegpt
 deerawan.vscode-dash
 doublebot.doublebot
-dracula-theme.theme-dracula
+dracula-theme-pro.theme-dracula-pro
 eamodio.gitlens
 esbenp.prettier-vscode
-formulahendry.code-runner
 github.codespaces
 github.copilot
 github.copilot-chat
@@ -29,6 +30,7 @@ mathematic.vscode-pdf
 mechatroner.rainbow-csv
 ms-azuretools.vscode-docker
 ms-python.autopep8
+ms-python.black-formatter
 ms-python.debugpy
 ms-python.isort
 ms-python.python
