@@ -1,7 +1,7 @@
 [user]
 	name = MohamedElashri
 	email = mail@elashri.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILVhMqBTTTp0eNRsbraLX1f65LPNezRcG0ZJyxQt1k9A
+	signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDwhsJ3F8gZgnQosM7OTgQA9zSsvDKSyHw38T2qJFdGsf2iOQaz0Xts+zCvd9ZldNXcRrguFLsB+rA2TnhaAgcY7il9D/DIHgYPYN4r9+6MgJ9aRoc/XrRF0yCsU3IFL9GRQ2bjmSY83KXz6Qy1wzqjhWWhXOpp6nkDLxRAwCt5iilOX1hCvBFVFtKQe0oeTulT8mB476jDaI/uW6RYMBqBZxPGr2M7MkBgH6G8Q76IOdIE/LahHYaA8fyBfclktGcUjMAlcrqU6Vz/EIb9c5aRcjEly3rhwPBys/vAbFquMug5hAq6tI/7i1YZjViSNxYANuiYhcRZRXMQv6+cnISsVKhIh2PpfO3kQBmSNtqJOOw/EnTFnDJ2W4bKGIw3ofGiC8a+hgaKQRXE0MzNNt9GP7WMdzZlUuGe/8VWgBr10Lom2bF6ch/EdVoZKllO8yKLBtnTA2Ci3XYE5xPy66xRyH8hUNrSp/lzfk/nRqBuV38ChdF+QoaiOzYK5xhFGPk=
 
 [credential]
   username = "MohamedElashri"
@@ -97,7 +97,8 @@
 
 
 [gpg "ssh"]
-	program = /Applications/security/1Password.app/Contents/MacOS/op-ssh-sign
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+	allowedSignersFile = 
 
 [filter "lfs"]
     required = true

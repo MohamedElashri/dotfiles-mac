@@ -7,7 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "New Darcula",
+  "theme": "Dracula",
   "telemetry": {
     "metrics": false
   },
@@ -19,7 +19,8 @@
   },
   "buffer_line_height": "comfortable",
   "ui_font_family": "Zed Sans", // Name of the font family for UI
-  "ui_font_features": { // The OpenType features to enable for text in the UI
+  "ui_font_features": {
+    // The OpenType features to enable for text in the UI
     // Disable ligatures:
     "calt": false
   },
@@ -30,11 +31,10 @@
   "copilot": {
     // The set of glob patterns for which copilot should be disabled
     // in any matching file.
-    "disabled_globs": [
-      ".env"
-    ]
+    "disabled_globs": [".env"]
   },
-  "private_files": [ // List of file patterns to hide from the file tree
+  "private_files": [
+    // List of file patterns to hide from the file tree
     "**/.env*",
     "**/*.pem",
     "**/*.key",
@@ -42,7 +42,8 @@
     "**/*.crt",
     "**/secrets.yml"
   ],
-  "file_scan_exclusions": [ // List of file patterns to exclude from file tree scanning
+  "file_scan_exclusions": [
+    // List of file patterns to exclude from file tree scanning
     "**/.git",
     "**/.svn",
     "**/.hg",
@@ -57,12 +58,7 @@
       // Default directories to search for virtual environments, relative
       // to the current working directory. We recommend overriding this
       // in your project's settings, rather than globally.
-      "directories": [
-        ".env",
-        "env",
-        ".venv",
-        "venv"
-      ],
+      "directories": [".env", "env", ".venv", "venv"],
       // Can also be 'csh', 'fish', and `nushell`
       "activate_script": "default"
     }

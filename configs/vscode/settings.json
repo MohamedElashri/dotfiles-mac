@@ -1,4 +1,12 @@
 {
+  "CodeGPT.Autocomplete.maxTokens": 5000,
+  "CodeGPT.apiKey": "Google AI Studio",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8"
   },
@@ -11,7 +19,9 @@
     "python": false
   },
   "cody.plugins.debug.enabled": false,
+  "continue.enableTabAutocomplete": true,
   "editor.accessibilitySupport": "off",
+  "editor.defaultFormatter": "ms-python.autopep8",
   "editor.fontFamily": "Monaspace Argon",
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
@@ -21,16 +31,20 @@
   "editor.inlineSuggest.showToolbar": "always",
   "editor.minimap.autohide": true,
   "editor.minimap.enabled": false,
+  "extensions.autoCheckUpdates": false,
+  "extensions.autoUpdate": "onlySelectedExtensions",
+  "git.autofetch": true,
   "git.ignoreLegacyWarning": true,
   "github.copilot-labs.showBrushesLenses": true,
   "github.copilot-labs.showTestGenerationLenses": true,
+  "github.copilot.advanced": {},
   "github.copilot.enable": {
     "*": false,
-    "plaintext": false,
     "markdown": true,
-    "scminput": false,
+    "plaintext": false,
     "python": true,
-    "quarto": false
+    "quarto": false,
+    "scminput": false
   },
   "gitlens.advanced.messages": {
     "suppressGitVersionWarning": true
@@ -48,14 +62,25 @@
   "python.formatting.provider": "none",
   "redhat.telemetry.enabled": false,
   "remote.SSH.connectTimeout": 100,
-  "remote.SSH.remotePlatform": {"lxplus":"linux","sleepy-earth":"linux","sneezy-earth":"linux","coder-vscode--melashri--VisualStudio":"linux"},
+  "remote.SSH.remotePlatform": {
+    "coder-vscode--melashri--VisualStudio": "linux",
+    "lxplus": "linux",
+    "sleepy-earth": "linux",
+    "sneezy-earth": "linux"
+  },
+  "remoteHub.commitDirectlyWarning": "off",
   "rootFileViewer.darkMode": true,
+  "semanticdiff.closeOriginalTab": true,
+  "semanticdiff.defaultDiffViewer": true,
   "terminal.external.osxExec": "Warp.app",
   "terminal.integrated.env.osx": {
+    "CW_NEW_SESSION": "1",
     "FIG_NEW_SESSION": "1",
-    "CW_NEW_SESSION": "1"
+    "Q_NEW_SESSION": "1"
   },
   "terminal.integrated.fontFamily": "JetBrains Mono",
+  "terminal.integrated.persistentSessionScrollback": 1000,
+  "terminal.integrated.scrollback": 10000,
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.colorCustomizations": {
     "terminal.ansiBlack": "#191919",
@@ -79,24 +104,12 @@
     "terminalCursor.background": "#A7A7A7",
     "terminalCursor.foreground": "#A7A7A7"
   },
+  "workbench.colorTheme": "Dracula Pro",
   "workbench.editorAssociations": {
     "*.xls": "default"
   },
   "workbench.editorLargeFileConfirmation": 50,
   "workbench.iconTheme": "vscode-icons",
-  "extensions.autoCheckUpdates": false,
-  "extensions.autoUpdate": false,
-  "remoteHub.commitDirectlyWarning": "off",
-  "editor.defaultFormatter": "ms-python.autopep8",
-  "github.copilot.advanced": {},
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "workbench.colorTheme": "Dracula Pro",
-  "continue.enableTabAutocomplete": true,
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "CodeGPT.apiKey": "Google AI Studio",
-  "CodeGPT.Autocomplete.maxTokens": 5000
+  "amazonQ.telemetry": false,
+  "amazonQ.shareContentWithAWS": false
 }
