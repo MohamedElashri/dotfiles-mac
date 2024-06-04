@@ -1,12 +1,21 @@
 #!/bin/bash
 
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+MAGENTA='\033[0;35m'
+CYAN='\033[0;36m'
+NC='\033[0m' # No Color
+
 # Function to check if a file exists and copy it
 copy_file() {
   if [ -f "$1" ]; then
     cp -f "$1" "$2"
-    echo "Copied $1 to $2"
+    echo -e "${GREEN}Copied $1 to $2${NC}"
   else
-    echo "File $1 does not exist. Skipping."
+    echo -e "${YELLOW}File $1 does not exist. Skipping.${NC}"
   fi
 }
 
@@ -14,15 +23,17 @@ copy_file() {
 ensure_directory() {
   if [ ! -d "$1" ]; then
     mkdir -p "$1"
-    echo "Created directory $1"
+    echo -e "${BLUE}Created directory $1${NC}"
   fi
 }
 
 # Backup brew packages
 brew list > "lists/brew.txt"
+echo -e "${CYAN}Backed up brew packages to lists/brew.txt${NC}"
 
 # Backup cask packages
 brew list --cask > "lists/cask.txt"
+echo -e "${CYAN}Backed up cask packages to lists/cask.txt${NC}"
 
 # Backup config files
 ensure_directory "configs/zsh"
@@ -72,10 +83,11 @@ copy_file "$HOME/Library/Application Support/Code/User/settings.json" "configs/v
 
 # Backup VSCode extensions lists
 ensure_directory "configs/vscode"
-code --list-extensions --show-versions | grep -v disabled > "configs/vscode/vs_code_extensions_enabled_list.txt"
-code --list-extensions --show-versions | grep disabled > "configs/vscode/vs_code_extensions_disabled_list.txt"
+code --list-extensions --show-versions | awk '/\(disabled\)/{print $0 > "configs/vscode/vs_code_extensions_disabled_list.txt"; next} {print $0 > "configs/vscode/vs_code_extensions_enabled_list.txt"}'
 code --list-extensions > "configs/vscode/vs_code_extensions_list.txt"
+echo -e "${MAGENTA}Backed up VSCode extensions lists${NC}"
 
 # Backup Fonts Collections
 ensure_directory "configs/fonts/FontCollections"
 cp -f ~/Library/FontCollections/* "configs/fonts/FontCollections"
+echo -e "${MAGENTA}Backed up Font Collections${NC}"
