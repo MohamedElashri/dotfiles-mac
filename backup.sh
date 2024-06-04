@@ -70,7 +70,10 @@ copy_file ~/.stCommitMsg configs/git/.stCommitMsg
 ensure_directory "configs/vscode"
 copy_file "$HOME/Library/Application Support/Code/User/settings.json" "configs/vscode/settings.json"
 
-# Backup vscode extensions list
+# Backup VSCode extensions lists
+ensure_directory "configs/vscode"
+code --list-extensions --show-versions | grep -v disabled > "configs/vscode/vs_code_extensions_enabled_list.txt"
+code --list-extensions --show-versions | grep disabled > "configs/vscode/vs_code_extensions_disabled_list.txt"
 code --list-extensions > "configs/vscode/vs_code_extensions_list.txt"
 
 # Backup Fonts Collections
