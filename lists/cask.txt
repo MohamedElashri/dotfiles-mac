@@ -68,7 +68,10 @@ mactex
 mattermost
 miniforge
 nextcloud
+obsidian
 openinterminal
+pieces
+pieces-os
 qbittorrent
 quarto
 raycast

@@ -179,6 +179,7 @@ libxtst
 libyaml
 little-cms2
 llvm
+llvm@17
 lpeg
 ls-go
 lua
@@ -268,6 +269,7 @@ rsync
 rubberband
 ruby
 ruby-build
+rust
 sdl2
 shared-mime-info
 shellcheck
@@ -392,7 +394,10 @@ mactex
 mattermost
 miniforge
 nextcloud
+obsidian
 openinterminal
+pieces
+pieces-os
 qbittorrent
 quarto
 raycast

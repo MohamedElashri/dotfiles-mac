@@ -39,11 +39,11 @@
   "github.copilot-labs.showTestGenerationLenses": true,
   "github.copilot.advanced": {},
   "github.copilot.enable": {
-    "*": false,
+    "quarto": false,
+    "*": true,
     "markdown": true,
     "plaintext": false,
     "python": true,
-    "quarto": false,
     "scminput": false
   },
   "gitlens.advanced.messages": {
@@ -111,5 +111,6 @@
   "workbench.editorLargeFileConfirmation": 50,
   "workbench.iconTheme": "vscode-icons",
   "amazonQ.telemetry": false,
-  "amazonQ.shareContentWithAWS": false
+  "amazonQ.shareContentWithAWS": false,
+  "github.copilot.editor.enableAutoCompletions": true
 }

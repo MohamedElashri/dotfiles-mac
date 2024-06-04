@@ -77,6 +77,12 @@ fi
 
 export ATUIN_CONFIG_DIR=$HOME/.atuin ## Atuin configuration
 
+##Go congiguration
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
 
 
 #### Additional tools  ####

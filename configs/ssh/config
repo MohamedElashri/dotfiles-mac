@@ -99,3 +99,7 @@ Host coder-vscode--*
 Host *
 	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"Host *
 	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+  IdentityAgent "~/Library/Group Containers/group.strongbox.mac.mcguill/agent.sock"
+# Amazon Q SSH Integration. Keep at the bottom of this file.
+Match all
+  Include "~/Library/Application Support/amazon-q/ssh"
