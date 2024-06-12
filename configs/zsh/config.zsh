@@ -90,8 +90,7 @@ eval "$(zoxide init zsh)" # zoxide config
 #eval "$(starship init zsh)" # starship config
 eval "$(atuin init zsh)" # atuin config
 source <(procs --gen-completion-out zsh) # procs configuration
-autoload -U +X compinit && compinit
-autoload -U +X bashcompinit && bashcompinit
+
 
 # Conditional editor settings based on SSH connection
 # if [[ -n $SSH_CONNECTION ]]; then

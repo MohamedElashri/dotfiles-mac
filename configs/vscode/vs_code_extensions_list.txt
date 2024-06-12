@@ -26,6 +26,7 @@ github.copilot-chat
 github.github-vscode-theme
 github.remotehub
 github.vscode-github-actions
+golang.go
 h5web.vscode-h5web
 irongeek.vscode-env
 janisdd.vscode-edit-csv
@@ -36,8 +37,8 @@ kevinrose.vsc-python-indent
 mathematic.vscode-pdf
 mechatroner.rainbow-csv
 meshintelligenttechnologiesinc.pieces-vscode
+mgt19937.typst-preview
 ms-azuretools.vscode-docker
-ms-python.autopep8
 ms-python.black-formatter
 ms-python.debugpy
 ms-python.isort
@@ -51,7 +52,6 @@ ms-toolsai.vscode-jupyter-slideshow
 ms-vscode-remote.remote-containers
 ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
-ms-vscode-remote.remote-wsl
 ms-vscode-remote.vscode-remote-extensionpack
 ms-vscode.azure-repos
 ms-vscode.cmake-tools
@@ -62,8 +62,8 @@ ms-vscode.makefile-tools
 ms-vscode.remote-explorer
 ms-vscode.remote-repositories
 ms-vscode.remote-server
-ms-vscode.vscode-speech
 ms-vsliveshare.vsliveshare
+nvarner.typst-lsp
 quarto.quarto
 redhat.vscode-yaml
 rust-lang.rust-analyzer
@@ -74,7 +74,6 @@ sourcegraph.cody-ai
 sourcegraph.sourcegraph
 spadin.remote-x11
 spadin.remote-x11-ssh
-talhabalaj.actual-font-changer
 tamasfe.even-better-toml
 timonwong.shellcheck
 visualstudioexptteam.intellicode-api-usage-examples

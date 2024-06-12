@@ -51,6 +51,11 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 export INFISICAL_API_URL="https://secrets.elashri.xyz/api"
 eval "$(op completion zsh)"; compdef _op op
 
+## rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+
 # History configuration
 export HISTFILE=~/.zsh_history
 export HISTFILESIZE=1000000000

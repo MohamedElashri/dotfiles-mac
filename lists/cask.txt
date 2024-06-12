@@ -83,5 +83,6 @@ vimr
 vlc
 warp
 wezterm
+xpipe
 xquartz
 zed

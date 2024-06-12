@@ -88,6 +88,7 @@ highway
 htop
 hugo
 hwloc
+hyperfine
 icu4c
 imagemagick
 imath
@@ -179,7 +180,6 @@ libxtst
 libyaml
 little-cms2
 llvm
-llvm@17
 lpeg
 ls-go
 lua
@@ -263,6 +263,7 @@ rclone
 readline
 reattach-to-user-namespace
 redis
+revolver
 ripgrep
 ripgrep-all
 rsync
@@ -293,6 +294,7 @@ tinyxml2
 tlrc
 tmux
 tree-sitter
+typst
 unbound
 unibilium
 unpaper
@@ -324,6 +326,7 @@ zimg
 zlib
 zoxide
 zstd
+zunit
 1password-cli
 adguard
 alacritty
@@ -409,5 +412,6 @@ vimr
 vlc
 warp
 wezterm
+xpipe
 xquartz
 zed
