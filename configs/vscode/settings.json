@@ -10,6 +10,8 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8"
   },
+  "amazonQ.shareContentWithAWS": false,
+  "amazonQ.telemetry": false,
   "application.shellEnvironmentResolutionTimeout": 20,
   "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
   "aws.telemetry": false,
@@ -38,12 +40,13 @@
   "github.copilot-labs.showBrushesLenses": true,
   "github.copilot-labs.showTestGenerationLenses": true,
   "github.copilot.advanced": {},
+  "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.enable": {
-    "quarto": false,
     "*": true,
     "markdown": true,
     "plaintext": false,
     "python": true,
+    "quarto": false,
     "scminput": false
   },
   "gitlens.advanced.messages": {
@@ -109,8 +112,5 @@
     "*.xls": "default"
   },
   "workbench.editorLargeFileConfirmation": 50,
-  "workbench.iconTheme": "vscode-icons",
-  "amazonQ.telemetry": false,
-  "amazonQ.shareContentWithAWS": false,
-  "github.copilot.editor.enableAutoCompletions": true
+  "workbench.iconTheme": "vscode-icons"
 }

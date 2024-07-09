@@ -63,7 +63,9 @@ font-ubuntu-mono-nerd-font
 font-ubuntu-nerd-font
 hyper
 iterm2
+keyclu
 kitty
+loop
 mactex
 mattermost
 miniforge

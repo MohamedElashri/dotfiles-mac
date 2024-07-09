@@ -1,9 +1,9 @@
 ### Files and Directories ###
-alias l='pwd && ls'
-alias ll='ls -la' # Use a long listing format
-alias l.='ls -d .* --color=auto' # Show hidden files
-alias ld="ls -D" # List only directories
-alias ls='eza' # Use exa instead of ls, overriding previous ls aliases
+#alias l='pwd && ls'
+#alias ll='ls -la' # Use a long listing format
+#alias l.='ls -d .* --color=auto' # Show hidden files
+#alias ld="ls -D" # List only directories
+#alias ls='eza' # Use exa instead of ls, overriding previous ls aliases
 alias grep='grep --color=auto' # Colorize the grep output
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'

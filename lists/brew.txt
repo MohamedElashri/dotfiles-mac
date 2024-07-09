@@ -198,6 +198,7 @@ mysql-client
 nano
 ncurses
 neovim
+netcat
 netpbm
 nettle
 nghttp2
@@ -293,6 +294,7 @@ tidy-html5
 tinyxml2
 tlrc
 tmux
+tree
 tree-sitter
 typst
 unbound
@@ -392,7 +394,9 @@ font-ubuntu-mono-nerd-font
 font-ubuntu-nerd-font
 hyper
 iterm2
+keyclu
 kitty
+loop
 mactex
 mattermost
 miniforge
