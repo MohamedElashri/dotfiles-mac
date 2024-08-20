@@ -1,8 +1,6 @@
 ControlPath ~/.ssh/%C
 ControlMaster auto
 ControlPersist 1
-PermitLocalCommand yes
-LocalCommand fig hook ssh --prompt "$$" "$(tty)" '~/.ssh/%C' '%r@%n' 1>&2
 
 #SCE_GROUP:8C026B3F-BF01-4CC7-8E5A-BAFC9684982F:::UC
 
@@ -35,15 +33,30 @@ Host *
 	AddKeysToAgent yes
 	UseKeychain yes
 
+# Entry for lxplus
 Host lxplus
-	User melashri
-	HostName lxplus.cern.ch
-	Port 22
-	ForwardX11 yes
-	ForwardAgent yes
-	ServerAliveInterval 60
-	ServerAliveCountMax 240
-	IdentityFile /Users/melashri/.ssh/id_rsa
+    User melashri
+    HostName lxplus.cern.ch
+    Port 22
+    ForwardX11 yes
+    ForwardAgent yes
+    ServerAliveInterval 60
+    ServerAliveCountMax 240
+    IdentityFile /Users/melashri/.ssh/id_rsa
+
+# Entry for lbgw which is accessible via lxplus
+Host lbgw
+    HostName lbgw
+    User melashri
+    Port 22
+    ProxyJump lxplus
+
+# Entry for GPU server farm accessible via lbgw
+Host gpu
+    HostName n4050101
+    User melashri
+    Port 22
+    ProxyCommand ssh -W %h:%p lbgw
 
 Host sleepy-earth
 	User melashri
@@ -97,9 +110,10 @@ Host coder-vscode--*
   UserKnownHostsFile /dev/null
 # --- END CODER VSCODE ---
 Host *
-	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"Host *
 	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
-  IdentityAgent "~/Library/Group Containers/group.strongbox.mac.mcguill/agent.sock"
+Host *
+	IdentityAgent "~/Library/Group Containers/group.strongbox.mac.mcguill/agent.sock"
+
 # Amazon Q SSH Integration. Keep at the bottom of this file.
 Match all
   Include "~/Library/Application Support/amazon-q/ssh"

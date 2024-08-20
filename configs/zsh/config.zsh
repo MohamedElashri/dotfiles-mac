@@ -92,6 +92,7 @@ eval "$(atuin init zsh)" # atuin config
 source <(procs --gen-completion-out zsh) # procs configuration
 
 
+
 # Conditional editor settings based on SSH connection
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'

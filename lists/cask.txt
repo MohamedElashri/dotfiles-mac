@@ -4,10 +4,12 @@ alacritty
 alt-tab
 android-platform-tools
 applite
+background-music
 bluesnooze
 contour
 cryptomator
 discord
+docker
 doughnut
 extraterm
 fmail2
@@ -63,6 +65,7 @@ font-ubuntu-mono-nerd-font
 font-ubuntu-nerd-font
 hyper
 iterm2
+keycastr
 keyclu
 kitty
 loop
@@ -81,7 +84,9 @@ rectangle
 rio
 sioyek
 slack
+utm
 vimr
+vivaldi
 vlc
 warp
 wezterm

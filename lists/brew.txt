@@ -1,6 +1,7 @@
 act
 aom
 appstream
+argp-standalone
 aria2
 aribb24
 armadillo
@@ -9,6 +10,8 @@ asciinema
 at-spi2-core
 atuin
 autoconf
+awscli
+bash
 bat
 berkeley-db@5
 boost
@@ -41,6 +44,7 @@ dust
 eigen
 emacs
 eza
+f3
 fd
 ffmpeg
 ffmpeg@4
@@ -116,6 +120,7 @@ libaec
 libarchive
 libass
 libassuan
+libassuan@2
 libavif
 libb2
 libbluray
@@ -128,6 +133,7 @@ libffi
 libfido2
 libgcrypt
 libgit2
+libgit2@1.7
 libgpg-error
 libheif
 libidn
@@ -216,7 +222,6 @@ openblas
 opencore-amr
 openexr
 openjpeg
-openldap
 openssl@1.1
 openssl@3
 openvino
@@ -272,6 +277,7 @@ rubberband
 ruby
 ruby-build
 rust
+s3cmd
 sdl2
 shared-mime-info
 shellcheck
@@ -307,6 +313,8 @@ vint
 webp
 wget
 wimlib
+wireguard-go
+wireguard-tools
 write-good
 x264
 x265
@@ -335,10 +343,12 @@ alacritty
 alt-tab
 android-platform-tools
 applite
+background-music
 bluesnooze
 contour
 cryptomator
 discord
+docker
 doughnut
 extraterm
 fmail2
@@ -394,6 +404,7 @@ font-ubuntu-mono-nerd-font
 font-ubuntu-nerd-font
 hyper
 iterm2
+keycastr
 keyclu
 kitty
 loop
@@ -412,7 +423,9 @@ rectangle
 rio
 sioyek
 slack
+utm
 vimr
+vivaldi
 vlc
 warp
 wezterm

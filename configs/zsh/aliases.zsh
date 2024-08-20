@@ -22,11 +22,11 @@ alias mergepdf='gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=_merged.p
 alias cleanDS="find . -type f -name '*.DS_Store' -ls -delete"
 
 ### Navigation Shortcuts ###
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias -- -="cd -"
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias -- -='cd -'
 alias github='cd $HOME/projects/github'
 alias lhcb='cd $HOME/projects/lhcb'
 alias cern='cd $HOME/projects/cern'
@@ -61,13 +61,13 @@ alias showdesktop='defaults write com.apple.finder CreateDesktop -bool true && k
 alias export='export'
 
 ### Exit Commands ###
-alias :q="exit"
-alias ext="exit"
-alias xt="exit"
-alias by="exit"
-alias bye="exit"
-alias die="exit"
-alias quit="exit"
+alias :q='exit'
+alias ext='exit'
+alias xt='exit'
+alias by='exit'
+alias bye='exit'
+alias die='exit'
+alias quit='exit'
 
 ### MacOS & Software ###
 alias update="sudo softwareupdate -i -a; brew update; brew upgrade"
