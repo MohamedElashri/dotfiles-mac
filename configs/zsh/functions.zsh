@@ -48,7 +48,47 @@ function GrePFind() {
   grep -rnw "$1" -e "$2"
 }
 
+create_and_push_repo() {
+    if ! command -v gh &> /dev/null
+    then
+        echo "Error: GitHub CLI (gh) is not installed. Please install it first."
+        return 1
+    fi
 
+    if [ -z "$1" ]; then
+        echo "Usage: create_and_push_repo <repo-name> [--private]"
+        return 1
+    fi
+
+    REPO_NAME=$1
+    PRIVACY_FLAG="--public"
+
+    if [ "$2" == "--private" ]; then
+        PRIVACY_FLAG="--private"
+    fi
+
+    if ! git init; then
+        echo "Error: Failed to initialize git repository."
+        return 1
+    fi
+
+    if ! git add .; then
+        echo "Error: Failed to add files to git repository."
+        return 1
+    fi
+
+    if ! git commit -m "Initial commit"; then
+        echo "Error: Failed to commit files."
+        return 1
+    fi
+
+    if ! gh repo create "$REPO_NAME" $PRIVACY_FLAG --disable-wiki --disable-issues --source=. --remote=origin --push; then
+        echo "Error: Failed to create GitHub repository and push files."
+        return 1
+    fi
+
+    echo "Repository $REPO_NAME created and pushed successfully!"
+}
 
 ########## System ##########
 
