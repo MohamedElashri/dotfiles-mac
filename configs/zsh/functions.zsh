@@ -63,7 +63,7 @@ create_and_push_repo() {
     REPO_NAME=$1
     PRIVACY_FLAG="--public"
 
-    if [ "$2" == "--private" ]; then
+    if [ "$2" = "--private" ]; then
         PRIVACY_FLAG="--private"
     fi
 
