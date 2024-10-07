@@ -15,6 +15,7 @@
   "application.shellEnvironmentResolutionTimeout": 20,
   "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
   "aws.telemetry": false,
+  "cmake.showOptionsMovedNotification": false,
   "codeium.enableConfig": {
     "*": false,
     "c": false,
@@ -33,7 +34,7 @@
   "editor.inlineSuggest.showToolbar": "always",
   "editor.minimap.autohide": true,
   "editor.minimap.enabled": false,
-  "extensions.autoCheckUpdates": false,
+  "extensions.autoCheckUpdates": true,
   "extensions.autoUpdate": false,
   "git.autofetch": true,
   "git.ignoreLegacyWarning": true,
@@ -61,7 +62,63 @@
   ],
   "gitlens.graph.layout": "editor",
   "gitlens.views.remotes.branches.layout": "list",
+  "jupyter.allowUnauthorizedRemoteConnection": true,
   "jupyter.askForKernelRestart": false,
+  "jupyter.completionTriggerCharacters": {
+    "bash": [
+      "$",
+      "{"
+    ],
+    "java": [
+      ".",
+      "@",
+      "#"
+    ],
+    "javascript": [
+      ".",
+      "\"",
+      "'",
+      "/",
+      "@"
+    ],
+    "julia": [
+      "."
+    ],
+    "python": [
+      ".",
+      "%",
+      "'",
+      "\""
+    ],
+    "r": [
+      "[",
+      "(",
+      ",",
+      "$",
+      "@",
+      "\"",
+      "'"
+    ],
+    "rust": [
+      ".",
+      ":"
+    ],
+    "scala": [
+      "."
+    ],
+    "typescript": [
+      ".",
+      "\"",
+      "'",
+      "/",
+      "@",
+      "<"
+    ]
+  },
+  "jupyter.executionAnalysis.enabled": true,
+  "jupyter.showVariableViewWhenDebugging": true,
+  "jupyter.themeMatplotlibPlots": true,
+  "notebook.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.bracketSameLine": true,
   "python.formatting.provider": "none",
   "redhat.telemetry.enabled": false,
@@ -72,17 +129,20 @@
     "sleepy-earth": "linux",
     "sneezy-earth": "linux"
   },
+  "remote.tunnels.alwaysUpdateCLI": true,
   "remoteHub.commitDirectlyWarning": "off",
   "rootFileViewer.darkMode": true,
+  "security.workspace.trust.untrustedFiles": "open",
   "semanticdiff.closeOriginalTab": true,
   "semanticdiff.defaultDiffViewer": true,
   "terminal.external.osxExec": "Warp.app",
+  "terminal.integrated.automationProfile.linux": {},
   "terminal.integrated.env.osx": {
     "CW_NEW_SESSION": "1",
     "FIG_NEW_SESSION": "1",
     "Q_NEW_SESSION": "1"
   },
-  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "terminal.integrated.fontFamily": "monospace",
   "terminal.integrated.persistentSessionScrollback": 1000,
   "terminal.integrated.scrollback": 10000,
   "vsicons.dontShowNewVersionMessage": true,
@@ -110,67 +170,10 @@
   },
   "workbench.colorTheme": "Dracula Pro",
   "workbench.editorAssociations": {
-    "*.xls": "default",
-    "*.ipynb": "default"
+    "*.ipynb": "default",
+    "*.xls": "default"
   },
   "workbench.editorLargeFileConfirmation": 50,
-  "workbench.iconTheme": "vscode-icons",
-  "jupyter.allowUnauthorizedRemoteConnection": true,
-  "jupyter.executionAnalysis.enabled": true,
-  "jupyter.showVariableViewWhenDebugging": true,
-  "jupyter.themeMatplotlibPlots": true,
-  "notebook.defaultFormatter": "esbenp.prettier-vscode",
-  "jupyter.completionTriggerCharacters": {
-    "bash": [
-      "$",
-      "{"
-    ],
-    "java": [
-      ".",
-      "@",
-      "#"
-    ],
-    "javascript": [
-      ".",
-      "\"",
-      "'",
-      "/",
-      "@"
-    ],
-    "python": [
-      ".",
-      "%",
-      "'",
-      "\""
-    ],
-    "julia": [
-      "."
-    ],
-    "r": [
-      "[",
-      "(",
-      ",",
-      "$",
-      "@",
-      "\"",
-      "'"
-    ],
-    "rust": [
-      ".",
-      ":"
-    ],
-    "scala": [
-      "."
-    ],
-    "typescript": [
-      ".",
-      "\"",
-      "'",
-      "/",
-      "@",
-      "<"
-    ]
-  },
-  "cmake.showOptionsMovedNotification": false,
-  "remote.tunnels.alwaysUpdateCLI": true
+  "workbench.experimental.enableNewProfilesUI": true,
+  "workbench.iconTheme": "vscode-icons"
 }

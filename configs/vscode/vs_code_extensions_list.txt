@@ -2,14 +2,13 @@
 albertopdrf.root-file-viewer
 allemandinstable.colorful-comments-refreshed
 amazonwebservices.amazon-q-vscode
+amazonwebservices.codewhisperer-for-command-line-companion
 bierner.github-markdown-preview
 bierner.markdown-footnotes
 bierner.markdown-yaml-preamble
 codeium.codeium
-continue.continue
 deerawan.vscode-dash
 donjayamanne.python-environment-manager
-doublebot.doublebot
 dracula-theme-pro.theme-dracula-pro
 eamodio.gitlens
 esbenp.prettier-vscode

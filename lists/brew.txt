@@ -186,6 +186,7 @@ libxtst
 libyaml
 little-cms2
 llvm
+llvm@18
 lpeg
 ls-go
 lua
@@ -204,7 +205,6 @@ mysql-client
 nano
 ncurses
 neovim
-netcat
 netpbm
 nettle
 nghttp2
@@ -384,6 +384,7 @@ font-iosevka-nerd-font
 font-jetbrains-mono-nerd-font
 font-lekton-nerd-font
 font-liberation-nerd-font
+font-m+-nerd-font
 font-meslo-lg-nerd-font
 font-monofur-nerd-font
 font-monoid-nerd-font
@@ -416,7 +417,6 @@ obsidian
 openinterminal
 pieces
 pieces-os
-qbittorrent
 quarto
 raycast
 rectangle

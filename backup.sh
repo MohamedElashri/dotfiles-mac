@@ -9,6 +9,8 @@ MAGENTA='\033[0;35m'
 CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
+
+
 # Function to check if a file exists and copy it
 copy_file() {
   if [ -f "$1" ]; then
@@ -70,6 +72,12 @@ copy_file ~/.config/gh/config.yml configs/cli/gh/config.yml
 
 ensure_directory "configs/cli/hyper"
 copy_file ~/.hyper.js configs/cli/hyper/hyper.js
+
+ensure_directory "configs/cli/"
+copy_file ~/cli/terminal_quran.sh configs/cli/terminal_quran.sh
+copy_file ~/cli/m_nvim.zsh configs/cli/m_nvim.zsh
+
+
 
 # Backup git
 ensure_directory "configs/git"

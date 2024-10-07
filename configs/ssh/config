@@ -2,7 +2,7 @@ ControlPath ~/.ssh/%C
 ControlMaster auto
 ControlPersist 1
 
-#SCE_GROUP:8C026B3F-BF01-4CC7-8E5A-BAFC9684982F:::UC
+# SCE_GROUP:8C026B3F-BF01-4CC7-8E5A-BAFC9684982F:::UC
 
 Host sneezy
 	User melashri
@@ -28,11 +28,6 @@ Host earth
 	Port 22
 	ForwardX11 yes
 
-Host *
-	IdentityFile ~/.ssh/id_rsa
-	AddKeysToAgent yes
-	UseKeychain yes
-
 # Entry for lxplus
 Host lxplus
     User melashri
@@ -42,7 +37,11 @@ Host lxplus
     ForwardAgent yes
     ServerAliveInterval 60
     ServerAliveCountMax 240
-    IdentityFile /Users/melashri/.ssh/id_rsa
+    PubkeyAuthentication no            # Disable public key authentication
+    PasswordAuthentication no          # Disable password-based login
+    PreferredAuthentications keyboard-interactive
+    IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+    IdentitiesOnly yes
 
 # Entry for lbgw which is accessible via lxplus
 Host lbgw
@@ -50,6 +49,7 @@ Host lbgw
     User melashri
     Port 22
     ProxyJump lxplus
+    IdentitiesOnly yes
 
 # Entry for GPU server farm accessible via lbgw
 Host gpu
@@ -57,6 +57,7 @@ Host gpu
     User melashri
     Port 22
     ProxyCommand ssh -W %h:%p lbgw
+    IdentitiesOnly yes
 
 Host sleepy-earth
 	User melashri
@@ -69,6 +70,7 @@ Host sleepy-earth
 	ProxyJump melashri@earth.phy.uc.edu:22
 	ServerAliveInterval 600
 	ServerAliveCountMax 240
+    IdentitiesOnly yes
 
 Host sneezy-earth
 	User melashri
@@ -81,39 +83,21 @@ Host sneezy-earth
 	ProxyJump melashri@earth.phy.uc.edu:22
 	ServerAliveInterval 600
 	ServerAliveCountMax 240
+    IdentitiesOnly yes
 
-Host NY-MELASHRI
-	User melashri
-	HostName 66.94.110.168
-	Port 239
-	ForwardX11 yes
-	ForwardX11Trusted yes
-	ServerAliveCountMax 240
-	ServerAliveInterval 120
-
-Host GE-MELASHRI
-	User melashri
-	HostName 185.182.187.198
-	Port 239
-	ForwardX11 yes
-	ForwardX11Trusted yes
-	ServerAliveCountMax 240
-	ServerAliveInterval 120
-
-# --- START CODER VSCODE ---
-Host coder-vscode--*
-  ConnectTimeout 0
-  LogLevel ERROR
-  ProxyCommand "/Users/melashri/Library/Application Support/Code/User/globalStorage/coder.coder-remote/bin/coder-darwin-arm64" vscodessh --network-info-dir "/Users/melashri/Library/Application Support/Code/User/globalStorage/coder.coder-remote/net" --log-dir "/Users/melashri/Library/Application Support/Code/User/globalStorage/coder.coder-remote/log" --session-token-file "/Users/melashri/Library/Application Support/Code/User/globalStorage/coder.coder-remote/session_token" --url-file "/Users/melashri/Library/Application Support/Code/User/globalStorage/coder.coder-remote/url" %h
-  SetEnv  CODER_SSH_SESSION_TYPE=vscode
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
-# --- END CODER VSCODE ---
+# Consolidated Host * entries
 Host *
-	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
-Host *
-	IdentityAgent "~/Library/Group Containers/group.strongbox.mac.mcguill/agent.sock"
+	IdentityFile ~/.ssh/id_rsa
+	AddKeysToAgent yes
+	UseKeychain yes
+	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock" 
+	#IdentityAgent "~/Library/Group Containers/group.strongbox.mac.mcguill/agent.sock"
+	ForwardX11 yes
+	ForwardAgent yes
+	ServerAliveCountMax 240
+	ServerAliveInterval 60
 
 # Amazon Q SSH Integration. Keep at the bottom of this file.
 Match all
   Include "~/Library/Application Support/amazon-q/ssh"
+  
