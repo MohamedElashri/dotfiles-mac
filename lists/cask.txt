@@ -8,6 +8,7 @@ background-music
 bluesnooze
 contour
 cryptomator
+deskpad
 discord
 docker
 doughnut
@@ -76,6 +77,7 @@ miniforge
 nextcloud
 obsidian
 openinterminal
+orbstack
 pieces
 pieces-os
 quarto

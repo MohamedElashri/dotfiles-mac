@@ -1,34 +1,45 @@
+# Control settings
 ControlPath ~/.ssh/%C
 ControlMaster auto
 ControlPersist 1
 
-# SCE_GROUP:8C026B3F-BF01-4CC7-8E5A-BAFC9684982F:::UC
-
+# Host configuration for sneezy
 Host sneezy
-	User melashri
-	HostName sneezy.geop.uc.edu
-	Port 22
+    User melashri
+    HostName sneezy.geop.uc.edu
+    Port 22
+    IdentitiesOnly yes
+    ForwardX11 yes
+    ForwardAgent yes
 
+# Host configuration for sleepy
 Host sleepy
-	User melashri
-	HostName sleepy.geop.uc.edu
-	Port 22
+    User melashri
+    HostName sleepy.geop.uc.edu
+    Port 22
+    IdentitiesOnly yes
+    ForwardX11 yes
+    ForwardAgent yes
 
+# Host configuration for goofy
 Host goofy
-	User melashri
-	HostName goofy.geop.uc.edu
-	Port 22
-	ForwardX11 yes
-	ForwardX11Trusted yes
-	ProxyJump melashri@earth.phy.uc.edu:22
+    User melashri
+    HostName goofy.geop.uc.edu
+    Port 22
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ProxyJump melashri@earth.phy.uc.edu
+    IdentitiesOnly yes
 
+# Host configuration for earth
 Host earth
-	User melashri
-	HostName earth.phy.uc.edu
-	Port 22
-	ForwardX11 yes
+    User melashri
+    HostName earth.phy.uc.edu
+    Port 22
+    ForwardX11 yes
+    IdentitiesOnly yes
 
-# Entry for lxplus
+# Host configuration for lxplus
 Host lxplus
     User melashri
     HostName lxplus.cern.ch
@@ -37,67 +48,67 @@ Host lxplus
     ForwardAgent yes
     ServerAliveInterval 60
     ServerAliveCountMax 240
-    PubkeyAuthentication no            # Disable public key authentication
-    PasswordAuthentication no          # Disable password-based login
+    PubkeyAuthentication no
+    PasswordAuthentication no
     PreferredAuthentications keyboard-interactive
     IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
     IdentitiesOnly yes
 
-# Entry for lbgw which is accessible via lxplus
+# Host configuration for lbgw accessible via lxplus
 Host lbgw
-    HostName lbgw
     User melashri
+    HostName lbgw
     Port 22
     ProxyJump lxplus
     IdentitiesOnly yes
 
-# Entry for GPU server farm accessible via lbgw
+# Host configuration for GPU server farm accessible via lbgw
 Host gpu
-    HostName n4050101
     User melashri
+    HostName n4050101
     Port 22
     ProxyCommand ssh -W %h:%p lbgw
     IdentitiesOnly yes
 
+# Host configuration for sleepy-earth
 Host sleepy-earth
-	User melashri
-	HostName sleepy.geop.uc.edu
-	Port 22
-	LocalForward 8765 localhost:8765
-	ForwardAgent yes
-	ForwardX11 yes
-	ForwardX11Trusted yes
-	ProxyJump melashri@earth.phy.uc.edu:22
-	ServerAliveInterval 600
-	ServerAliveCountMax 240
+    User melashri
+    HostName sleepy.geop.uc.edu
+    Port 22
+    LocalForward 8765 localhost:8765
+    ForwardAgent yes
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ProxyJump melashri@earth.phy.uc.edu
+    ServerAliveInterval 600
+    ServerAliveCountMax 240
     IdentitiesOnly yes
 
+# Host configuration for sneezy-earth
 Host sneezy-earth
-	User melashri
-	HostName sneezy.geop.uc.edu
-	Port 22
-	LocalForward 8765 localhost:8765
-	ForwardAgent yes
-	ForwardX11 yes
-	ForwardX11Trusted yes
-	ProxyJump melashri@earth.phy.uc.edu:22
-	ServerAliveInterval 600
-	ServerAliveCountMax 240
+    User melashri
+    HostName sneezy.geop.uc.edu
+    Port 22
+    LocalForward 8765 localhost:8765
+    ForwardAgent yes
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ProxyJump melashri@earth.phy.uc.edu
+    ServerAliveInterval 600
+    ServerAliveCountMax 240
     IdentitiesOnly yes
 
-# Consolidated Host * entries
+# Default settings for all hosts
 Host *
-	IdentityFile ~/.ssh/id_rsa
-	AddKeysToAgent yes
-	UseKeychain yes
-	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock" 
-	#IdentityAgent "~/Library/Group Containers/group.strongbox.mac.mcguill/agent.sock"
-	ForwardX11 yes
-	ForwardAgent yes
-	ServerAliveCountMax 240
-	ServerAliveInterval 60
+    IdentityFile ~/.ssh/id_rsa
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+    ForwardX11 yes
+    ForwardAgent yes
+    ServerAliveCountMax 240
+    ServerAliveInterval 60
 
-# Amazon Q SSH Integration. Keep at the bottom of this file.
+# Amazon Q SSH Integration (leave at the bottom of the file)
 Match all
   Include "~/Library/Application Support/amazon-q/ssh"
-  

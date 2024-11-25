@@ -93,7 +93,8 @@ htop
 hugo
 hwloc
 hyperfine
-icu4c
+icu4c@75
+icu4c@76
 imagemagick
 imath
 img2pdf
@@ -126,6 +127,7 @@ libb2
 libbluray
 libcbor
 libde265
+libdeflate
 libepoxy
 libev
 libevent
@@ -163,6 +165,7 @@ libssh2
 libtasn1
 libtermkey
 libtiff
+libtommath
 libtool
 libunibreak
 libunistring
@@ -186,7 +189,6 @@ libxtst
 libyaml
 little-cms2
 llvm
-llvm@18
 lpeg
 ls-go
 lua
@@ -238,7 +240,7 @@ pinentry
 pinentry-mac
 pipx
 pixman
-pkg-config
+pkgconf
 pmix
 pngquant
 poppler
@@ -259,6 +261,7 @@ python-setuptools
 python@3.10
 python@3.11
 python@3.12
+python@3.13
 python@3.9
 pyvim
 pyyaml
@@ -347,6 +350,7 @@ background-music
 bluesnooze
 contour
 cryptomator
+deskpad
 discord
 docker
 doughnut
@@ -415,6 +419,7 @@ miniforge
 nextcloud
 obsidian
 openinterminal
+orbstack
 pieces
 pieces-os
 quarto

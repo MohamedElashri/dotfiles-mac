@@ -17,9 +17,10 @@
   "aws.telemetry": false,
   "cmake.showOptionsMovedNotification": false,
   "codeium.enableConfig": {
-    "*": false,
+    "*": true,
     "c": false,
-    "python": false
+    "python": false,
+    "plaintext": true
   },
   "cody.plugins.debug.enabled": false,
   "continue.enableTabAutocomplete": true,
@@ -175,5 +176,6 @@
   },
   "workbench.editorLargeFileConfirmation": 50,
   "workbench.experimental.enableNewProfilesUI": true,
-  "workbench.iconTheme": "vscode-icons"
+  "workbench.iconTheme": "vscode-icons",
+  "chat.editing.alwaysSaveWithGeneratedChanges": true
 }
