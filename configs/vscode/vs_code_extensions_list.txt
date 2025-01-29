@@ -1,15 +1,12 @@
 1password.op-vscode
 albertopdrf.root-file-viewer
-allemandinstable.colorful-comments-refreshed
 amazonwebservices.amazon-q-vscode
 amazonwebservices.codewhisperer-for-command-line-companion
 bierner.github-markdown-preview
 bierner.markdown-footnotes
 bierner.markdown-yaml-preamble
 codeium.codeium
-continue.continue
 deerawan.vscode-dash
-donjayamanne.python-environment-manager
 dracula-theme-pro.theme-dracula-pro
 eamodio.gitlens
 esbenp.prettier-vscode
@@ -19,13 +16,11 @@ github.copilot-chat
 github.remotehub
 github.vscode-github-actions
 golang.go
-irongeek.vscode-env
-janisdd.vscode-edit-csv
 jeff-hykin.better-cpp-syntax
-jinxdash.prettier-rust
 kaleidoscope-app.vscode-ksdiff
 kevinrose.vsc-python-indent
 mathematic.vscode-pdf
+mechatroner.rainbow-csv
 meshintelligenttechnologiesinc.pieces-vscode
 ms-azuretools.vscode-docker
 ms-python.black-formatter
@@ -42,7 +37,6 @@ ms-vscode-remote.remote-containers
 ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
 ms-vscode-remote.vscode-remote-extensionpack
-ms-vscode.azure-repos
 ms-vscode.cmake-tools
 ms-vscode.cpptools
 ms-vscode.cpptools-extension-pack
@@ -57,7 +51,6 @@ nvarner.typst-lsp
 quarto.quarto
 redhat.vscode-yaml
 rust-lang.rust-analyzer
-samuelcolvin.jinjahtml
 semanticdiff.semanticdiff
 shd101wyy.markdown-preview-enhanced
 sourcegraph.cody-ai
@@ -65,6 +58,7 @@ sourcegraph.sourcegraph
 tamasfe.even-better-toml
 timonwong.shellcheck
 visualstudioexptteam.vscodeintellicode
+vladstudio.vlad-studio-tiniri
 vscode-icons-team.vscode-icons
 vscodevim.vim
 yzhang.markdown-all-in-one

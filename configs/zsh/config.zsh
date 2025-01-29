@@ -89,7 +89,6 @@ export PATH=$PATH:$GOROOT/bin
 eval "$(zoxide init zsh)" # zoxide config
 #eval "$(starship init zsh)" # starship config
 eval "$(atuin init zsh)" # atuin config
-source <(procs --gen-completion-out zsh) # procs configuration
 
 
 

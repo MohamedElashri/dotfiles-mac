@@ -65,6 +65,7 @@ font-terminess-ttf-nerd-font
 font-tinos-nerd-font
 font-ubuntu-mono-nerd-font
 font-ubuntu-nerd-font
+ghostty
 hyper
 iterm2
 keycastr
@@ -86,7 +87,6 @@ rectangle
 rio
 sioyek
 slack
-utm
 vimr
 vivaldi
 vlc

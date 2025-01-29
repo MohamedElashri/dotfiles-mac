@@ -1,3 +1,4 @@
+abseil
 act
 aom
 appstream
@@ -85,7 +86,6 @@ gtk+3
 gtk4
 gts
 harfbuzz
-hdf5
 helix
 hicolor-icon-theme
 highway
@@ -117,11 +117,9 @@ lazygit
 leptonica
 less
 libadwaita
-libaec
 libarchive
 libass
 libassuan
-libassuan@2
 libavif
 libb2
 libbluray
@@ -135,7 +133,7 @@ libffi
 libfido2
 libgcrypt
 libgit2
-libgit2@1.7
+libgit2@1.8
 libgpg-error
 libheif
 libidn
@@ -157,6 +155,7 @@ libraw
 librist
 librsvg
 libsamplerate
+libsass
 libsndfile
 libsodium
 libsoxr
@@ -219,6 +218,7 @@ nss
 numpy
 nvm
 oniguruma
+onnx
 open-mpi
 openblas
 opencore-amr
@@ -245,8 +245,8 @@ pmix
 pngquant
 poppler
 popt
-procs
 proselint
+protobuf
 pugixml
 pybind11
 pycparser
@@ -291,7 +291,6 @@ sqlite
 srt
 starship
 stow
-superlu
 svt-av1
 tbb
 tcl-tk
@@ -407,6 +406,7 @@ font-terminess-ttf-nerd-font
 font-tinos-nerd-font
 font-ubuntu-mono-nerd-font
 font-ubuntu-nerd-font
+ghostty
 hyper
 iterm2
 keycastr
@@ -428,7 +428,6 @@ rectangle
 rio
 sioyek
 slack
-utm
 vimr
 vivaldi
 vlc

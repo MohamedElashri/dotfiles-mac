@@ -169,7 +169,6 @@
     "terminalCursor.background": "#A7A7A7",
     "terminalCursor.foreground": "#A7A7A7"
   },
-  "workbench.colorTheme": "Dracula Pro",
   "workbench.editorAssociations": {
     "*.ipynb": "default",
     "*.xls": "default"
@@ -177,5 +176,7 @@
   "workbench.editorLargeFileConfirmation": 50,
   "workbench.experimental.enableNewProfilesUI": true,
   "workbench.iconTheme": "vscode-icons",
-  "chat.editing.alwaysSaveWithGeneratedChanges": true
+  "chat.editing.alwaysSaveWithGeneratedChanges": true,
+  "git.openRepositoryInParentFolders": "never",
+  "workbench.colorTheme": "Tiniri Dark"
 }

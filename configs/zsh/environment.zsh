@@ -47,9 +47,13 @@ export NVM_DIR="$HOME/.nvm"
 # VScode path
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-# Custom configurations
+
+# Ensure compinit is initialized
+autoload -Uz compinit && compinit
+
+
+# Infisical API
 export INFISICAL_API_URL="https://secrets.elashri.xyz/api"
-eval "$(op completion zsh)"; compdef _op op
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -57,6 +61,16 @@ eval "$(rbenv init -)"
 
 # 1password
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+# Load 1Password completions safely
+if command -v op >/dev/null 2>&1; then
+    eval "$(op completion zsh 2>/dev/null)" || true
+    [[ "$(whence -v compdef)" != "" ]] && compdef _op op
+fi
+
+# CLIs here
+export PATH="$PATH:$HOME/.local/bin"
+
+
 
 # History configuration
 export HISTFILE=~/.zsh_history
