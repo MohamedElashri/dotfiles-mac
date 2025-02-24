@@ -20,7 +20,8 @@
     "*": true,
     "c": false,
     "python": false,
-    "plaintext": true
+    "plaintext": true,
+    "diff": true
   },
   "cody.plugins.debug.enabled": false,
   "continue.enableTabAutocomplete": true,
@@ -178,5 +179,7 @@
   "workbench.iconTheme": "vscode-icons",
   "chat.editing.alwaysSaveWithGeneratedChanges": true,
   "git.openRepositoryInParentFolders": "never",
-  "workbench.colorTheme": "Tiniri Dark"
+  "pieces.OS.launchOnStartup": "Yes",
+  "pieces.cloudCapabilities": "Blended",
+  "pieces.telemetry": true
 }

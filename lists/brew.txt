@@ -93,7 +93,6 @@ htop
 hugo
 hwloc
 hyperfine
-icu4c@75
 icu4c@76
 imagemagick
 imath
@@ -196,6 +195,7 @@ luv
 lz4
 lzo
 m4
+mariadb-connector-c
 mbedtls
 micro
 mpdecimal
@@ -275,6 +275,7 @@ redis
 revolver
 ripgrep
 ripgrep-all
+root
 rsync
 rubberband
 ruby
@@ -428,6 +429,7 @@ rectangle
 rio
 sioyek
 slack
+stats
 vimr
 vivaldi
 vlc

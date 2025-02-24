@@ -87,6 +87,7 @@ rectangle
 rio
 sioyek
 slack
+stats
 vimr
 vivaldi
 vlc

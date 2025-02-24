@@ -33,6 +33,7 @@
   },
   "ui_font_size": 16, // Default UI font size in pixels
   "features": {
+    "edit_prediction_provider": "zed",
     "copilot": true // Enable or disable Copilot
   },
   "copilot": {
