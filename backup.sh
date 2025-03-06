@@ -77,7 +77,9 @@ ensure_directory "configs/cli/"
 copy_file ~/cli/terminal_quran.sh configs/cli/terminal_quran.sh
 copy_file ~/cli/m_nvim.zsh configs/cli/m_nvim.zsh
 
-
+# Backup tmux.conf
+ensure_directory "configs/tmux"
+copy_file ~/.tmux.conf configs/tmux/.tmux.conf
 
 # Backup git
 ensure_directory "configs/git"

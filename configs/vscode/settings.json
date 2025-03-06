@@ -176,10 +176,11 @@
   },
   "workbench.editorLargeFileConfirmation": 50,
   "workbench.experimental.enableNewProfilesUI": true,
-  "workbench.iconTheme": "vscode-icons",
   "chat.editing.alwaysSaveWithGeneratedChanges": true,
   "git.openRepositoryInParentFolders": "never",
   "pieces.OS.launchOnStartup": "Yes",
   "pieces.cloudCapabilities": "Blended",
-  "pieces.telemetry": true
+  "pieces.telemetry": true,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Dracula Pro"
 }

@@ -1,6 +1,6 @@
 dracula-theme-pro.theme-dracula-pro@1.1.0
 github.codespaces@1.17.3
-github.copilot@1.272.0
+github.copilot@1.275.0
 github.copilot-chat@0.24.1
 ms-vscode-remote.remote-ssh@0.117.1
 ms-vscode-remote.remote-ssh-edit@0.87.0

@@ -109,6 +109,12 @@ Host *
     ServerAliveCountMax 240
     ServerAliveInterval 60
 
+Host gcern
+    HostName gitlab.cern.ch
+    User git
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa
+
 # Amazon Q SSH Integration (leave at the bottom of the file)
 Match all
   Include "~/Library/Application Support/amazon-q/ssh"
