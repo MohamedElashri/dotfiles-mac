@@ -50,7 +50,7 @@ copy_file ~/shellhistory.zsh configs/zsh/shellhistory.zsh
 copy_file ~/.p10k.zsh configs/zsh/.p10k.zsh
 
 ensure_directory "configs/cli/bat"
-copy_file ~/.config/bat/config configs/cli/bat/config
+copy_file ~/.config/bat/config/config configs/cli/bat/config
 
 ensure_directory "configs/zed"
 copy_file ~/.config/zed/settings.json configs/zed/settings.json
