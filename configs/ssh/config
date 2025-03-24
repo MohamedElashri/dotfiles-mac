@@ -10,7 +10,10 @@ Host sneezy
     Port 22
     IdentitiesOnly yes
     ForwardX11 yes
+    ForwardX11Trusted yes
     ForwardAgent yes
+    ServerAliveInterval 60
+    ServerAliveCountMax 240
 
 # Host configuration for sleepy
 Host sleepy
@@ -19,7 +22,10 @@ Host sleepy
     Port 22
     IdentitiesOnly yes
     ForwardX11 yes
+    ForwardX11Trusted yes
     ForwardAgent yes
+    ServerAliveInterval 60
+    ServerAliveCountMax 240
 
 # Host configuration for goofy
 Host goofy
@@ -30,6 +36,8 @@ Host goofy
     ForwardX11Trusted yes
     ProxyJump melashri@earth.phy.uc.edu
     IdentitiesOnly yes
+    ServerAliveInterval 60
+    ServerAliveCountMax 240
 
 # Host configuration for earth
 Host earth
@@ -37,7 +45,10 @@ Host earth
     HostName earth.phy.uc.edu
     Port 22
     ForwardX11 yes
+    ForwardX11Trusted yes
     IdentitiesOnly yes
+    ServerAliveInterval 60
+    ServerAliveCountMax 240
 
 # Host configuration for lxplus
 Host lxplus
@@ -45,6 +56,7 @@ Host lxplus
     HostName lxplus.cern.ch
     Port 22
     ForwardX11 yes
+    ForwardX11Trusted yes
     ForwardAgent yes
     ServerAliveInterval 60
     ServerAliveCountMax 240
@@ -60,7 +72,11 @@ Host lbgw
     HostName lbgw
     Port 22
     ProxyJump lxplus
+    ForwardX11 yes
+    ForwardX11Trusted yes
     IdentitiesOnly yes
+    ServerAliveInterval 60
+    ServerAliveCountMax 240
 
 # Host configuration for GPU server farm accessible via lbgw
 Host gpu
@@ -68,14 +84,18 @@ Host gpu
     HostName n4050101
     Port 22
     ProxyCommand ssh -W %h:%p lbgw
+    ForwardX11 yes
+    ForwardX11Trusted yes
     IdentitiesOnly yes
+    ServerAliveInterval 60
+    ServerAliveCountMax 240
 
-# Host configuration for sleepy-earth
+# Host configuration for sleepy-earth with unique port forwarding
 Host sleepy-earth
     User melashri
     HostName sleepy.geop.uc.edu
     Port 22
-    LocalForward 8765 localhost:8765
+    LocalForward 31415 localhost:31415
     ForwardAgent yes
     ForwardX11 yes
     ForwardX11Trusted yes
@@ -84,12 +104,26 @@ Host sleepy-earth
     ServerAliveCountMax 240
     IdentitiesOnly yes
 
-# Host configuration for sneezy-earth
+# Host configuration for sneezy-earth with unique port forwarding
 Host sneezy-earth
     User melashri
     HostName sneezy.geop.uc.edu
     Port 22
-    LocalForward 8765 localhost:8765
+    LocalForward 27182 localhost:27182
+    ForwardAgent yes
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ProxyJump melashri@earth.phy.uc.edu
+    ServerAliveInterval 600
+    ServerAliveCountMax 240
+    IdentitiesOnly yes
+
+# Host configuration for goofy-earth with unique port forwarding
+Host goofy-earth
+    User melashri
+    HostName goofy.geop.uc.edu
+    Port 22
+    LocalForward 16180 localhost:16180
     ForwardAgent yes
     ForwardX11 yes
     ForwardX11Trusted yes

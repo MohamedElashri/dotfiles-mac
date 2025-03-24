@@ -181,6 +181,7 @@
   "pieces.OS.launchOnStartup": "Yes",
   "pieces.cloudCapabilities": "Blended",
   "pieces.telemetry": true,
-  "workbench.iconTheme": "vscode-icons",
-  "workbench.colorTheme": "Dracula Pro"
+  "settingsSync.ignoredExtensions": [
+    "ms-vscode.js-debug-companion"
+  ]
 }

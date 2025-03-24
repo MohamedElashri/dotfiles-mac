@@ -94,6 +94,7 @@ hugo
 hwloc
 hyperfine
 icu4c@76
+icu4c@77
 imagemagick
 imath
 img2pdf
@@ -163,7 +164,6 @@ libssh2
 libtasn1
 libtermkey
 libtiff
-libtommath
 libtool
 libunibreak
 libunistring
@@ -295,7 +295,6 @@ starship
 stow
 svt-av1
 tbb
-tcl-tk
 tesseract
 tesseract-lang
 tflint
@@ -431,6 +430,7 @@ rio
 sioyek
 slack
 stats
+tabby
 vimr
 vivaldi
 vlc

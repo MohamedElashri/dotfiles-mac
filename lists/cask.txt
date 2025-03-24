@@ -88,6 +88,7 @@ rio
 sioyek
 slack
 stats
+tabby
 vimr
 vivaldi
 vlc
