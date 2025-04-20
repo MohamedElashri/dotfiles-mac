@@ -186,6 +186,7 @@ libxtst
 libyaml
 little-cms2
 llvm
+llvm@19
 lpeg
 ls-go
 lua

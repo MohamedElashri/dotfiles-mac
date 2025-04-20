@@ -1,15 +1,6 @@
 {
   "CodeGPT.Autocomplete.maxTokens": 5000,
   "CodeGPT.apiKey": "Google AI Studio",
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.autopep8"
-  },
   "amazonQ.shareContentWithAWS": false,
   "amazonQ.telemetry": false,
   "application.shellEnvironmentResolutionTimeout": 20,
@@ -26,7 +17,6 @@
   "cody.plugins.debug.enabled": false,
   "continue.enableTabAutocomplete": true,
   "editor.accessibilitySupport": "off",
-  "editor.defaultFormatter": "ms-python.autopep8",
   "editor.fontFamily": "Monaspace Argon",
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
@@ -43,7 +33,6 @@
   "github.copilot-labs.showBrushesLenses": true,
   "github.copilot-labs.showTestGenerationLenses": true,
   "github.copilot.advanced": {},
-  "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.enable": {
     "*": true,
     "markdown": true,
@@ -149,27 +138,26 @@
   "terminal.integrated.scrollback": 10000,
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.colorCustomizations": {
-    "terminal.ansiBlack": "#191919",
-    "terminal.ansiBlue": "#639EE4",
-    "terminal.ansiBrightBlack": "#5F5A60",
-    "terminal.ansiBrightBlue": "#639EE4",
-    "terminal.ansiBrightCyan": "#4BB1A7",
-    "terminal.ansiBrightGreen": "#84B97C",
-    "terminal.ansiBrightMagenta": "#B888E2",
-    "terminal.ansiBrightRed": "#DC657D",
-    "terminal.ansiBrightWhite": "#FFFFFF",
-    "terminal.ansiBrightYellow": "#C3BA63",
-    "terminal.ansiCyan": "#4BB1A7",
-    "terminal.ansiGreen": "#84B97C",
-    "terminal.ansiMagenta": "#B888E2",
-    "terminal.ansiRed": "#DC657D",
-    "terminal.ansiWhite": "#A7A7A7",
-    "terminal.ansiYellow": "#C3BA63",
-    "terminal.background": "#191919",
-    "terminal.foreground": "#A7A7A7",
-    "terminalCursor.background": "#A7A7A7",
-    "terminalCursor.foreground": "#A7A7A7"
-  },
+  "terminal.background":"#FFFFFF",
+  "terminal.foreground":"#101010",
+  "terminalCursor.background":"#101010",
+  "terminalCursor.foreground":"#101010",
+  "terminal.ansiBlack":"#FFFFFF",
+  "terminal.ansiBlue":"#3777E6",
+  "terminal.ansiBrightBlack":"#B0B0B0",
+  "terminal.ansiBrightBlue":"#3777E6",
+  "terminal.ansiBrightCyan":"#1FAAAA",
+  "terminal.ansiBrightGreen":"#00C918",
+  "terminal.ansiBrightMagenta":"#AD00A1",
+  "terminal.ansiBrightRed":"#FF0086",
+  "terminal.ansiBrightWhite":"#202020",
+  "terminal.ansiBrightYellow":"#ABA800",
+  "terminal.ansiCyan":"#1FAAAA",
+  "terminal.ansiGreen":"#00C918",
+  "terminal.ansiMagenta":"#AD00A1",
+  "terminal.ansiRed":"#FF0086",
+  "terminal.ansiWhite":"#101010",
+  "terminal.ansiYellow":"#ABA800"  },
   "workbench.editorAssociations": {
     "*.ipynb": "default",
     "*.xls": "default"
@@ -183,5 +171,6 @@
   "pieces.telemetry": true,
   "settingsSync.ignoredExtensions": [
     "ms-vscode.js-debug-companion"
-  ]
+  ],
+  "workbench.colorTheme": "Visual Studio Light"
 }

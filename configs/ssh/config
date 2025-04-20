@@ -3,6 +3,27 @@ ControlPath ~/.ssh/%C
 ControlMaster auto
 ControlPersist 1
 
+# Disable X11 forwarding for local networks
+Host 192.168.*.*
+    ForwardX11 no
+    ForwardX11Trusted no
+
+Host 10.*.*.*
+    ForwardX11 no
+    ForwardX11Trusted no
+
+Host 172.16.*.*
+    ForwardX11 no
+    ForwardX11Trusted no
+
+Host 127.*.*.*
+    ForwardX11 no
+    ForwardX11Trusted no
+
+Host localhost
+    ForwardX11 no
+    ForwardX11Trusted no
+
 # Host configuration for sneezy
 Host sneezy
     User melashri
@@ -90,7 +111,7 @@ Host gpu
     ServerAliveInterval 60
     ServerAliveCountMax 240
 
-# Host configuration for sleepy-earth with unique port forwarding
+# Host configuration for sleepy-earth with
 Host sleepy-earth
     User melashri
     HostName sleepy.geop.uc.edu
@@ -104,7 +125,7 @@ Host sleepy-earth
     ServerAliveCountMax 240
     IdentitiesOnly yes
 
-# Host configuration for sneezy-earth with unique port forwarding
+# Host configuration for sneezy-earth
 Host sneezy-earth
     User melashri
     HostName sneezy.geop.uc.edu
@@ -118,7 +139,7 @@ Host sneezy-earth
     ServerAliveCountMax 240
     IdentitiesOnly yes
 
-# Host configuration for goofy-earth with unique port forwarding
+# Host configuration for goofy-earth
 Host goofy-earth
     User melashri
     HostName goofy.geop.uc.edu
@@ -132,8 +153,14 @@ Host goofy-earth
     ServerAliveCountMax 240
     IdentitiesOnly yes
 
+# Host configuration for CERN gitlab
+Host gcern
+    HostName gitlab.cern.ch
+    User git
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa
+
 # Default settings for all hosts
-Host *
     IdentityFile ~/.ssh/id_rsa
     AddKeysToAgent yes
     UseKeychain yes
@@ -142,12 +169,6 @@ Host *
     ForwardAgent yes
     ServerAliveCountMax 240
     ServerAliveInterval 60
-
-Host gcern
-    HostName gitlab.cern.ch
-    User git
-    PreferredAuthentications publickey
-    IdentityFile ~/.ssh/id_rsa
 
 # Amazon Q SSH Integration (leave at the bottom of the file)
 Match all
