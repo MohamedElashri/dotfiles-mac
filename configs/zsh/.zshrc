@@ -22,7 +22,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 
 #### Zsh configuration files START #####
-# Zsh configuration files
 source $HOME/config.zsh
 source $HOME/plugins.zsh
 source $HOME/environment.zsh
@@ -42,12 +41,14 @@ source $HOME/cli/m_nvim.zsh
 
 # Post-initialization blocks for external tools. These should stay at the bottom.
 
-# CodeWhisperer post block
 
-# Q post block. Keep at the bottom of this file.
 
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
 
 # Added by Windsurf
 export PATH="/Users/melashri/.codeium/windsurf/bin:$PATH"
+
+#Add custom completion directory
+fpath=(~/.zsh/completion $fpath)
+autoload -U compinit && compinit

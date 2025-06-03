@@ -92,7 +92,6 @@ highway
 hugo
 hwloc
 hyperfine
-icu4c@76
 icu4c@77
 imagemagick
 imath
@@ -132,7 +131,6 @@ libffi
 libfido2
 libgcrypt
 libgit2
-libgit2@1.8
 libgpg-error
 libheif
 libidn
@@ -197,8 +195,8 @@ lzo
 m4
 mariadb-connector-c
 mbedtls
-mc
 micro
+minio
 mpdecimal
 mpfr
 mpg123
@@ -225,7 +223,6 @@ openblas
 opencore-amr
 openexr
 openjpeg
-openssl@1.1
 openssl@3
 openvino
 opus
@@ -255,8 +252,6 @@ pyenv
 pyenv-virtualenv
 pygments
 python-argcomplete
-python-idna
-python-lxml
 python-packaging
 python-setuptools
 python@3.10
@@ -264,7 +259,6 @@ python@3.11
 python@3.12
 python@3.13
 pyvim
-pyyaml
 qpdf
 rav1e
 rbenv
@@ -412,7 +406,6 @@ iterm2
 keycastr
 keyclu
 kitty
-loop
 mactex
 mattermost
 miniforge

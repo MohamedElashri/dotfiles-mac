@@ -172,5 +172,6 @@
   "settingsSync.ignoredExtensions": [
     "ms-vscode.js-debug-companion"
   ],
-  "workbench.colorTheme": "Visual Studio Light"
+  "workbench.colorTheme": "Default High Contrast Light",
+  "chat.unifiedChatView": false
 }

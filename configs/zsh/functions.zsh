@@ -390,6 +390,16 @@ fcount() {
     IFS="$OLD_IFS"
 }
 
+count_files() {
+  local dir="${1:-.}"
+  if [[ -d "$dir" ]]; then
+    fd --type f --max-depth 1 --hidden --exclude .DS_Store . "$dir" | wc -l
+  else
+    echo "Error: '$dir' is not a valid directory." >&2
+    return 1
+  fi
+}
+
 
 ########## System ##########
 

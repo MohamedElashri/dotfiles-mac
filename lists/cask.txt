@@ -71,7 +71,6 @@ iterm2
 keycastr
 keyclu
 kitty
-loop
 mactex
 mattermost
 miniforge
