@@ -184,7 +184,6 @@ libxtst
 libyaml
 little-cms2
 llvm
-llvm@19
 lpeg
 ls-go
 lua
@@ -346,6 +345,7 @@ cryptomator
 deskpad
 discord
 docker
+docker-desktop
 doughnut
 extraterm
 fmail2

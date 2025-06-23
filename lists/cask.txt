@@ -11,6 +11,7 @@ cryptomator
 deskpad
 discord
 docker
+docker-desktop
 doughnut
 extraterm
 fmail2

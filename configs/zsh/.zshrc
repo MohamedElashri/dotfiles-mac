@@ -27,7 +27,7 @@ source $HOME/plugins.zsh
 source $HOME/environment.zsh
 source $HOME/aliases.zsh
 source $HOME/functions.zsh
-source $HOME/shellhistory.zsh
+#source $HOME/shellhistory.zsh
 
 #### Zsh configuration files END #####
 
@@ -52,3 +52,4 @@ export PATH="/Users/melashri/.codeium/windsurf/bin:$PATH"
 #Add custom completion directory
 fpath=(~/.zsh/completion $fpath)
 autoload -U compinit && compinit
+export PATH="/Users/melashri/.pixi/bin:$PATH"
