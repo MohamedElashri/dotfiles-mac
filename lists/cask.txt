@@ -87,6 +87,7 @@ rectangle
 rio
 sioyek
 slack
+soundanchor
 stats
 tabby
 vimr

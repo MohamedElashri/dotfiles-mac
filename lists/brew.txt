@@ -56,6 +56,7 @@ free-mac
 freetype
 frei0r
 fribidi
+fswatch
 ftgl
 fzf
 gcc
@@ -77,6 +78,7 @@ gnutls
 go
 gobject-introspection
 gpgme
+gpgmepp
 graphene
 graphite2
 graphviz
@@ -99,7 +101,6 @@ img2pdf
 infisical
 irssi
 isl
-jansson
 jasper
 jbig2dec
 jbig2enc
@@ -142,6 +143,8 @@ liblqr
 libmicrohttpd
 libmpc
 libnghttp2
+libnghttp3
+libngtcp2
 libogg
 libomp
 libpng
@@ -200,6 +203,7 @@ mpdecimal
 mpfr
 mpg123
 msgpack
+mutagen
 mysql-client
 nano
 ncurses
@@ -278,6 +282,7 @@ s3cmd
 sdl2
 shared-mime-info
 shellcheck
+simdjson
 six
 snappy
 speex
@@ -421,6 +426,7 @@ rectangle
 rio
 sioyek
 slack
+soundanchor
 stats
 tabby
 vimr

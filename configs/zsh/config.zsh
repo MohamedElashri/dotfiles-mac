@@ -91,6 +91,9 @@ eval "$(zoxide init zsh)" # zoxide config
 eval "$(atuin init zsh)" # atuin config
 
 
+## Clangd
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
 
 # Conditional editor settings based on SSH connection
 # if [[ -n $SSH_CONNECTION ]]; then
