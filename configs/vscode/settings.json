@@ -172,6 +172,8 @@
   "settingsSync.ignoredExtensions": [
     "ms-vscode.js-debug-companion"
   ],
-  "workbench.colorTheme": "Monokai Pro (Filter Octagon)",
-  "chat.unifiedChatView": false
+  "chat.unifiedChatView": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "workbench.colorTheme": "Monokai Pro Light",
+  "workbench.iconTheme": "Monokai Pro Light Icons"
 }
