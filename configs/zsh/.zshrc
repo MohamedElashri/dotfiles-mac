@@ -36,7 +36,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 
 # Custom scripts
-$HOME/cli/terminal_quran.sh
+# $HOME/cli/terminal_quran.sh
 source $HOME/cli/m_nvim.zsh
 
 # Post-initialization blocks for external tools. These should stay at the bottom.

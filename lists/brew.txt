@@ -1,4 +1,5 @@
 act
+agg
 aom
 appstream
 argp-standalone
