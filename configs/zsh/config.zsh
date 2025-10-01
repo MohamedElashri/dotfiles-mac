@@ -65,9 +65,9 @@ ZSH_HIGHLIGHT_STYLES[cursor]='standout'
 
 ####Path configurations ####
 export PATH="$PATH:$HOME/.local/bin"
-export PATH="/usr/local/Cellar/python@3.10/3.10/bin:$PATH"
+# export PATH="/usr/local/Cellar/python@3.10/3.10/bin:$PATH"
 export PATH=$(brew --prefix python)/bin:$PATH
-export PYTHONPATH="/$HOME/pythia8310/lib:$PYTHONPATH"
+# export PYTHONPATH="/$HOME/pythia8310/lib:$PYTHONPATH"
 
 ## Ruby configuration
 if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
