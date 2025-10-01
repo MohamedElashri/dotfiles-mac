@@ -175,5 +175,6 @@
   "chat.unifiedChatView": false,
   "github.copilot.nextEditSuggestions.enabled": true,
   "workbench.colorTheme": "Monokai Pro Light",
-  "workbench.iconTheme": "Monokai Pro Light Icons"
+  "workbench.iconTheme": "Monokai Pro Light Icons",
+  "python.analysis.typeCheckingMode": "standard"
 }
