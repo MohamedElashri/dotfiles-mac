@@ -15,7 +15,7 @@ fi
 
 # Powerlevel10k configuration
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-ZSH_THEME="wezm" # set by `omz`
+ZSH_THEME="powerlevel10k/powerlevel10k" # set by `omz`
 
 
 #### Powerlevel10k configuration END #####
