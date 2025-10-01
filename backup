@@ -48,30 +48,40 @@ copy_file ~/functions.zsh configs/zsh/functions.zsh
 copy_file ~/shellhistory.zsh configs/zsh/shellhistory.zsh
 copy_file ~/.p10k.zsh configs/zsh/.p10k.zsh
 
+
+# Backup bat config
 ensure_directory "configs/cli/bat"
 copy_file ~/.config/bat/config configs/cli/bat/config
 
+# Backup zed config
 ensure_directory "configs/zed"
 copy_file ~/.config/zed/settings.json configs/zed/settings.json
 
+# Backup atuin config
 ensure_directory "configs/cli/atuin"
 copy_file ~/.atuin/config.toml configs/cli/atuin/config.toml
 
+# Backup ssh config
 ensure_directory "configs/ssh"
 copy_file ~/.ssh/config configs/ssh/config
 
+# Backup helix config
 ensure_directory "configs/cli/helix"
 copy_file ~/.config/helix/config.toml configs/cli/helix/config.toml
 
+# Backup nano config
 ensure_directory "configs/cli/nano"
 copy_file ~/.nanorc configs/cli/nano/nanorc
 
+# Backup gh config
 ensure_directory "configs/cli/gh"
 copy_file ~/.config/gh/config.yml configs/cli/gh/config.yml
 
+# Backup hyper terminal config
 ensure_directory "configs/cli/hyper"
 copy_file ~/.hyper.js configs/cli/hyper/hyper.js
 
+# Backup terminal quarn script and nvim manager
 ensure_directory "configs/cli/"
 copy_file ~/cli/terminal_quran.sh configs/cli/terminal_quran.sh
 copy_file ~/cli/m_nvim.zsh configs/cli/m_nvim.zsh
