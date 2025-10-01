@@ -9,8 +9,6 @@ MAGENTA='\033[0;35m'
 CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
-
-
 # Function to check if a file exists and copy it
 copy_file() {
   if [ -f "$1" ]; then
@@ -30,6 +28,7 @@ ensure_directory() {
 }
 
 # Backup brew packages
+ensure_directory "lists"
 brew list > "lists/brew.txt"
 echo -e "${CYAN}Backed up brew packages to lists/brew.txt${NC}"
 
@@ -50,7 +49,7 @@ copy_file ~/shellhistory.zsh configs/zsh/shellhistory.zsh
 copy_file ~/.p10k.zsh configs/zsh/.p10k.zsh
 
 ensure_directory "configs/cli/bat"
-copy_file ~/.config/bat/config/config configs/cli/bat/config
+copy_file ~/.config/bat/config configs/cli/bat/config
 
 ensure_directory "configs/zed"
 copy_file ~/.config/zed/settings.json configs/zed/settings.json
@@ -91,7 +90,15 @@ copy_file ~/.stCommitMsg configs/git/.stCommitMsg
 ensure_directory "configs/vscode"
 copy_file "$HOME/Library/Application Support/Code/User/settings.json" "configs/vscode/settings.json"
 
+# Backup iTerm2 config
+ensure_directory "configs/iterm2"
+copy_file "$HOME/Library/Preferences/com.googlecode.iterm2.plist" "configs/iterm2/com.googlecode.iterm2.plist"
+
 # Backup Fonts Collections
 ensure_directory "configs/fonts/FontCollections"
-cp -f ~/Library/FontCollections/* "configs/fonts/FontCollections"
-echo -e "${MAGENTA}Backed up Font Collections${NC}"
+cp -f ~/Library/FontCollections/* "configs/fonts/FontCollections" 2>/dev/null
+if [ $? -eq 0 ]; then
+  echo -e "${MAGENTA}Backed up Font Collections${NC}"
+else
+  echo -e "${YELLOW}No Font Collections found or unable to copy.${NC}"
+fi
