@@ -2,10 +2,21 @@
 # PATH Configurations
 # =============================================================================
 
-export PATH="/opt/homebrew/opt/python@3.8/bin:/usr/local/bin:$PATH"
-export PATH="${PATH}:/Applications/terminal/ShellHistory.app/Contents/Helpers"
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-export PATH="$PATH:$HOME/.local/bin"
+export PATH="${PATH}:/Applications/terminal/ShellHistory.app/Contents/Helpers" # ShellHistory App
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" # VSCode App
+export PATH="$PATH:$HOME/.local/bin" # User-specific bin 
+export PATH=$(brew --prefix python)/bin:$PATH
+# export PYTHONPATH="/$HOME/pythia8310/lib:$PYTHONPATH"
+export ATUIN_CONFIG_DIR=$HOME/.atuin ## Atuin configuration
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH" # LLVM - Clang
+
+##Go congiguration
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+
 
 # =============================================================================
 # Oh My Zsh Configuration (with Powerlevel10k theme)
@@ -64,12 +75,36 @@ nvm() {
 }
 
 # =============================================================================
+# Ruby Configuration (Lazy loading for fast startup)
+# =============================================================================
+_ruby_lazy_setup() {
+  local brew_rb="/opt/homebrew/opt/ruby/bin"
+  [[ -d $brew_rb ]] || return 0
+  # Prepend Ruby bin
+  PATH="$brew_rb:$PATH"
+  # Add gem bin (computed using the brew Ruby, not whatever is first in PATH)
+  local gem_bin="$("$brew_rb/gem" environment gemdir)/bin"
+  PATH="$gem_bin:$PATH"
+  # Remove wrappers so subsequent calls go straight to the real binaries
+  unfunction ruby gem bundle rake irb rdoc ri 2>/dev/null
+}
+
+ruby()   { _ruby_lazy_setup; command ruby   "$@"; }
+gem()   # Wrap common Ruby entrypoints
+ { _ruby_lazy_setup; command gem    "$@"; }
+bundle() { _ruby_lazy_setup; command bundle "$@"; }
+rake()   { _ruby_lazy_setup; command rake   "$@"; }
+irb()    { _ruby_lazy_setup; command irb    "$@"; }
+rdoc()   { _ruby_lazy_setup; command rdoc   "$@"; }
+ri()     { _ruby_lazy_setup; command ri     "$@"; }
+
+# =============================================================================
 # Other Tools
 # =============================================================================
 
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# # rbenv
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
 
 # 1Password
 export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"

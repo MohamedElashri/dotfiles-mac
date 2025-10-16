@@ -117,6 +117,7 @@ alias ip6_on='sudo networksetup -setv6automatic Wi-Fi'
 alias ip6_off='sudo networksetup -setv6off Wi-Fi'
 alias speedtest='speedtest-cli'
 alias edit_host='sudo nano /etc/hosts'
+alias bypass_xyz='dnscrypt-proxy -config ~/.config/dnscrypt-proxy/dnscrypt-proxy.toml'
 
 ### Misc ###
 alias weather_cincy="curl https://wttr.in/Cincinnati | head -7" 

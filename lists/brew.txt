@@ -15,6 +15,7 @@ awscli
 bash
 bat
 berkeley-db@5
+binwalk
 boost
 bottom
 brotli
@@ -22,6 +23,7 @@ btop
 c-ares
 ca-certificates
 cairo
+capstone
 cask
 ccat
 cffi
@@ -39,6 +41,8 @@ ctags
 dav1d
 davix
 dbus
+dnscrypt-proxy
+dtc
 duf
 duktape
 dust
@@ -84,6 +88,7 @@ graphite2
 graphviz
 gsettings-desktop-schemas
 gsl
+gtk+
 gtk+3
 gtk4
 gts
@@ -157,6 +162,7 @@ librist
 librsvg
 libsamplerate
 libsass
+libslirp
 libsndfile
 libsodium
 libsoxr
@@ -208,6 +214,7 @@ msgpack
 mutagen
 mysql-client
 nano
+nasm
 ncurses
 neovim
 netpbm
@@ -231,6 +238,7 @@ openjph
 openssl@3
 opus
 p11-kit
+p7zip
 pandoc
 pango
 parallel
@@ -261,6 +269,7 @@ python@3.11
 python@3.12
 python@3.13
 pyvim
+qemu
 qpdf
 qwen-code
 rav1e
@@ -287,6 +296,7 @@ six
 snappy
 speex
 sqlite
+squashfs
 srt
 starship
 stow
@@ -309,6 +319,7 @@ unpaper
 utf8proc
 util-linux
 uvwasi
+vde
 vim
 vint
 webp
