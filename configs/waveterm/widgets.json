@@ -1,16 +1,4 @@
 {
-  "nmem": {
-    "icon": "ubuntu",
-    "color": "#70ac76",
-    "label": "nmem",
-    "blockdef": {
-      "meta": {
-        "view": "term",
-        "controller": "cmd",
-        "cmd": "nmem --watch"
-      }
-    }
-  },
   "btop": {
     "icon": "computer",
     "color": "#c4958b",
@@ -19,19 +7,19 @@
       "meta": {
         "view": "term",
         "controller": "cmd",
-        "cmd": "/usr/bin/env zsh -lic 'if command -v btop >/dev/null 2>&1; then exec btop; elif [ -x /usr/bin/btop ]; then exec /usr/bin/btop; elif [ -x /usr/local/bin/btop ]; then exec /usr/local/bin/btop; elif [ -x /opt/homebrew/bin/btop ]; then exec /opt/homebrew/bin/btop; else echo \"btop not found; PATH=$PATH\"; fi'"
+        "cmd": "/usr/bin/env zsh -lic 'for path in /opt/homebrew/bin/btop /usr/local/bin/btop $(which btop 2>/dev/null); do if [ -x \"$path\" ]; then exec \"$path\"; fi; done; echo \"btop not found. Install with: brew install btop\"'"
       }
     }
   },
-  "htop": {
-    "icon": "computer",
-    "color": "#88b0d0",
-    "label": "htop",
+  "dns-mdns": {
+    "icon": "network-wired",
+    "color": "#2ecc71",
+    "label": "dns/mdns",
     "blockdef": {
       "meta": {
         "view": "term",
         "controller": "cmd",
-        "cmd": "/usr/bin/env zsh -lic 'if command -v htop >/dev/null 2>&1; then exec htop; else echo \"htop not found. Install htop or use btop widget.\"; fi'"
+        "cmd": "/usr/bin/env zsh -lic 'echo \"=== macOS DNS/mDNS Info ===\"; echo; echo \"• Bonjour hostname:\"; scutil --get LocalHostName | sed \"s/$/.local/\"; echo; echo \"• Resolving self:\"; dscacheutil -q host -a name $(scutil --get LocalHostName).local | head -n 3; echo; echo \"• DNS servers:\"; scutil --dns | sed -n \"/resolver #1/,/^$/p\" | grep \"nameserver\" | sed -E \"s/.*: (.*)/  - \\1/\" | head -n 5; echo; echo \"Tip: Use \\\"dns-sd -B _http._tcp\\\" in Terminal for live mDNS.\"'"
       }
     }
   },
@@ -43,7 +31,7 @@
       "meta": {
         "view": "term",
         "controller": "cmd",
-        "cmd": "/usr/bin/env zsh -lic 'if command -v docker >/dev/null 2>&1; then watch -n3 \"docker stats --no-stream --format \\\"table {{.Name}}\\t{{.CPUPerc}}\\t{{.MemUsage}}\\t{{.NetIO}}\\t{{.BlockIO}}\\\"\"; else echo \"docker not found.\"; fi'"
+        "cmd": "/usr/bin/env zsh -lic 'if command -v docker >/dev/null 2>&1; then watch -n3 \"docker stats --no-stream --format \\\"table {{.Name}}\\\\t{{.CPUPerc}}\\\\t{{.MemUsage}}\\\\t{{.NetIO}}\\\\t{{.BlockIO}}\\\"\"; else echo \"Docker not found. Is Docker Desktop running?\"; fi'"
       }
     }
   },
@@ -55,36 +43,36 @@
       "meta": {
         "view": "term",
         "controller": "cmd",
-        "cmd": "/usr/bin/env zsh -lic 'watch -n5 \"df -hT || df -h\"'"
+        "cmd": "/usr/bin/env zsh -lic 'watch -n5 \"df -h\"'"
       }
     }
   },
-  "logs": {
-    "icon": "file-text",
-    "color": "#a0a0a0",
-    "label": "logs",
+  "network": {
+    "icon": "wifi",
+    "color": "#4db6ac",
+    "label": "network",
     "blockdef": {
       "meta": {
         "view": "term",
         "controller": "cmd",
-        "cmd": "/usr/bin/env zsh -lic 'if command -v journalctl >/dev/null 2>&1; then exec journalctl -f -n 200; elif [ -f /var/log/syslog ]; then exec tail -n 200 -F /var/log/syslog; elif [ -f /var/log/messages ]; then exec tail -n 200 -F /var/log/messages; else echo \"No system log found.\"; fi'"
+        "cmd": "/usr/bin/env zsh -lic 'if command -v netstat >/dev/null 2>&1; then watch -n5 \"netstat -rn | grep -E \\\"^(default|Internet:|Active|Destination)\\\"\"; else echo \"netstat not available.\"; fi'"
       }
     }
   },
   "tailscale": {
-    "icon": "network-wired",
+    "icon": "tower-broadcast",
     "color": "#4db6ac",
     "label": "tailscale",
     "blockdef": {
       "meta": {
         "view": "term",
         "controller": "cmd",
-        "cmd": "/usr/bin/env zsh -lic 'if command -v tailscale >/dev/null 2>&1; then watch -n5 \"tailscale status\"; else echo \"tailscale not found.\"; fi'"
+        "cmd": "/usr/bin/env zsh -lic 'if command -v tailscale >/dev/null 2>&1; then watch -n5 \"tailscale status\"; else echo \"tailscale not found. Install with: brew install tailscale\"; fi'"
       }
     }
   },
   "ping": {
-    "icon": "wifi",
+    "icon": "signal",
     "color": "#d18be0",
     "label": "ping",
     "blockdef": {
@@ -103,7 +91,7 @@
       "meta": {
         "view": "term",
         "controller": "cmd",
-        "cmd": "/usr/bin/env zsh -lic 'if command -v curl >/dev/null 2>&1; then watch -n1800 \"curl -s wttr.in/Geneva?format=3\"; else echo \"curl not found.\"; fi'"
+        "cmd": "/usr/bin/env zsh -lic 'if command -v curl >/dev/null 2>&1; then watch -n1800 \"curl -s wttr.in/Geneva?format=3\"; else echo \"curl not found. Install with: brew install curl\"; fi'"
       }
     }
   },
@@ -115,19 +103,7 @@
       "meta": {
         "view": "term",
         "controller": "cmd",
-        "cmd": "/usr/bin/env zsh -lic 'if command -v apt >/dev/null 2>&1; then apt list --upgradable 2>/dev/null | head -n 20; elif command -v dnf >/dev/null 2>&1; then dnf check-update || true; elif command -v brew >/dev/null 2>&1; then brew outdated; else echo \"No package manager detected.\"; fi'"
-      }
-    }
-  },
-  "services": {
-    "icon": "square-binary",
-    "color": "#f39c12",
-    "label": "services",
-    "blockdef": {
-      "meta": {
-        "view": "term",
-        "controller": "cmd",
-        "cmd": "/usr/bin/env zsh -lic 'if command -v systemctl >/dev/null 2>&1; then systemctl --failed --no-pager; else echo \"systemctl not found.\"; fi'"
+        "cmd": "/usr/bin/env zsh -lic 'if command -v brew >/dev/null 2>&1; then brew outdated; else echo \"Homebrew not found.\"; fi'"
       }
     }
   },
@@ -139,8 +115,23 @@
       "meta": {
         "view": "term",
         "controller": "cmd",
-        "cmd": "/usr/bin/env zsh -lic 'if command -v ss >/dev/null 2>&1; then watch -n5 \"ss -tulpn | awk \\\"BEGIN {printf \\\"%-5s %-25s %s\\\\n\\\", \\\"Proto\\\", \\\"Local-Address:Port\\\", \\\"Program\\\"} NR>1 {printf \\\"%-5s %-25s %s\\\\n\\\", $1, $5, $7}\\\"\"; elif command -v netstat >/dev/null 2>&1; then watch -n5 \"netstat -tulpn | awk \\\"BEGIN {printf \\\"%-5s %-25s %s\\\\n\\\", \\\"Proto\\\", \\\"Local-Address:Port\\\", \\\"Program\\\"} NR>2 {printf \\\"%-5s %-25s %s\\\\n\\\", $1, $4, $7}\\\"\"; else echo \"No ss/netstat found.\"; fi'"
+        "cmd": "/usr/bin/env zsh -lic 'if ! command -v lsof >/dev/null 2>&1; then echo \"lsof not found. Usually preinstalled on macOS.\"; exit 1; fi; while true; do clear; echo \"Listening ports (refresh every 5s):\\n\"; lsof -i -P -n 2>/dev/null | awk \"BEGIN { printf \\\"%-25s %s\\\\n\\\", \\\"Local-Address:Port\\\", \\\"Program\\\" } /LISTEN/ { split(\\$9, a, \\\":\\\"); port = a[length(a)]; gsub(/\\\\[.*\\\\]/, \\\"\\\", \\$9); printf \\\"%-25s %s\\\\n\\\", \\$9, \\$1 }\"; sleep 5; done'"
       }
+    }
+  },
+"ssh-config": {
+  "icon": "key",
+  "color": "#3498db",
+  "label": "ssh",
+  "blockdef": {
+    "meta": {
+      "view": "term",
+      "controller": "cmd",
+      "cmd": "/usr/bin/env zsh -lic 'config=\"$HOME/.ssh/config\"; if [[ ! -f \"$config\" ]]; then echo \"No ~/.ssh/config found.\"; exit 0; fi; echo \"SSH Configured Hosts:\"; echo; awk \"/^[ ]*Host[ ]+[^*?]/ { host=\\$2 } /^[ ]*HostName[ ]+/ { if (host != \\\"\\\") { print host \\\" → \\\" \\$2; host=\\\"\\\" } }\" \"$config\" | sort -u || echo \"No valid entries found.\"'"
     }
   }
 }
+}
+
+
+
