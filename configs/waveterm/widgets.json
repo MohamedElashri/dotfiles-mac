@@ -1,0 +1,146 @@
+{
+  "nmem": {
+    "icon": "ubuntu",
+    "color": "#70ac76",
+    "label": "nmem",
+    "blockdef": {
+      "meta": {
+        "view": "term",
+        "controller": "cmd",
+        "cmd": "nmem --watch"
+      }
+    }
+  },
+  "btop": {
+    "icon": "computer",
+    "color": "#c4958b",
+    "label": "btop",
+    "blockdef": {
+      "meta": {
+        "view": "term",
+        "controller": "cmd",
+        "cmd": "/usr/bin/env zsh -lic 'if command -v btop >/dev/null 2>&1; then exec btop; elif [ -x /usr/bin/btop ]; then exec /usr/bin/btop; elif [ -x /usr/local/bin/btop ]; then exec /usr/local/bin/btop; elif [ -x /opt/homebrew/bin/btop ]; then exec /opt/homebrew/bin/btop; else echo \"btop not found; PATH=$PATH\"; fi'"
+      }
+    }
+  },
+  "htop": {
+    "icon": "computer",
+    "color": "#88b0d0",
+    "label": "htop",
+    "blockdef": {
+      "meta": {
+        "view": "term",
+        "controller": "cmd",
+        "cmd": "/usr/bin/env zsh -lic 'if command -v htop >/dev/null 2>&1; then exec htop; else echo \"htop not found. Install htop or use btop widget.\"; fi'"
+      }
+    }
+  },
+  "docker-stats": {
+    "icon": "docker",
+    "color": "#4aa3df",
+    "label": "docker",
+    "blockdef": {
+      "meta": {
+        "view": "term",
+        "controller": "cmd",
+        "cmd": "/usr/bin/env zsh -lic 'if command -v docker >/dev/null 2>&1; then watch -n3 \"docker stats --no-stream --format \\\"table {{.Name}}\\t{{.CPUPerc}}\\t{{.MemUsage}}\\t{{.NetIO}}\\t{{.BlockIO}}\\\"\"; else echo \"docker not found.\"; fi'"
+      }
+    }
+  },
+  "disk": {
+    "icon": "hard-drive",
+    "color": "#e0b070",
+    "label": "disk",
+    "blockdef": {
+      "meta": {
+        "view": "term",
+        "controller": "cmd",
+        "cmd": "/usr/bin/env zsh -lic 'watch -n5 \"df -hT || df -h\"'"
+      }
+    }
+  },
+  "logs": {
+    "icon": "file-text",
+    "color": "#a0a0a0",
+    "label": "logs",
+    "blockdef": {
+      "meta": {
+        "view": "term",
+        "controller": "cmd",
+        "cmd": "/usr/bin/env zsh -lic 'if command -v journalctl >/dev/null 2>&1; then exec journalctl -f -n 200; elif [ -f /var/log/syslog ]; then exec tail -n 200 -F /var/log/syslog; elif [ -f /var/log/messages ]; then exec tail -n 200 -F /var/log/messages; else echo \"No system log found.\"; fi'"
+      }
+    }
+  },
+  "tailscale": {
+    "icon": "network-wired",
+    "color": "#4db6ac",
+    "label": "tailscale",
+    "blockdef": {
+      "meta": {
+        "view": "term",
+        "controller": "cmd",
+        "cmd": "/usr/bin/env zsh -lic 'if command -v tailscale >/dev/null 2>&1; then watch -n5 \"tailscale status\"; else echo \"tailscale not found.\"; fi'"
+      }
+    }
+  },
+  "ping": {
+    "icon": "wifi",
+    "color": "#d18be0",
+    "label": "ping",
+    "blockdef": {
+      "meta": {
+        "view": "term",
+        "controller": "cmd",
+        "cmd": "/usr/bin/env zsh -lic 'watch -n2 \"ping -c 1 1.1.1.1 | grep time=\"'"
+      }
+    }
+  },
+  "weather": {
+    "icon": "umbrella",
+    "color": "#7fb3d5",
+    "label": "weather",
+    "blockdef": {
+      "meta": {
+        "view": "term",
+        "controller": "cmd",
+        "cmd": "/usr/bin/env zsh -lic 'if command -v curl >/dev/null 2>&1; then watch -n1800 \"curl -s wttr.in/Geneva?format=3\"; else echo \"curl not found.\"; fi'"
+      }
+    }
+  },
+  "updates": {
+    "icon": "refresh",
+    "color": "#5dade2",
+    "label": "updates",
+    "blockdef": {
+      "meta": {
+        "view": "term",
+        "controller": "cmd",
+        "cmd": "/usr/bin/env zsh -lic 'if command -v apt >/dev/null 2>&1; then apt list --upgradable 2>/dev/null | head -n 20; elif command -v dnf >/dev/null 2>&1; then dnf check-update || true; elif command -v brew >/dev/null 2>&1; then brew outdated; else echo \"No package manager detected.\"; fi'"
+      }
+    }
+  },
+  "services": {
+    "icon": "square-binary",
+    "color": "#f39c12",
+    "label": "services",
+    "blockdef": {
+      "meta": {
+        "view": "term",
+        "controller": "cmd",
+        "cmd": "/usr/bin/env zsh -lic 'if command -v systemctl >/dev/null 2>&1; then systemctl --failed --no-pager; else echo \"systemctl not found.\"; fi'"
+      }
+    }
+  },
+  "ports": {
+    "icon": "shield",
+    "color": "#9b59b6",
+    "label": "ports",
+    "blockdef": {
+      "meta": {
+        "view": "term",
+        "controller": "cmd",
+        "cmd": "/usr/bin/env zsh -lic 'if command -v ss >/dev/null 2>&1; then watch -n5 \"ss -tulpn | awk \\\"BEGIN {printf \\\"%-5s %-25s %s\\\\n\\\", \\\"Proto\\\", \\\"Local-Address:Port\\\", \\\"Program\\\"} NR>1 {printf \\\"%-5s %-25s %s\\\\n\\\", $1, $5, $7}\\\"\"; elif command -v netstat >/dev/null 2>&1; then watch -n5 \"netstat -tulpn | awk \\\"BEGIN {printf \\\"%-5s %-25s %s\\\\n\\\", \\\"Proto\\\", \\\"Local-Address:Port\\\", \\\"Program\\\"} NR>2 {printf \\\"%-5s %-25s %s\\\\n\\\", $1, $4, $7}\\\"\"; else echo \"No ss/netstat found.\"; fi'"
+      }
+    }
+  }
+}

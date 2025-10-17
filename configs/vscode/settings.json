@@ -65,19 +65,11 @@
   },
   "workbench.editorLargeFileConfirmation": 50,
   "git.openRepositoryInParentFolders": "never",
-  "pieces.OS.launchOnStartup": "Yes",
-  "pieces.cloudCapabilities": "Blended",
-  "pieces.telemetry": false,
   "settingsSync.ignoredExtensions": [
     "ms-vscode.js-debug-companion"
   ],
-  "chat.unifiedChatView": false,
   "github.copilot.nextEditSuggestions.enabled": true,
-  "python.analysis.typeCheckingMode": "standard",
-  "harper.codeActions.ForceStable": true,
-  "workbench.iconTheme": "Monokai Pro Light Icons",
-  "workbench.colorTheme": "Monokai Pro Light",
   "chat.mcp.gallery.enabled": true,
-  // "chat.disableAIFeatures": false
+  "workbench.colorTheme": "Quiet Light",
 
 }

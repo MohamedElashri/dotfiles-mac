@@ -1,0 +1,29 @@
+
+{
+  "autoupdate:channel": "latest",
+  "telemetry:enabled": false,
+  "editor:minimapenabled": true,
+  "web:defaulturl": "http://www.perplexity.ai",
+  "web:defaultsearch": "https://www.perplexity.ai/?q={query}",
+  "term:copyonselect": false,
+  "term:theme": "dracula",
+  "term:transparency": 0.1,
+  "term:fontsize" : 14,
+  "markdown:fontsize" : 16,
+  "web:openlinksinternally" : false,
+  "blockheader:showblockids" : true,
+  "widget:showhelp": true,
+  "window:transparent" : false,
+  "window:bgcolor": "FF5555",
+  "window:reducedmotion": false,
+  "window:tilegapsize": 10,
+  "window:maxtabcachesize": 5,
+  "window:showmenubar" : false,
+  "window:nativetitlebar": false,
+  "window:confirmonclose": false,
+  "window:magnifiedblockopacity": 0.6,
+  "window:magnifiedblocksize": 0.9,
+  "window:magnifiedblockblurprimarypx": 10,
+  "window:magnifiedblockblursecondarypx": 2
+
+}

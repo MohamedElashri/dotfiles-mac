@@ -27,6 +27,23 @@ ensure_directory() {
   fi
 }
 
+# Function to copy an entire directory recursively
+copy_dir() {
+  local src="$1"
+  local dest="$2"
+
+  if [ -d "$src" ]; then
+    # Ensure destination parent directory exists
+    mkdir -p "$dest"
+    # Copy contents of src into dest (preserving structure)
+    cp -r "$src"/* "$dest/" 2>/dev/null
+    echo -e "${GREEN}Copied directory $src to $dest${NC}"
+  else
+    echo -e "${YELLOW}Directory $src does not exist. Skipping.${NC}"
+  fi
+}
+
+
 # Backup brew packages
 ensure_directory "lists"
 brew list > "lists/brew.txt"
@@ -103,6 +120,10 @@ copy_file "$HOME/Library/Application Support/Code/User/settings.json" "configs/v
 # Backup iTerm2 config
 ensure_directory "configs/iterm2"
 copy_file "$HOME/Library/Preferences/com.googlecode.iterm2.plist" "configs/iterm2/com.googlecode.iterm2.plist"
+
+# Backup waveterm config folder at ~/.waveterm/config folder
+ensure_directory "configs/waveterm"
+copy_dir "$HOME/.waveterm/config" "configs/waveterm"
 
 # Backup Fonts Collections
 ensure_directory "configs/fonts/FontCollections"
