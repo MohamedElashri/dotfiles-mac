@@ -8,6 +8,7 @@ aribb24
 armadillo
 arpack
 asciinema
+asdf
 at-spi2-core
 atuin
 autoconf
@@ -71,6 +72,7 @@ gettext
 gh
 ghostscript
 giflib
+git
 git-delta
 git-lfs
 gl2ps
@@ -193,6 +195,7 @@ libxmlb
 libxrender
 libxtst
 libyaml
+libzip
 little-cms2
 llvm
 lpeg
@@ -223,6 +226,7 @@ nghttp2
 nlohmann-json
 nmap
 node
+node@20
 npth
 nspr
 nss
@@ -255,6 +259,8 @@ pmix
 pngquant
 poppler
 popt
+postgresql@15
+postgresql@17
 proselint
 pybind11
 pycparser
@@ -268,6 +274,7 @@ python@3.10
 python@3.11
 python@3.12
 python@3.13
+python@3.14
 pyvim
 qemu
 qpdf

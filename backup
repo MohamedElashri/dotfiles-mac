@@ -125,6 +125,11 @@ copy_file "$HOME/Library/Preferences/com.googlecode.iterm2.plist" "configs/iterm
 ensure_directory "configs/waveterm"
 copy_dir "$HOME/.waveterm/config" "configs/waveterm"
 
+# Backup atuin config
+ensure_directory "configs/cli/atuin"
+copy_file ~/.config/atuin/config.toml configs/cli/atuin/config.toml
+
+
 # Backup Fonts Collections
 ensure_directory "configs/fonts/FontCollections"
 cp -f ~/Library/FontCollections/* "configs/fonts/FontCollections" 2>/dev/null
