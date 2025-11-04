@@ -19,7 +19,7 @@
 # (windows: C:\Users\USER\AppData\Local\rio\themes\dracula.toml)
 #
 # Example:
-theme = "catppuccin-macchiato"
+theme = "dracula"
 
 # Padding-x
 #
@@ -61,7 +61,7 @@ padding-y = [12, 12]
 # This configuration only has effect if use-fork is disabled.
 #
 # Example:
-# working-dir = "/Users/raphael/Documents/"
+# working-dir = "/Users/melashri/Documents/"
 
 # Environment variables
 #
