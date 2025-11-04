@@ -130,6 +130,13 @@ ensure_directory "configs/cli/atuin"
 copy_file ~/.config/atuin/config.toml configs/cli/atuin/config.toml
 
 
+#Backup rio-terminal
+ensure_directory "configs/cli/rio-terminal"
+copy_file ~/.config/rio/config.toml configs/cli/rio-terminal/config.toml
+ensure_directory "configs/cli/rio-terminal/themes"
+copy_file ~/.config/rio/themes/dracula.toml configs/cli/rio-terminal/themes/dracula.toml
+copy_file ~/.config/rio/themes/catppuccin-macchiato.toml configs/cli/rio-terminal/themes/catppuccin-macchiato.toml
+
 # Backup Fonts Collections
 ensure_directory "configs/fonts/FontCollections"
 cp -f ~/Library/FontCollections/* "configs/fonts/FontCollections" 2>/dev/null

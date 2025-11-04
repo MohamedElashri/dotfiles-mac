@@ -118,6 +118,7 @@ jpeg-xl
 jq
 jsonlint
 krb5
+kstart
 lame
 lazygit
 leptonica

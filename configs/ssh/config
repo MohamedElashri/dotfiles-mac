@@ -1,175 +1,135 @@
-# Control settings
-ControlPath ~/.ssh/%C
-ControlMaster auto
-ControlPersist 1
-
-# Disable X11 forwarding for local networks
-Host 192.168.*.*
-    ForwardX11 no
-    ForwardX11Trusted no
-
-Host 10.*.*.*
-    ForwardX11 no
-    ForwardX11Trusted no
-
-Host 172.16.*.*
-    ForwardX11 no
-    ForwardX11Trusted no
-
-Host 127.*.*.*
-    ForwardX11 no
-    ForwardX11Trusted no
-
-Host localhost
-    ForwardX11 no
-    ForwardX11Trusted no
-
-# Host configuration for sneezy
-Host sneezy
-    User melashri
-    HostName sneezy.geop.uc.edu
-    Port 22
-    IdentitiesOnly yes
-    ForwardX11 yes
-    ForwardX11Trusted yes
-    ForwardAgent yes
-    ServerAliveInterval 60
-    ServerAliveCountMax 240
-
-# Host configuration for sleepy
-Host sleepy
-    User melashri
-    HostName sleepy.geop.uc.edu
-    Port 22
-    IdentitiesOnly yes
-    ForwardX11 yes
-    ForwardX11Trusted yes
-    ForwardAgent yes
-    ServerAliveInterval 60
-    ServerAliveCountMax 240
-
-# Host configuration for goofy
-Host goofy
-    User melashri
-    HostName goofy.geop.uc.edu
-    Port 22
-    ForwardX11 yes
-    ForwardX11Trusted yes
-    ProxyJump melashri@earth.phy.uc.edu
-    IdentitiesOnly yes
-    ServerAliveInterval 60
-    ServerAliveCountMax 240
-
-# Host configuration for earth
-Host earth
-    User melashri
-    HostName earth.phy.uc.edu
-    Port 22
-    ForwardX11 yes
-    ForwardX11Trusted yes
-    IdentitiesOnly yes
-    ServerAliveInterval 60
-    ServerAliveCountMax 240
-
-# Host configuration for lxplus
-Host lxplus
-    User melashri
-    HostName lxplus.cern.ch
-    Port 22
-    ForwardX11 yes
-    ForwardX11Trusted yes
-    ForwardAgent yes
-    ServerAliveInterval 60
-    ServerAliveCountMax 240
-    PubkeyAuthentication no
-    PasswordAuthentication no
-    PreferredAuthentications keyboard-interactive
-    IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
-    IdentitiesOnly yes
-
-# Host configuration for lbgw accessible via lxplus
-Host lbgw
-    User melashri
-    HostName lbgw
-    Port 22
-    ProxyJump lxplus
-    ForwardX11 yes
-    ForwardX11Trusted yes
-    IdentitiesOnly yes
-    ServerAliveInterval 60
-    ServerAliveCountMax 240
-
-# Host configuration for GPU server farm accessible via lbgw
-Host gpu
-    User melashri
-    HostName n4050101
-    Port 22
-    ProxyCommand ssh -W %h:%p lbgw
-    ForwardX11 yes
-    ForwardX11Trusted yes
-    IdentitiesOnly yes
-    ServerAliveInterval 60
-    ServerAliveCountMax 240
-
-# Host configuration for sleepy-earth with
-Host sleepy-earth
-    User melashri
-    HostName sleepy.geop.uc.edu
-    Port 22
-    LocalForward 31415 localhost:31415
-    ForwardAgent yes
-    ForwardX11 yes
-    ForwardX11Trusted yes
-    ProxyJump melashri@earth.phy.uc.edu
-    ServerAliveInterval 600
-    ServerAliveCountMax 240
-    IdentitiesOnly yes
-
-# Host configuration for sneezy-earth
-Host sneezy-earth
-    User melashri
-    HostName sneezy.geop.uc.edu
-    Port 22
-    LocalForward 27182 localhost:27182
-    ForwardAgent yes
-    ForwardX11 yes
-    ForwardX11Trusted yes
-    ProxyJump melashri@earth.phy.uc.edu
-    ServerAliveInterval 600
-    ServerAliveCountMax 240
-    IdentitiesOnly yes
-
-# Host configuration for goofy-earth
-Host goofy-earth
-    User melashri
-    HostName goofy.geop.uc.edu
-    Port 22
-    LocalForward 16180 localhost:16180
-    ForwardAgent yes
-    ForwardX11 yes
-    ForwardX11Trusted yes
-    ProxyJump melashri@earth.phy.uc.edu
-    ServerAliveInterval 600
-    ServerAliveCountMax 240
-    IdentitiesOnly yes
-
-# Host configuration for CERN gitlab
-Host gcern
-    HostName gitlab.cern.ch
-    User git
-    PreferredAuthentications publickey
-    IdentityFile ~/.ssh/id_rsa
-
-# Default settings for all hosts
+# --------------------------------------------------------
+# Global defaults (applies to all hosts)
+# --------------------------------------------------------
+Host *
+    ControlPath ~/.ssh/%C
+    ControlMaster auto
+    ControlPersist 1
     IdentityFile ~/.ssh/id_rsa
     AddKeysToAgent yes
     UseKeychain yes
     IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
     ForwardX11 yes
     ForwardAgent yes
-    ServerAliveCountMax 240
     ServerAliveInterval 60
+    ServerAliveCountMax 240
 
-# Amazon Q SSH Integration (leave at the bottom of the file)
+# Disable X11 forwarding for local networks
+Host 192.168.*.* 10.*.*.* 172.16.*.* 127.*.*.* localhost
+    ForwardX11 no
+    ForwardX11Trusted no
+
+# --------------------------------------------------------
+# University cluster hosts
+# --------------------------------------------------------
+Host sneezy
+    HostName sneezy.geop.uc.edu
+    User melashri
+    Port 22
+    IdentitiesOnly yes
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ForwardAgent yes
+
+Host sleepy
+    HostName sleepy.geop.uc.edu
+    User melashri
+    Port 22
+    IdentitiesOnly yes
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ForwardAgent yes
+
+Host goofy
+    HostName goofy.geop.uc.edu
+    User melashri
+    Port 22
+    IdentitiesOnly yes
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ProxyJump earth
+
+Host earth
+    HostName earth.phy.uc.edu
+    User melashri
+    Port 22
+    IdentitiesOnly yes
+    ForwardX11 yes
+    ForwardX11Trusted yes
+
+# Tunnels through earth
+Host sleepy-earth
+    HostName sleepy.geop.uc.edu
+    User melashri
+    ProxyJump earth
+    LocalForward 31415 localhost:31415
+    IdentitiesOnly yes
+
+Host sneezy-earth
+    HostName sneezy.geop.uc.edu
+    User melashri
+    ProxyJump earth
+    LocalForward 27182 localhost:27182
+    IdentitiesOnly yes
+
+Host goofy-earth
+    HostName goofy.geop.uc.edu
+    User melashri
+    ProxyJump earth
+    LocalForward 16180 localhost:16180
+    IdentitiesOnly yes
+
+# --------------------------------------------------------
+# CERN hosts – Kerberos + TWOFA fallback
+# --------------------------------------------------------
+Host lxplus
+    HostName lxplus.cern.ch
+    User melashri
+    Port 22
+    PreferredAuthentications gssapi-with-mic,keyboard-interactive
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials yes
+    PubkeyAuthentication yes        # Required for auth method negotiation
+    PasswordAuthentication no
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ForwardAgent yes
+    ServerAliveInterval 60
+    ServerAliveCountMax 240
+    IdentitiesOnly yes
+    IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+Host lbgw
+    HostName lbgw
+    User melashri
+    ProxyJump lxplus
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ServerAliveInterval 60
+    ServerAliveCountMax 240
+    IdentitiesOnly yes
+
+Host gpu
+    HostName n4050101
+    User melashri
+    ProxyCommand ssh -W %h:%p lbgw
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ServerAliveInterval 60
+    ServerAliveCountMax 240
+    IdentitiesOnly yes
+
+# --------------------------------------------------------
+# CERN GitLab (SSH key only)
+# --------------------------------------------------------
+Host gcern
+    HostName gitlab.cern.ch
+    User git
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa
+
+# --------------------------------------------------------
+# Amazon Q SSH integration
+# --------------------------------------------------------
 Match all
-  Include "~/Library/Application Support/amazon-q/ssh"
+    Include "~/Library/Application Support/amazon-q/ssh"
