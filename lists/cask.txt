@@ -1,6 +1,5 @@
 1password-cli
 adguard
-alacritty
 alt-tab
 android-platform-tools
 applite
@@ -10,11 +9,10 @@ contour
 cryptomator
 deskpad
 discord
+dockdoor
 docker
 docker-desktop
 doughnut
-extraterm
-fmail2
 font-3270-nerd-font
 font-agave-nerd-font
 font-anonymice-nerd-font
@@ -23,6 +21,7 @@ font-aurulent-sans-mono-nerd-font
 font-bigblue-terminal-nerd-font
 font-bitstream-vera-sans-mono-nerd-font
 font-blex-mono-nerd-font
+font-cascadia-code
 font-caskaydia-cove-nerd-font
 font-code-new-roman-nerd-font
 font-cousine-nerd-font
@@ -43,12 +42,14 @@ font-im-writing-nerd-font
 font-inconsolata-go-nerd-font
 font-inconsolata-lgc-nerd-font
 font-inconsolata-nerd-font
+font-iosevka
 font-iosevka-nerd-font
 font-jetbrains-mono-nerd-font
 font-lekton-nerd-font
 font-liberation-nerd-font
 font-m+-nerd-font
 font-meslo-lg-nerd-font
+font-monaspace
 font-monofur-nerd-font
 font-monoid-nerd-font
 font-mononoki-nerd-font
@@ -80,6 +81,7 @@ nextcloud
 obsidian
 openinterminal
 orbstack
+pearcleaner
 pieces
 pieces-os
 quarto
@@ -88,7 +90,6 @@ rectangle
 rio
 sioyek
 slack
-soundanchor
 stats
 tabby
 vimr

@@ -1,13 +1,9 @@
 {
-  "amazonQ.shareContentWithAWS": false,
-  "amazonQ.telemetry": false,
   "application.shellEnvironmentResolutionTimeout": 20,
-  "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
-  "aws.telemetry": false,
   "editor.accessibilitySupport": "off",
-  "editor.fontFamily": "Monaspace Argon",
+  "editor.fontFamily": "'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Hack', 'Iosevka', 'Monaspace Argon', monospace",
   "editor.fontLigatures": true,
-  "editor.fontSize": 13,
+  "editor.fontSize": 14,
   "editor.fontWeight": "bold",
   "editor.formatOnPaste": true,
   "editor.inlineSuggest.enabled": true,
@@ -35,7 +31,7 @@
     "FIG_NEW_SESSION": "1",
     "Q_NEW_SESSION": "1"
   },
-  "terminal.integrated.fontFamily": "monospace",
+  "terminal.integrated.fontFamily": "JetBrains Mono",
   "terminal.integrated.persistentSessionScrollback": 1000,
   "terminal.integrated.scrollback": 10000,
   "workbench.colorCustomizations": {
@@ -70,8 +66,6 @@
   ],
   "github.copilot.nextEditSuggestions.enabled": true,
   "chat.mcp.gallery.enabled": true,
-  "workbench.colorTheme": "Quiet Light",
-  "chat.mcp.gallery.enabled": true,
-  
+  "workbench.colorTheme": "Quiet Light",  
 
 }
