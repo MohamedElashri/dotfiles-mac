@@ -127,3 +127,4 @@ setopt INC_APPEND_HISTORY
 export HISTTIMEFORMAT="[%F %T] "
 setopt EXTENDED_HISTORY
 setopt HIST_FIND_NO_DUPS
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"

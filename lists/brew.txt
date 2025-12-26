@@ -28,6 +28,7 @@ cairo
 capstone
 cask
 ccat
+certifi
 cffi
 cfitsio
 chezmoi
@@ -99,6 +100,7 @@ harfbuzz
 helix
 hicolor-icon-theme
 highway
+httpie
 hugo
 hwloc
 hyperfine
@@ -145,6 +147,7 @@ libgcrypt
 libgit2
 libgpg-error
 libheif
+libiconv
 libidn
 libidn2
 libimagequant
@@ -178,6 +181,7 @@ libtermkey
 libtiff
 libtool
 libudfread
+libultrahdr
 libunibreak
 libunistring
 libusb
@@ -211,6 +215,7 @@ lzo
 m4
 mariadb-connector-c
 mbedtls
+mbedtls@3
 micro
 minio
 mpdecimal
@@ -240,6 +245,7 @@ open-mpi
 openblas
 opencore-amr
 openexr
+openjdk@17
 openjpeg
 openjph
 openssl@3
@@ -322,6 +328,7 @@ tlrc
 tmux
 tree
 tree-sitter
+tree-sitter@0.25
 typst
 unbound
 unibilium
@@ -368,6 +375,8 @@ android-platform-tools
 applite
 background-music
 bluesnooze
+bruno
+claude-code
 contour
 cryptomator
 deskpad
@@ -419,6 +428,7 @@ font-mononoki-nerd-font
 font-mplus-nerd-font
 font-noto-nerd-font
 font-open-dyslexic-nerd-font
+font-opendyslexic-nerd-font
 font-overpass-nerd-font
 font-profont-nerd-font
 font-proggy-clean-tt-nerd-font

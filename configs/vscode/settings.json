@@ -66,6 +66,8 @@
   ],
   "github.copilot.nextEditSuggestions.enabled": true,
   "chat.mcp.gallery.enabled": true,
-  "workbench.colorTheme": "Quiet Light",  
+  "workbench.colorTheme": "Quiet Light",
+  "python.analysis.typeCheckingMode": "standard",
+  
 
 }

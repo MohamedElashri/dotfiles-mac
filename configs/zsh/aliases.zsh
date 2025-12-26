@@ -99,11 +99,8 @@ alias gen_pass='LC_ALL=C tr -dc "[:alnum:]" < /dev/urandom | head -c 20 | pbcopy
 alias gcc13='gcc-13'
 alias gcc12='gcc-12'
 alias gcc14='gcc-14'
-alias copilot='gh copilot'
-alias explain='gh copilot explain'
-alias ask='gh copilot suggest'
-alias suggest='gh copilot suggest'
 alias findgrep='GrePFind'
+alias suggest='copilot -i'
 
 ### Networking ###
 alias clear_dns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'

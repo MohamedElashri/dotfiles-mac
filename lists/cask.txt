@@ -5,6 +5,8 @@ android-platform-tools
 applite
 background-music
 bluesnooze
+bruno
+claude-code
 contour
 cryptomator
 deskpad
@@ -56,6 +58,7 @@ font-mononoki-nerd-font
 font-mplus-nerd-font
 font-noto-nerd-font
 font-open-dyslexic-nerd-font
+font-opendyslexic-nerd-font
 font-overpass-nerd-font
 font-profont-nerd-font
 font-proggy-clean-tt-nerd-font
